@@ -1,0 +1,14 @@
+{
+  "name": "basalt-mcp-server",
+  "version": "0.1.0",
+  "description": "Basalt MCP server — serves DTCG design tokens to AI coding tools",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  }
+}
