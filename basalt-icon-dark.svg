@@ -1,0 +1,12 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!--
+    Basalt — Final icon mark
+    B4 V10 — Concentric hex rings, ember core
+    Version: 0.1.0 | Background: Dark (#0C0A09)
+    Rings: outer #3D3A37 · mid #1E1B19 · core #F97316
+  -->
+  <rect width="256" height="256" rx="56" fill="#0C0A09"/>
+  <polygon points="213.36,78.72 213.36,177.28 128.00,226.56 42.64,177.28 42.64,78.72 128.00,29.44" fill="#3D3A37"/>
+  <polygon points="184.53,95.36 184.53,160.64 128.00,193.28 71.47,160.64 71.47,95.36 128.00,62.72" fill="#1E1B19"/>
+  <polygon points="157.93,110.72 157.93,145.28 128.00,162.56 98.07,145.28 98.07,110.72 128.00,93.44" fill="#F97316"/>
+</svg>
