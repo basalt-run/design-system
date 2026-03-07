@@ -24,7 +24,7 @@
     "text": {
       "$type": "color",
       "primary":    { "$value": "{color.stone.900}", "$description": "Main readable text" },
-      "secondary":  { "$value": "{color.stone.500}", "$description": "Supporting text, metadata, labels" },
+      "secondary":  { "$value": "{color.stone.600}", "$description": "Supporting text, metadata, labels. 6.4:1 contrast on light canvas — WCAG AA ✅"},
       "tertiary":   { "$value": "{color.stone.400}", "$description": "Placeholder, hint text" },
       "disabled":   { "$value": "{color.stone.300}", "$description": "Non-interactive text" },
       "inverse":    { "$value": "{color.stone.50}",  "$description": "Text on dark/inverse surfaces" },
