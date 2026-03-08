@@ -131,12 +131,7 @@
       "$type": "color",
       "$description": "Error states. Broken aliases, failed syncs."
     },
-    "brand": {
-      "blush": {
-        "$type": "color",
-        "$value": "#E11EB1"
-      }
-    }
+    "brand": {}
   },
   "spacing": {
     "1": {
