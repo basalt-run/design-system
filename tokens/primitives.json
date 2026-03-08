@@ -132,12 +132,7 @@
       "$description": "Error states. Broken aliases, failed syncs."
     },
     "brand": {},
-    "palepink": {
-      "primary": {
-        "$type": "color",
-        "$value": "#f4a4c0"
-      }
-    }
+    "palepink": {}
   },
   "spacing": {
     "1": {
