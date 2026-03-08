@@ -16,9 +16,6 @@
   },
   "color": {
     "stone": {
-      "50": {
-        "$value": "#FAFAF9"
-      },
       "100": {
         "$value": "#F5F5F4"
       },
