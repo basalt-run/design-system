@@ -47,7 +47,11 @@
         "$value": "#0C0A09"
       },
       "$type": "color",
-      "$description": "Warm neutral scale. Named after volcanic basalt stone."
+      "$description": "Warm neutral scale. Named after volcanic basalt stone.",
+      "update": {
+        "$type": "color",
+        "$value": "#FAFAF9"
+      }
     },
     "ember": {
       "100": {
