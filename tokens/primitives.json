@@ -134,13 +134,7 @@
     },
     "brand": {},
     "palepink": {},
-    "pinkpale": {
-      "test": {
-        "$type": "color",
-        "$value": "#f9d3e0",
-        "$description": "test"
-      }
-    }
+    "pinkpale": {}
   },
   "spacing": {
     "1": {
