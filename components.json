@@ -1,0 +1,23 @@
+{
+  "$schema": "https://basalt.run/schemas/components.json",
+  "version": "1.0.0",
+  "components": [
+    {
+      "name": "Button",
+      "description": "primary button",
+      "sourcePath": "color.action.default",
+      "tokens": [
+        "color.action.default"
+      ],
+      "variants": [
+        {
+          "name": "primary"
+        }
+      ],
+      "sizes": [],
+      "ariaRole": null,
+      "wcagCriteria": [],
+      "minTouchTarget": null
+    }
+  ]
+}
