@@ -17,7 +17,49 @@
       "sizes": [],
       "ariaRole": null,
       "wcagCriteria": [],
-      "minTouchTarget": null
+      "minTouchTarget": null,
+      "buildConfig": {
+        "variants": {
+          "primary": {
+            "states": {
+              "default": {
+                "tokenBindings": [
+                  {
+                    "id": "5df89443-1b7d-4077-9009-b20295918740",
+                    "cssProperty": "background-color",
+                    "tokenPath": "color.ember.600",
+                    "tailwindPrefix": "bg"
+                  },
+                  {
+                    "id": "fdc7dc4b-65dd-4a24-ace8-97ebd160187b",
+                    "cssProperty": "color",
+                    "tokenPath": "color.stone.50",
+                    "tailwindPrefix": "text"
+                  }
+                ],
+                "staticClasses": ""
+              },
+              "hover": {
+                "tokenBindings": [
+                  {
+                    "id": "9d605e22-2d4a-450e-ab6a-79edae9c5c14",
+                    "cssProperty": "background-color",
+                    "tokenPath": "color.ember.700",
+                    "tailwindPrefix": "bg"
+                  },
+                  {
+                    "id": "f3cb7cd8-63a5-409e-91c7-7fa127176eac",
+                    "cssProperty": "color",
+                    "tokenPath": "color.stone.50",
+                    "tailwindPrefix": "text"
+                  }
+                ],
+                "staticClasses": ""
+              }
+            }
+          }
+        }
+      }
     }
   ]
 }
