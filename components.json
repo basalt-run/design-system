@@ -3,9 +3,77 @@
   "version": "1.0.0",
   "components": [
     {
+      "name": "a11yBadge",
+      "description": "Accessibility contrast badge — shown inline on color tokens.",
+      "tokens": [
+        "a11yBadge.radius",
+        "a11yBadge.paddingX",
+        "a11yBadge.paddingY",
+        "a11yBadge.fontSize",
+        "a11yBadge.fontWeight",
+        "a11yBadge.pass.bg",
+        "a11yBadge.pass.border",
+        "a11yBadge.pass.text",
+        "a11yBadge.aa.bg",
+        "a11yBadge.aa.border",
+        "a11yBadge.aa.text",
+        "a11yBadge.aaLarge.bg",
+        "a11yBadge.aaLarge.border",
+        "a11yBadge.aaLarge.text",
+        "a11yBadge.fail.bg",
+        "a11yBadge.fail.border",
+        "a11yBadge.fail.text"
+      ],
+      "variants": [],
+      "sizes": [],
+      "ariaRole": null,
+      "wcagCriteria": [
+        "1.4.3"
+      ],
+      "minTouchTarget": null,
+      "buildConfig": {}
+    },
+    {
+      "name": "badge",
+      "description": "Status badge / label tokens.",
+      "tokens": [
+        "badge.paddingX",
+        "badge.paddingY",
+        "badge.radius",
+        "badge.fontSize",
+        "badge.fontWeight",
+        "badge.positive.bg",
+        "badge.positive.border",
+        "badge.positive.text",
+        "badge.warning.bg",
+        "badge.warning.border",
+        "badge.warning.text",
+        "badge.danger.bg",
+        "badge.danger.border",
+        "badge.danger.text",
+        "badge.info.bg",
+        "badge.info.border",
+        "badge.info.text",
+        "badge.neutral.bg",
+        "badge.neutral.border",
+        "badge.neutral.text",
+        "badge.accent.bg",
+        "badge.accent.border",
+        "badge.accent.text"
+      ],
+      "variants": [],
+      "sizes": [],
+      "ariaRole": null,
+      "wcagCriteria": [
+        "1.4.3",
+        "1.4.11"
+      ],
+      "minTouchTarget": null,
+      "buildConfig": {}
+    },
+    {
       "name": "Button",
       "description": "primary button",
-      "sourcePath": "color.action.default",
       "tokens": [
         "color.action.default"
       ],
@@ -22,44 +90,400 @@
         "variants": {
           "primary": {
             "states": {
-              "default": {
-                "tokenBindings": [
-                  {
-                    "id": "5df89443-1b7d-4077-9009-b20295918740",
-                    "cssProperty": "background-color",
-                    "tokenPath": "color.ember.600",
-                    "tailwindPrefix": "bg"
-                  },
-                  {
-                    "id": "fdc7dc4b-65dd-4a24-ace8-97ebd160187b",
-                    "cssProperty": "color",
-                    "tokenPath": "color.stone.50",
-                    "tailwindPrefix": "text"
-                  }
-                ],
-                "staticClasses": ""
-              },
               "hover": {
+                "staticClasses": "",
                 "tokenBindings": [
                   {
                     "id": "9d605e22-2d4a-450e-ab6a-79edae9c5c14",
-                    "cssProperty": "background-color",
                     "tokenPath": "color.ember.700",
+                    "cssProperty": "background-color",
                     "tailwindPrefix": "bg"
                   },
                   {
                     "id": "f3cb7cd8-63a5-409e-91c7-7fa127176eac",
-                    "cssProperty": "color",
                     "tokenPath": "color.stone.50",
+                    "cssProperty": "color",
                     "tailwindPrefix": "text"
                   }
-                ],
-                "staticClasses": ""
+                ]
+              },
+              "default": {
+                "staticClasses": "",
+                "tokenBindings": [
+                  {
+                    "id": "5df89443-1b7d-4077-9009-b20295918740",
+                    "tokenPath": "color.ember.600",
+                    "cssProperty": "background-color",
+                    "tailwindPrefix": "bg"
+                  },
+                  {
+                    "id": "fdc7dc4b-65dd-4a24-ace8-97ebd160187b",
+                    "tokenPath": "color.stone.50",
+                    "cssProperty": "color",
+                    "tailwindPrefix": "text"
+                  }
+                ]
               }
             }
           }
         }
       }
+    },
+    {
+      "name": "card",
+      "description": "Card container tokens.",
+      "tokens": [
+        "card.bg",
+        "card.border",
+        "card.borderHover",
+        "card.radius",
+        "card.padding",
+        "card.paddingLg",
+        "card.shadow",
+        "card.shadowHover",
+        "card.header.fontSize",
+        "card.header.fontWeight",
+        "card.header.color",
+        "card.body.fontSize",
+        "card.body.color"
+      ],
+      "variants": [],
+      "sizes": [],
+      "ariaRole": null,
+      "wcagCriteria": [
+        "1.4.3"
+      ],
+      "minTouchTarget": null,
+      "buildConfig": {}
+    },
+    {
+      "name": "codeBlock",
+      "description": "Code display blocks — token output, JSON, production code.",
+      "tokens": [
+        "codeBlock.bg",
+        "codeBlock.border",
+        "codeBlock.radius",
+        "codeBlock.padding",
+        "codeBlock.fontSize",
+        "codeBlock.fontFamily",
+        "codeBlock.lineHeight",
+        "codeBlock.text",
+        "codeBlock.textHighlight"
+      ],
+      "variants": [],
+      "sizes": [],
+      "ariaRole": null,
+      "wcagCriteria": [
+        "1.4.3"
+      ],
+      "minTouchTarget": null,
+      "buildConfig": {}
+    },
+    {
+      "name": "dropdown",
+      "description": "Dropdown menu / popover tokens.",
+      "tokens": [
+        "dropdown.bg",
+        "dropdown.border",
+        "dropdown.radius",
+        "dropdown.padding",
+        "dropdown.shadow",
+        "dropdown.minWidth",
+        "dropdown.item.paddingX",
+        "dropdown.item.paddingY",
+        "dropdown.item.radius",
+        "dropdown.item.fontSize",
+        "dropdown.item.text",
+        "dropdown.item.bg",
+        "dropdown.item.bgHover",
+        "dropdown.item.bgActive",
+        "dropdown.item.textDanger",
+        "dropdown.separator.color",
+        "dropdown.separator.margin"
+      ],
+      "variants": [],
+      "sizes": [],
+      "ariaRole": null,
+      "wcagCriteria": [
+        "2.1.1",
+        "4.1.2"
+      ],
+      "minTouchTarget": null,
+      "buildConfig": {}
+    },
+    {
+      "name": "emptyState",
+      "description": "Empty state — used when a list or section has no content.",
+      "tokens": [
+        "emptyState.iconColor",
+        "emptyState.iconSize",
+        "emptyState.titleColor",
+        "emptyState.bodyColor",
+        "emptyState.gap",
+        "emptyState.paddingY"
+      ],
+      "variants": [],
+      "sizes": [],
+      "ariaRole": null,
+      "wcagCriteria": [
+        "1.4.3"
+      ],
+      "minTouchTarget": null,
+      "buildConfig": {}
+    },
+    {
+      "name": "focus",
+      "description": "Global focus ring system — WCAG 2.4.11 compliance.",
+      "tokens": [
+        "focus.ringColor",
+        "focus.ringWidth",
+        "focus.ringOffset",
+        "focus.ringOffsetBgLight",
+        "focus.ringOffsetBgDark"
+      ],
+      "variants": [],
+      "sizes": [],
+      "ariaRole": null,
+      "wcagCriteria": [
+        "2.4.7",
+        "2.4.11"
+      ],
+      "minTouchTarget": null,
+      "buildConfig": {}
+    },
+    {
+      "name": "input",
+      "description": "Text input, textarea, select tokens.",
+      "tokens": [
+        "input.height.sm",
+        "input.height.md",
+        "input.height.lg",
+        "input.paddingX",
+        "input.paddingY",
+        "input.radius",
+        "input.fontSize",
+        "input.fontFamily",
+        "input.bg",
+        "input.bgDisabled",
+        "input.text",
+        "input.textPlaceholder",
+        "input.textDisabled",
+        "input.border",
+        "input.borderHover",
+        "input.borderFocus",
+        "input.borderError",
+        "input.focusRingColor",
+        "input.focusRingWidth",
+        "input.focusRingOffset",
+        "input.label.fontSize",
+        "input.label.fontWeight",
+        "input.label.color",
+        "input.label.gap",
+        "input.hint.fontSize",
+        "input.hint.color",
+        "input.hint.gap",
+        "input.error.fontSize",
+        "input.error.color",
+        "input.error.iconColor"
+      ],
+      "variants": [],
+      "sizes": [],
+      "ariaRole": null,
+      "wcagCriteria": [
+        "1.4.3",
+        "1.3.1",
+        "2.4.7",
+        "4.1.2"
+      ],
+      "minTouchTarget": null,
+      "buildConfig": {}
+    },
+    {
+      "name": "modal",
+      "description": "Modal dialog tokens.",
+      "tokens": [
+        "modal.bg",
+        "modal.border",
+        "modal.radius",
+        "modal.padding",
+        "modal.maxWidth",
+        "modal.shadow",
+        "modal.backdrop",
+        "modal.header.fontSize",
+        "modal.header.fontWeight",
+        "modal.header.color",
+        "modal.header.border",
+        "modal.header.paddingBottom",
+        "modal.footer.border",
+        "modal.footer.paddingTop",
+        "modal.footer.gap"
+      ],
+      "variants": [],
+      "sizes": [],
+      "ariaRole": null,
+      "wcagCriteria": [
+        "2.1.1",
+        "2.4.3",
+        "4.1.2"
+      ],
+      "minTouchTarget": null,
+      "buildConfig": {}
+    },
+    {
+      "name": "sidebar",
+      "description": "Left navigation sidebar tokens.",
+      "tokens": [
+        "sidebar.width",
+        "sidebar.bg",
+        "sidebar.border",
+        "sidebar.padding",
+        "sidebar.header.height",
+        "sidebar.header.border",
+        "sidebar.section.labelFontSize",
+        "sidebar.section.labelFontWeight",
+        "sidebar.section.labelColor",
+        "sidebar.section.labelSpacing",
+        "sidebar.section.gap",
+        "sidebar.item.height",
+        "sidebar.item.paddingX",
+        "sidebar.item.radius",
+        "sidebar.item.fontSize",
+        "sidebar.item.fontWeight",
+        "sidebar.item.gap",
+        "sidebar.item.text",
+        "sidebar.item.textHover",
+        "sidebar.item.textActive",
+        "sidebar.item.bg",
+        "sidebar.item.bgHover",
+        "sidebar.item.bgActive",
+        "sidebar.item.borderActive"
+      ],
+      "variants": [],
+      "sizes": [],
+      "ariaRole": null,
+      "wcagCriteria": [
+        "2.4.1",
+        "4.1.2"
+      ],
+      "minTouchTarget": null,
+      "buildConfig": {}
+    },
+    {
+      "name": "table",
+      "description": "Data table tokens.",
+      "tokens": [
+        "table.bg",
+        "table.border",
+        "table.radius",
+        "table.header.bg",
+        "table.header.text",
+        "table.header.fontSize",
+        "table.header.fontWeight",
+        "table.header.paddingX",
+        "table.header.paddingY",
+        "table.header.letterSpacing",
+        "table.row.bg",
+        "table.row.bgHover",
+        "table.row.bgSelected",
+        "table.row.border",
+        "table.row.text",
+        "table.row.fontSize",
+        "table.row.paddingX",
+        "table.row.paddingY"
+      ],
+      "variants": [],
+      "sizes": [],
+      "ariaRole": null,
+      "wcagCriteria": [
+        "1.3.1",
+        "2.4.6"
+      ],
+      "minTouchTarget": null,
+      "buildConfig": {}
+    },
+    {
+      "name": "toast",
+      "description": "Toast notification tokens.",
+      "tokens": [
+        "toast.radius",
+        "toast.padding",
+        "toast.paddingX",
+        "toast.fontSize",
+        "toast.fontWeight",
+        "toast.shadow",
+        "toast.duration",
+        "toast.default.bg",
+        "toast.default.border",
+        "toast.default.text",
+        "toast.default.icon",
+        "toast.success.bg",
+        "toast.success.border",
+        "toast.success.text",
+        "toast.success.icon",
+        "toast.error.bg",
+        "toast.error.border",
+        "toast.error.text",
+        "toast.error.icon",
+        "toast.warning.bg",
+        "toast.warning.border",
+        "toast.warning.text",
+        "toast.warning.icon"
+      ],
+      "variants": [],
+      "sizes": [],
+      "ariaRole": null,
+      "wcagCriteria": [
+        "1.4.3",
+        "4.1.3"
+      ],
+      "minTouchTarget": null,
+      "buildConfig": {}
+    },
+    {
+      "name": "tokenCard",
+      "description": "Token editor card — the primary interactive element in the token list.",
+      "tokens": [
+        "tokenCard.bg",
+        "tokenCard.bgHover",
+        "tokenCard.border",
+        "tokenCard.borderFocus",
+        "tokenCard.radius",
+        "tokenCard.paddingX",
+        "tokenCard.paddingY",
+        "tokenCard.path.fontSize",
+        "tokenCard.path.fontFamily",
+        "tokenCard.path.color",
+        "tokenCard.value.fontSize",
+        "tokenCard.value.fontFamily",
+        "tokenCard.value.color",
+        "tokenCard.swatch.size",
+        "tokenCard.swatch.radius"
+      ],
+      "variants": [],
+      "sizes": [],
+      "ariaRole": null,
+      "wcagCriteria": [
+        "1.4.3"
+      ],
+      "minTouchTarget": null,
+      "buildConfig": {}
+    },
+    {
+      "name": "topbar",
+      "description": "Top navigation / header bar tokens.",
+      "tokens": [
+        "topbar.height",
+        "topbar.bg",
+        "topbar.border"
+      ],
+      "variants": [],
+      "sizes": [],
+      "ariaRole": null,
+      "wcagCriteria": [
+        "1.4.3"
+      ],
+      "minTouchTarget": null,
+      "buildConfig": {}
     }
   ]
 }
