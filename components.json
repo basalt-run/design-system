@@ -1968,9 +1968,9 @@
       "sizes": [],
       "ariaRole": null,
       "wcagCriteria": [
-        "2.1.1",
-        "2.4.3",
-        "4.1.2"
+        "2.1.1 Keyboard",
+        "2.4.3 Focus Order",
+        "4.1.2 Name, Role, Value"
       ],
       "minTouchTarget": null,
       "buildConfig": {
@@ -2038,8 +2038,61 @@
           }
         }
       },
-      "props": [],
-      "aria": {}
+      "props": [
+        {
+          "name": "open",
+          "type": "boolean",
+          "required": true,
+          "description": "Controls the visibility state of the modal"
+        },
+        {
+          "name": "onClose",
+          "type": "function",
+          "required": true,
+          "description": "Callback fired when the modal requests to close via backdrop click, escape key, or close button"
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "required": false,
+          "description": "Header title text for the modal"
+        },
+        {
+          "name": "showCloseButton",
+          "type": "boolean",
+          "default": "true",
+          "required": false,
+          "description": "Whether to display the close button in the header"
+        },
+        {
+          "name": "closeOnBackdrop",
+          "type": "boolean",
+          "default": "true",
+          "required": false,
+          "description": "Whether clicking the backdrop dismisses the modal"
+        },
+        {
+          "name": "closeOnEscape",
+          "type": "boolean",
+          "default": "true",
+          "required": false,
+          "description": "Whether pressing Escape key dismisses the modal"
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": true,
+          "description": "Content to render in the modal body"
+        }
+      ],
+      "usage": "Use modals to focus user attention on critical tasks, confirmations, or information that requires immediate action before continuing. Modals should contain a clear header, concise content, and explicit action buttons in the footer. Reserve modals for workflows that must interrupt the user's current context.",
+      "never": "Never use modals for non-essential information that could be displayed inline or in a less intrusive pattern. Never nest modals within other modals, as this creates confusion and navigation complexity. Never omit a clear close mechanism or trap focus without providing keyboard-accessible exit options.",
+      "compose": "Wrap modal content with a header containing a title and close button, a scrollable body section, and a footer with primary and secondary action buttons. Pair with a backdrop overlay to dim background content and signal the modal state.",
+      "aria": {
+        "role": "dialog",
+        "keyboard": "Escape closes modal. Tab cycles focus through interactive elements within modal. Focus is trapped inside modal while open and restored to trigger element on close.",
+        "screenReader": "Announces dialog role and title. Background content is marked inert or aria-hidden to prevent navigation outside modal."
+      }
     },
     {
       "name": "sidebar",
