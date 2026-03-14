@@ -2,192 +2,135 @@
   "$metadata": {
     "basalt": {
       "file": "semantic.light",
-      "version": "0.1.0",
+      "version": "1.0.0",
       "spec": "dtcg-2025.10",
-      "requires": ["primitives"],
-      "description": "Semantic aliases for light mode. All aliases resolve via {dot.notation} to primitives.json."
+      "description": "Semantic alias tokens — light mode. Components consume these, never primitives.",
+      "mode": "light",
+      "requires": ["primitives"]
     }
   },
 
   "color": {
-    "bg": {
-      "$type": "color",
-      "$description": "Surface backgrounds — from lowest to highest elevation.",
-      "canvas":   { "$value": "{color.stone.100}", "$description": "App chrome, sidebar, outer frame" },
-      "page":     { "$value": "{color.stone.50}",  "$description": "Main content area — the default surface" },
-      "elevated": { "$value": "#FFFFFF",            "$description": "Cards, dialogs — lifted above page" },
-      "overlay":  { "$value": "{color.stone.50}",  "$description": "Popovers, dropdowns, tooltips" },
-      "inset":    { "$value": "{color.stone.200}",  "$description": "Input backgrounds, code blocks, sunken regions" },
-      "inverse":  { "$value": "{color.stone.900}",  "$description": "Inverse surface — for tooltips with inverted treatment" }
+    "$type": "color",
+
+    "background": {
+      "$description": "Page and surface backgrounds.",
+      "page":     { "$value": "{color.stone.50}",  "$description": "Default page background" },
+      "surface":  { "$value": "{color.stone.100}", "$description": "Cards, panels, sidebars" },
+      "elevated": { "$value": "{color.white}",     "$description": "Elevated surfaces — modals, dropdowns" },
+      "sunken":   { "$value": "{color.stone.200}", "$description": "Recessed areas — code blocks, input backgrounds" },
+      "overlay":  { "$value": "rgba(0, 0, 0, 0.4)", "$description": "Modal backdrop" },
+      "inverse":  { "$value": "{color.stone.900}", "$description": "Inverse surface — tooltips, dark badges" }
     },
 
     "text": {
-      "$type": "color",
-      "primary":    { "$value": "{color.stone.900}", "$description": "Main readable text" },
-      "secondary":  { "$value": "{color.stone.600}", "$description": "Supporting text, metadata, labels. 6.4:1 contrast on light canvas — WCAG AA ✅"},
-      "tertiary":   { "$value": "{color.stone.400}", "$description": "Placeholder, hint text" },
-      "disabled":   { "$value": "{color.stone.300}", "$description": "Non-interactive text" },
-      "inverse":    { "$value": "{color.stone.50}",  "$description": "Text on dark/inverse surfaces" },
-      "onAccent":   { "$value": "{color.stone.950}", "$description": "Text placed on ember accent backgrounds" },
-      "link":       { "$value": "{color.ember.600}", "$description": "Hyperlinks in prose" },
-      "linkHover":  { "$value": "{color.ember.700}" }
+      "$description": "Text colors.",
+      "primary":   { "$value": "{color.stone.900}", "$description": "Body text, headings" },
+      "secondary": { "$value": "{color.stone.500}", "$description": "Supporting text, descriptions" },
+      "tertiary":  { "$value": "{color.stone.400}", "$description": "Placeholder text, hints" },
+      "disabled":  { "$value": "{color.stone.300}", "$description": "Disabled state text" },
+      "inverse":   { "$value": "{color.stone.50}",  "$description": "Text on dark/inverse surfaces" },
+      "onAccent":  { "$value": "{color.white}",     "$description": "Text on ember/accent backgrounds" },
+      "link":      { "$value": "{color.ember.600}", "$description": "Interactive link text" },
+      "linkHover": { "$value": "{color.ember.700}", "$description": "Link hover state" },
+      "code":      { "$value": "{color.ember.700}", "$description": "Inline code text" }
     },
 
     "border": {
-      "$type": "color",
-      "subtle":   { "$value": "{color.stone.200}", "$description": "Hairline dividers, table rows" },
-      "default":  { "$value": "{color.stone.300}", "$description": "Input borders, card borders" },
-      "strong":   { "$value": "{color.stone.400}", "$description": "Prominent borders, focused inputs" },
-      "inverse":  { "$value": "{color.stone.600}" }
+      "$description": "Border and divider colors.",
+      "default":  { "$value": "{color.stone.200}", "$description": "Default border — cards, inputs, dividers" },
+      "strong":   { "$value": "{color.stone.300}", "$description": "Stronger border — active inputs, focused" },
+      "subtle":   { "$value": "{color.stone.100}", "$description": "Very subtle — nested sections" },
+      "inverse":  { "$value": "{color.stone.700}", "$description": "Border on dark surfaces" },
+      "focus":    { "$value": "{color.ember.500}", "$description": "Focus ring color — WCAG 2.4.11" },
+      "accent":   { "$value": "{color.ember.500}", "$description": "Accent border — active nav item" }
     },
 
-    "accent": {
-      "$type": "color",
-      "subtle":   { "$value": "{color.ember.100}", "$description": "Accent tint backgrounds" },
-      "muted":    { "$value": "{color.ember.200}" },
-      "default":  { "$value": "{color.ember.500}", "$description": "Primary CTA, active states, highlights" },
-      "hover":    { "$value": "{color.ember.600}", "$description": "Accent on hover" },
-      "active":   { "$value": "{color.ember.700}", "$description": "Accent on press" },
-      "focus":    { "$value": "{color.ember.500}", "$description": "Focus ring color" }
+    "action": {
+      "$description": "Primary interactive/CTA color.",
+      "bg":          { "$value": "{color.ember.500}", "$description": "Primary button background" },
+      "bgHover":     { "$value": "{color.ember.600}", "$description": "Primary button hover" },
+      "bgActive":    { "$value": "{color.ember.700}", "$description": "Primary button pressed" },
+      "bgDisabled":  { "$value": "{color.stone.200}", "$description": "Disabled button background" },
+      "text":        { "$value": "{color.white}",     "$description": "Text on primary button" },
+      "textDisabled":{ "$value": "{color.stone.400}", "$description": "Text on disabled button" },
+      "subtle":      { "$value": "{color.ember.50}",  "$description": "Ghost/subtle action background" },
+      "subtleHover": { "$value": "{color.ember.100}", "$description": "Ghost action hover" }
     },
 
-    "feedback": {
-      "$type": "color",
+    "neutral": {
+      "$description": "Secondary interactive / ghost color.",
+      "bg":          { "$value": "{color.white}",     "$description": "Secondary button background" },
+      "bgHover":     { "$value": "{color.stone.100}", "$description": "Secondary button hover" },
+      "bgActive":    { "$value": "{color.stone.200}", "$description": "Secondary button pressed" },
+      "bgDisabled":  { "$value": "{color.stone.100}", "$description": "Disabled secondary background" },
+      "text":        { "$value": "{color.stone.700}", "$description": "Secondary button text" },
+      "textHover":   { "$value": "{color.stone.900}", "$description": "Secondary button text hover" },
+      "border":      { "$value": "{color.stone.300}", "$description": "Secondary button border" },
+      "borderHover": { "$value": "{color.stone.400}", "$description": "Secondary button border hover" }
+    },
+
+    "ghost": {
+      "$description": "Minimal action — no background until interaction.",
+      "bg":       { "$value": "{color.transparent}" },
+      "bgHover":  { "$value": "{color.stone.100}" },
+      "bgActive": { "$value": "{color.stone.200}" },
+      "text":     { "$value": "{color.stone.600}" },
+      "textHover":{ "$value": "{color.stone.900}" }
+    },
+
+    "danger": {
+      "$description": "Destructive action color.",
+      "bg":          { "$value": "{color.danger.500}", "$description": "Danger button background" },
+      "bgHover":     { "$value": "{color.danger.600}", "$description": "Danger button hover" },
+      "bgSubtle":    { "$value": "{color.danger.50}",  "$description": "Danger subtle/ghost background" },
+      "bgSubtleHover":{ "$value": "{color.danger.100}" },
+      "text":        { "$value": "{color.white}" },
+      "textSubtle":  { "$value": "{color.danger.700}", "$description": "Danger text on light background" },
+      "border":      { "$value": "{color.danger.300}" }
+    },
+
+    "status": {
+      "$description": "Semantic feedback colors.",
       "positive": {
-        "subtle":   { "$value": "{color.positive.100}" },
-        "default":  { "$value": "{color.positive.500}" },
-        "strong":   { "$value": "{color.positive.700}" }
+        "bg":     { "$value": "{color.positive.50}" },
+        "border": { "$value": "{color.positive.200}" },
+        "text":   { "$value": "{color.positive.700}" },
+        "icon":   { "$value": "{color.positive.500}" }
       },
       "warning": {
-        "subtle":   { "$value": "{color.warning.100}" },
-        "default":  { "$value": "{color.warning.500}" },
-        "strong":   { "$value": "{color.warning.700}" }
+        "bg":     { "$value": "{color.warning.50}" },
+        "border": { "$value": "{color.warning.200}" },
+        "text":   { "$value": "{color.warning.700}" },
+        "icon":   { "$value": "{color.warning.500}" }
       },
-      "error": {
-        "subtle":   { "$value": "{color.destructive.100}" },
-        "default":  { "$value": "{color.destructive.500}" },
-        "strong":   { "$value": "{color.destructive.700}" }
+      "danger": {
+        "bg":     { "$value": "{color.danger.50}" },
+        "border": { "$value": "{color.danger.200}" },
+        "text":   { "$value": "{color.danger.700}" },
+        "icon":   { "$value": "{color.danger.500}" }
+      },
+      "info": {
+        "bg":     { "$value": "{color.stone.100}" },
+        "border": { "$value": "{color.stone.200}" },
+        "text":   { "$value": "{color.stone.700}" },
+        "icon":   { "$value": "{color.stone.500}" }
       }
     },
 
-    "token": {
-      "$type": "color",
-      "$description": "UI chrome specific to token visualization — the core product UI.",
-      "colorSwatch":  { "$value": "{color.stone.200}", "$description": "Empty color swatch background" },
-      "aliasBadge":   { "$value": "{color.ember.100}", "$description": "Alias indicator chip background" },
-      "aliasBadgeText": { "$value": "{color.ember.700}" },
-      "missingRef":   { "$value": "{color.destructive.100}", "$description": "Broken alias highlight" },
-      "missingRefText": { "$value": "{color.destructive.700}" },
-      "deprecated":   { "$value": "{color.warning.100}" },
-      "deprecatedText": { "$value": "{color.warning.700}" },
-      "added":        { "$value": "{color.positive.100}", "$description": "Newly added token in diff view" },
-      "addedText":    { "$value": "{color.positive.700}" },
-      "modified":     { "$value": "{color.ember.100}", "$description": "Modified token in diff view" },
-      "modifiedText": { "$value": "{color.ember.700}" }
+    "brand": {
+      "$description": "Direct brand color references — use sparingly.",
+      "primary":   { "$value": "{color.ember.500}" },
+      "secondary": { "$value": "{color.stone.900}" },
+      "muted":     { "$value": "{color.ember.100}" }
     }
   },
 
-  "shadow": {
-    "$description": "Semantic shadow assignments by component role. Light mode only — see semantic.dark.json for dark mode elevation strategy.",
-    "input":   { "$type": "shadow", "$value": "{shadow.xs}", "$description": "Subtle depth on form inputs" },
-    "card":    { "$type": "shadow", "$value": "{shadow.md}", "$description": "Default card elevation" },
-    "dialog":  { "$type": "shadow", "$value": "{shadow.xl}", "$description": "Modal dialogs, drawers" },
-    "popover": { "$type": "shadow", "$value": "{shadow.lg}", "$description": "Dropdowns, popovers, command menus" },
-    "focus":   {
-      "$type": "shadow",
-      "$value": {
-        "offsetX": "0", "offsetY": "0",
-        "blur": "0", "spread": "3px",
-        "color": "{color.ember.500}"
-      },
-      "$description": "Keyboard focus ring — uses accent alias, not primitive"
-    }
-  },
-
-  "typography": {
-    "$description": "Semantic type roles — what components reference.",
-    "body": {
-      "fontFamily":    { "$value": "{typography.fontFamily.sans}" },
-      "fontSize":      { "$value": "{typography.fontSize.base}" },
-      "fontWeight":    { "$value": "{typography.fontWeight.regular}" },
-      "lineHeight":    { "$value": "{typography.lineHeight.normal}" },
-      "letterSpacing": { "$value": "{typography.letterSpacing.normal}" }
-    },
-    "bodySmall": {
-      "fontFamily":    { "$value": "{typography.fontFamily.sans}" },
-      "fontSize":      { "$value": "{typography.fontSize.sm}" },
-      "fontWeight":    { "$value": "{typography.fontWeight.regular}" },
-      "lineHeight":    { "$value": "{typography.lineHeight.normal}" },
-      "letterSpacing": { "$value": "{typography.letterSpacing.normal}" }
-    },
-    "label": {
-      "fontFamily":    { "$value": "{typography.fontFamily.sans}" },
-      "fontSize":      { "$value": "{typography.fontSize.xs}" },
-      "fontWeight":    { "$value": "{typography.fontWeight.medium}" },
-      "lineHeight":    { "$value": "{typography.lineHeight.none}" },
-      "letterSpacing": { "$value": "{typography.letterSpacing.wide}" }
-    },
-    "heading1": {
-      "fontFamily":    { "$value": "{typography.fontFamily.display}" },
-      "fontSize":      { "$value": "{typography.fontSize.4xl}" },
-      "fontWeight":    { "$value": "{typography.fontWeight.bold}" },
-      "lineHeight":    { "$value": "{typography.lineHeight.tight}" },
-      "letterSpacing": { "$value": "{typography.letterSpacing.tighter}" }
-    },
-    "heading2": {
-      "fontFamily":    { "$value": "{typography.fontFamily.display}" },
-      "fontSize":      { "$value": "{typography.fontSize.2xl}" },
-      "fontWeight":    { "$value": "{typography.fontWeight.semibold}" },
-      "lineHeight":    { "$value": "{typography.lineHeight.tight}" },
-      "letterSpacing": { "$value": "{typography.letterSpacing.tighter}" }
-    },
-    "heading3": {
-      "fontFamily":    { "$value": "{typography.fontFamily.display}" },
-      "fontSize":      { "$value": "{typography.fontSize.xl}" },
-      "fontWeight":    { "$value": "{typography.fontWeight.semibold}" },
-      "lineHeight":    { "$value": "{typography.lineHeight.snug}" },
-      "letterSpacing": { "$value": "{typography.letterSpacing.normal}" }
-    },
-    "code": {
-      "fontFamily":    { "$value": "{typography.fontFamily.mono}" },
-      "fontSize":      { "$value": "{typography.fontSize.sm}" },
-      "fontWeight":    { "$value": "{typography.fontWeight.regular}" },
-      "lineHeight":    { "$value": "{typography.lineHeight.relaxed}" },
-      "letterSpacing": { "$value": "{typography.letterSpacing.normal}" }
-    },
-    "codeSmall": {
-      "fontFamily":    { "$value": "{typography.fontFamily.mono}" },
-      "fontSize":      { "$value": "{typography.fontSize.xs}" },
-      "fontWeight":    { "$value": "{typography.fontWeight.regular}" },
-      "lineHeight":    { "$value": "{typography.lineHeight.normal}" },
-      "letterSpacing": { "$value": "{typography.letterSpacing.normal}" }
-    }
-  },
-
-  "spacing": {
-    "$description": "Semantic spacing aliases — component-level intent.",
-    "component": {
-      "paddingXs": { "$type": "dimension", "$value": "{spacing.2}", "$description": "Tight padding — badges, chips" },
-      "paddingSm": { "$type": "dimension", "$value": "{spacing.3}", "$description": "Small components — icon buttons" },
-      "paddingMd": { "$type": "dimension", "$value": "{spacing.4}", "$description": "Default component padding — buttons, inputs" },
-      "paddingLg": { "$type": "dimension", "$value": "{spacing.6}", "$description": "Large components — cards, panels" }
-    },
-    "layout": {
-      "gapSm":    { "$type": "dimension", "$value": "{spacing.4}",  "$description": "Tight layout gaps" },
-      "gapMd":    { "$type": "dimension", "$value": "{spacing.6}",  "$description": "Default section gap" },
-      "gapLg":    { "$type": "dimension", "$value": "{spacing.12}", "$description": "Major section spacing" },
-      "pagePad":  { "$type": "dimension", "$value": "{spacing.8}",  "$description": "Page-edge horizontal padding" }
-    }
-  },
-
-  "radius": {
-    "$description": "Semantic radius aliases by component type.",
-    "button":  { "$type": "dimension", "$value": "{radius.md}", "$description": "Default button radius" },
-    "input":   { "$type": "dimension", "$value": "{radius.md}" },
-    "card":    { "$type": "dimension", "$value": "{radius.lg}" },
-    "dialog":  { "$type": "dimension", "$value": "{radius.xl}" },
-    "badge":   { "$type": "dimension", "$value": "{radius.full}", "$description": "Pill-shaped badges" },
-    "swatch":  { "$type": "dimension", "$value": "{radius.sm}",   "$description": "Color token swatches" },
-    "tooltip": { "$type": "dimension", "$value": "{radius.md}" }
+  "elevation": {
+    "$description": "Light mode uses shadows for elevation.",
+    "1": { "$value": "{shadow.xs}", "$description": "Subtle — inline raised elements" },
+    "2": { "$value": "{shadow.sm}", "$description": "Buttons, inputs" },
+    "3": { "$value": "{shadow.md}", "$description": "Cards, dropdowns" },
+    "4": { "$value": "{shadow.lg}", "$description": "Dialogs, floating panels" }
   }
 }

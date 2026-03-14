@@ -2,206 +2,135 @@
   "$metadata": {
     "basalt": {
       "file": "semantic.dark",
-      "version": "0.1.0",
+      "version": "1.0.0",
       "spec": "dtcg-2025.10",
-      "requires": ["primitives"],
-      "description": "Semantic aliases for dark mode. All aliases resolve via {dot.notation} to primitives.json. Dark mode is the primary experience for Basalt — design dark first."
+      "description": "Semantic alias tokens — dark mode. Same structure as semantic.light, different primitive references.",
+      "mode": "dark",
+      "requires": ["primitives"]
     }
   },
 
   "color": {
-    "bg": {
-      "$type": "color",
-      "$description": "Surface backgrounds — from lowest to highest elevation. Dark mode inverts the elevation metaphor: higher elevation = lighter surface.",
-      "canvas":   { "$value": "{color.stone.950}", "$description": "App chrome, sidebar, outer frame — the darkest layer" },
-      "page":     { "$value": "{color.stone.900}", "$description": "Main content area" },
-      "elevated": { "$value": "{color.stone.800}", "$description": "Cards, panels — one level up" },
-      "overlay":  { "$value": "{color.stone.800}", "$description": "Popovers, dropdowns, command menus" },
-      "inset":    { "$value": "{color.stone.950}", "$description": "Code blocks, input backgrounds — sunken into canvas" },
-      "inverse":  { "$value": "{color.stone.50}",  "$description": "Inverse surface — white tooltips on dark" }
+    "$type": "color",
+
+    "background": {
+      "$description": "Page and surface backgrounds.",
+      "page":     { "$value": "{color.stone.950}", "$description": "Default page background" },
+      "surface":  { "$value": "{color.stone.900}", "$description": "Cards, panels, sidebars" },
+      "elevated": { "$value": "{color.stone.800}", "$description": "Elevated surfaces — dropdowns, popovers" },
+      "sunken":   { "$value": "rgba(0, 0, 0, 0.3)", "$description": "Recessed areas — code blocks, input backgrounds" },
+      "overlay":  { "$value": "rgba(0, 0, 0, 0.6)", "$description": "Modal backdrop" },
+      "inverse":  { "$value": "{color.stone.100}", "$description": "Inverse surface — light tooltips" }
     },
 
     "text": {
-      "$type": "color",
-      "primary":    { "$value": "{color.stone.50}",  "$description": "Main readable text" },
-      "secondary":  { "$value": "{color.stone.400}", "$description": "Supporting text, metadata, labels" },
-      "tertiary":   { "$value": "{color.stone.500}", "$description": "Placeholder, hint text" },
-      "disabled":   { "$value": "{color.stone.600}", "$description": "Non-interactive text" },
-      "inverse":    { "$value": "{color.stone.900}", "$description": "Text on light/inverse surfaces" },
-      "onAccent":   { "$value": "{color.stone.950}", "$description": "Text placed on ember accent backgrounds" },
-      "link":       { "$value": "{color.ember.400}", "$description": "Hyperlinks — lighter in dark mode for contrast" },
-      "linkHover":  { "$value": "{color.ember.300}" }
+      "$description": "Text colors.",
+      "primary":   { "$value": "{color.stone.50}",  "$description": "Body text, headings" },
+      "secondary": { "$value": "{color.stone.400}", "$description": "Supporting text, descriptions" },
+      "tertiary":  { "$value": "{color.stone.600}", "$description": "Placeholder text, hints" },
+      "disabled":  { "$value": "{color.stone.700}", "$description": "Disabled state text" },
+      "inverse":   { "$value": "{color.stone.900}", "$description": "Text on light/inverse surfaces" },
+      "onAccent":  { "$value": "{color.white}",     "$description": "Text on ember/accent backgrounds" },
+      "link":      { "$value": "{color.ember.400}", "$description": "Interactive link text" },
+      "linkHover": { "$value": "{color.ember.300}", "$description": "Link hover state" },
+      "code":      { "$value": "{color.ember.400}", "$description": "Inline code text" }
     },
 
     "border": {
-      "$type": "color",
-      "subtle":   { "$value": "{color.stone.800}", "$description": "Hairline dividers — barely visible against dark surfaces" },
-      "default":  { "$value": "{color.stone.700}", "$description": "Component borders" },
-      "strong":   { "$value": "{color.stone.500}", "$description": "Focused inputs, prominent dividers" },
-      "inverse":  { "$value": "{color.stone.300}" }
+      "$description": "Border and divider colors.",
+      "default":  { "$value": "{color.stone.800}", "$description": "Default border — cards, inputs, dividers" },
+      "strong":   { "$value": "{color.stone.700}", "$description": "Stronger border — active inputs" },
+      "subtle":   { "$value": "{color.stone.900}", "$description": "Very subtle border — nested sections" },
+      "inverse":  { "$value": "{color.stone.200}", "$description": "Border on light surfaces" },
+      "focus":    { "$value": "{color.ember.500}", "$description": "Focus ring color — WCAG 2.4.11" },
+      "accent":   { "$value": "{color.ember.500}", "$description": "Accent border — active nav item" }
     },
 
-    "accent": {
-      "$type": "color",
-      "subtle":   { "$value": "{color.ember.900}", "$description": "Very subtle accent tint" },
-      "muted":    { "$value": "{color.ember.800}" },
-      "default":  { "$value": "{color.ember.400}", "$description": "Primary CTA — slightly lighter in dark mode for contrast" },
-      "hover":    { "$value": "{color.ember.300}" },
-      "active":   { "$value": "{color.ember.200}" },
-      "focus":    { "$value": "{color.ember.400}", "$description": "Focus ring — matches accent.default" }
+    "action": {
+      "$description": "Primary interactive/CTA color.",
+      "bg":           { "$value": "{color.ember.500}", "$description": "Primary button background" },
+      "bgHover":      { "$value": "{color.ember.600}", "$description": "Primary button hover" },
+      "bgActive":     { "$value": "{color.ember.700}", "$description": "Primary button pressed" },
+      "bgDisabled":   { "$value": "{color.stone.800}", "$description": "Disabled button background" },
+      "text":         { "$value": "{color.white}",     "$description": "Text on primary button" },
+      "textDisabled": { "$value": "{color.stone.600}", "$description": "Text on disabled button" },
+      "subtle":       { "$value": "rgba(249, 115, 22, 0.1)",  "$description": "Ghost/subtle action background" },
+      "subtleHover":  { "$value": "rgba(249, 115, 22, 0.15)", "$description": "Ghost action hover" }
     },
 
-    "feedback": {
-      "$type": "color",
+    "neutral": {
+      "$description": "Secondary interactive / ghost color.",
+      "bg":          { "$value": "{color.stone.800}",  "$description": "Secondary button background" },
+      "bgHover":     { "$value": "{color.stone.700}",  "$description": "Secondary button hover" },
+      "bgActive":    { "$value": "{color.stone.600}",  "$description": "Secondary button pressed" },
+      "bgDisabled":  { "$value": "{color.stone.900}",  "$description": "Disabled secondary background" },
+      "text":        { "$value": "{color.stone.300}",  "$description": "Secondary button text" },
+      "textHover":   { "$value": "{color.stone.100}",  "$description": "Secondary button text hover" },
+      "border":      { "$value": "{color.stone.700}",  "$description": "Secondary button border" },
+      "borderHover": { "$value": "{color.stone.500}",  "$description": "Secondary button border hover" }
+    },
+
+    "ghost": {
+      "$description": "Minimal action — no background until interaction.",
+      "bg":        { "$value": "{color.transparent}" },
+      "bgHover":   { "$value": "{color.stone.800}" },
+      "bgActive":  { "$value": "{color.stone.700}" },
+      "text":      { "$value": "{color.stone.400}" },
+      "textHover": { "$value": "{color.stone.100}" }
+    },
+
+    "danger": {
+      "$description": "Destructive action color.",
+      "bg":              { "$value": "{color.danger.500}" },
+      "bgHover":         { "$value": "{color.danger.600}" },
+      "bgSubtle":        { "$value": "rgba(239, 68, 68, 0.1)" },
+      "bgSubtleHover":   { "$value": "rgba(239, 68, 68, 0.15)" },
+      "text":            { "$value": "{color.white}" },
+      "textSubtle":      { "$value": "{color.danger.400}" },
+      "border":          { "$value": "{color.danger.700}" }
+    },
+
+    "status": {
+      "$description": "Semantic feedback colors.",
       "positive": {
-        "subtle":   { "$value": "rgba(34, 197, 94, 0.12)" },
-        "default":  { "$value": "{color.positive.400}" },
-        "strong":   { "$value": "{color.positive.100}" }
+        "bg":     { "$value": "rgba(34, 197, 94, 0.1)" },
+        "border": { "$value": "rgba(34, 197, 94, 0.2)" },
+        "text":   { "$value": "{color.positive.400}" },
+        "icon":   { "$value": "{color.positive.500}" }
       },
       "warning": {
-        "subtle":   { "$value": "rgba(234, 179, 8, 0.12)" },
-        "default":  { "$value": "{color.warning.400}" },
-        "strong":   { "$value": "{color.warning.100}" }
+        "bg":     { "$value": "rgba(234, 179, 8, 0.1)" },
+        "border": { "$value": "rgba(234, 179, 8, 0.2)" },
+        "text":   { "$value": "{color.warning.400}" },
+        "icon":   { "$value": "{color.warning.500}" }
       },
-      "error": {
-        "subtle":   { "$value": "rgba(239, 68, 68, 0.12)" },
-        "default":  { "$value": "{color.destructive.400}" },
-        "strong":   { "$value": "{color.destructive.100}" }
+      "danger": {
+        "bg":     { "$value": "rgba(239, 68, 68, 0.1)" },
+        "border": { "$value": "rgba(239, 68, 68, 0.2)" },
+        "text":   { "$value": "{color.danger.400}" },
+        "icon":   { "$value": "{color.danger.500}" }
+      },
+      "info": {
+        "bg":     { "$value": "{color.stone.800}" },
+        "border": { "$value": "{color.stone.700}" },
+        "text":   { "$value": "{color.stone.300}" },
+        "icon":   { "$value": "{color.stone.400}" }
       }
     },
 
-    "token": {
-      "$type": "color",
-      "$description": "Product UI chrome for token visualization — dark mode treatment.",
-      "colorSwatch":    { "$value": "{color.stone.700}" },
-      "aliasBadge":     { "$value": "rgba(249, 115, 22, 0.15)" },
-      "aliasBadgeText": { "$value": "{color.ember.300}" },
-      "missingRef":     { "$value": "rgba(239, 68, 68, 0.15)" },
-      "missingRefText": { "$value": "{color.destructive.400}" },
-      "deprecated":     { "$value": "rgba(234, 179, 8, 0.15)" },
-      "deprecatedText": { "$value": "{color.warning.400}" },
-      "added":          { "$value": "rgba(34, 197, 94, 0.15)" },
-      "addedText":      { "$value": "{color.positive.400}" },
-      "modified":       { "$value": "rgba(249, 115, 22, 0.15)" },
-      "modifiedText":   { "$value": "{color.ember.400}" }
+    "brand": {
+      "$description": "Direct brand color references — use sparingly.",
+      "primary":   { "$value": "{color.ember.500}" },
+      "secondary": { "$value": "{color.stone.100}" },
+      "muted":     { "$value": "rgba(249, 115, 22, 0.1)" }
     }
   },
 
-  "shadow": {
-    "$description": "Dark mode elevation uses borders, not shadows. Shadows are invisible on dark surfaces. Use color.border tokens to communicate depth instead.",
-    "input":   {
-      "$type": "shadow",
-      "$value": { "offsetX": "0", "offsetY": "0", "blur": "0", "spread": "0px", "color": "transparent" },
-      "$description": "No shadow in dark mode — use border instead"
-    },
-    "card":    {
-      "$type": "shadow",
-      "$value": { "offsetX": "0", "offsetY": "0", "blur": "0", "spread": "0px", "color": "transparent" },
-      "$description": "No shadow in dark mode — elevated background communicates depth"
-    },
-    "dialog":  {
-      "$type": "shadow",
-      "$value": { "offsetX": "0", "offsetY": "0", "blur": "0", "spread": "0px", "color": "transparent" }
-    },
-    "popover": {
-      "$type": "shadow",
-      "$value": { "offsetX": "0", "offsetY": "0", "blur": "0", "spread": "0px", "color": "transparent" }
-    },
-    "focus":   {
-      "$type": "shadow",
-      "$value": {
-        "offsetX": "0", "offsetY": "0",
-        "blur": "0", "spread": "3px",
-        "color": "{color.ember.400}"
-      },
-      "$description": "Focus ring — matches dark mode accent.focus alias"
-    }
-  },
-
-  "typography": {
-    "$description": "Dark mode typography inherits all values from semantic.light — only overrides that differ are listed. In practice, dark mode typography is identical except color is handled by color.text tokens above.",
-    "body": {
-      "fontFamily":    { "$value": "{typography.fontFamily.sans}" },
-      "fontSize":      { "$value": "{typography.fontSize.base}" },
-      "fontWeight":    { "$value": "{typography.fontWeight.regular}" },
-      "lineHeight":    { "$value": "{typography.lineHeight.normal}" },
-      "letterSpacing": { "$value": "{typography.letterSpacing.normal}" }
-    },
-    "bodySmall": {
-      "fontFamily":    { "$value": "{typography.fontFamily.sans}" },
-      "fontSize":      { "$value": "{typography.fontSize.sm}" },
-      "fontWeight":    { "$value": "{typography.fontWeight.regular}" },
-      "lineHeight":    { "$value": "{typography.lineHeight.normal}" },
-      "letterSpacing": { "$value": "{typography.letterSpacing.normal}" }
-    },
-    "label": {
-      "fontFamily":    { "$value": "{typography.fontFamily.sans}" },
-      "fontSize":      { "$value": "{typography.fontSize.xs}" },
-      "fontWeight":    { "$value": "{typography.fontWeight.medium}" },
-      "lineHeight":    { "$value": "{typography.lineHeight.none}" },
-      "letterSpacing": { "$value": "{typography.letterSpacing.wide}" }
-    },
-    "heading1": {
-      "fontFamily":    { "$value": "{typography.fontFamily.display}" },
-      "fontSize":      { "$value": "{typography.fontSize.4xl}" },
-      "fontWeight":    { "$value": "{typography.fontWeight.bold}" },
-      "lineHeight":    { "$value": "{typography.lineHeight.tight}" },
-      "letterSpacing": { "$value": "{typography.letterSpacing.tighter}" }
-    },
-    "heading2": {
-      "fontFamily":    { "$value": "{typography.fontFamily.display}" },
-      "fontSize":      { "$value": "{typography.fontSize.2xl}" },
-      "fontWeight":    { "$value": "{typography.fontWeight.semibold}" },
-      "lineHeight":    { "$value": "{typography.lineHeight.tight}" },
-      "letterSpacing": { "$value": "{typography.letterSpacing.tighter}" }
-    },
-    "heading3": {
-      "fontFamily":    { "$value": "{typography.fontFamily.display}" },
-      "fontSize":      { "$value": "{typography.fontSize.xl}" },
-      "fontWeight":    { "$value": "{typography.fontWeight.semibold}" },
-      "lineHeight":    { "$value": "{typography.lineHeight.snug}" },
-      "letterSpacing": { "$value": "{typography.letterSpacing.normal}" }
-    },
-    "code": {
-      "fontFamily":    { "$value": "{typography.fontFamily.mono}" },
-      "fontSize":      { "$value": "{typography.fontSize.sm}" },
-      "fontWeight":    { "$value": "{typography.fontWeight.regular}" },
-      "lineHeight":    { "$value": "{typography.lineHeight.relaxed}" },
-      "letterSpacing": { "$value": "{typography.letterSpacing.normal}" }
-    },
-    "codeSmall": {
-      "fontFamily":    { "$value": "{typography.fontFamily.mono}" },
-      "fontSize":      { "$value": "{typography.fontSize.xs}" },
-      "fontWeight":    { "$value": "{typography.fontWeight.regular}" },
-      "lineHeight":    { "$value": "{typography.lineHeight.normal}" },
-      "letterSpacing": { "$value": "{typography.letterSpacing.normal}" }
-    }
-  },
-
-  "spacing": {
-    "$description": "Spacing is mode-agnostic — dark mode inherits all from semantic.light. Defined here for completeness.",
-    "component": {
-      "paddingXs": { "$type": "dimension", "$value": "{spacing.2}" },
-      "paddingSm": { "$type": "dimension", "$value": "{spacing.3}" },
-      "paddingMd": { "$type": "dimension", "$value": "{spacing.4}" },
-      "paddingLg": { "$type": "dimension", "$value": "{spacing.6}" }
-    },
-    "layout": {
-      "gapSm":   { "$type": "dimension", "$value": "{spacing.4}" },
-      "gapMd":   { "$type": "dimension", "$value": "{spacing.6}" },
-      "gapLg":   { "$type": "dimension", "$value": "{spacing.12}" },
-      "pagePad": { "$type": "dimension", "$value": "{spacing.8}" }
-    }
-  },
-
-  "radius": {
-    "$description": "Radius is mode-agnostic — dark mode inherits all from semantic.light.",
-    "button":  { "$type": "dimension", "$value": "{radius.md}" },
-    "input":   { "$type": "dimension", "$value": "{radius.md}" },
-    "card":    { "$type": "dimension", "$value": "{radius.lg}" },
-    "dialog":  { "$type": "dimension", "$value": "{radius.xl}" },
-    "badge":   { "$type": "dimension", "$value": "{radius.full}" },
-    "swatch":  { "$type": "dimension", "$value": "{radius.sm}" },
-    "tooltip": { "$type": "dimension", "$value": "{radius.md}" }
+  "elevation": {
+    "$description": "Dark mode uses borders for elevation, not shadows.",
+    "1": { "$value": "{color.stone.800}", "$description": "Subtle raised border" },
+    "2": { "$value": "{color.stone.700}", "$description": "Card, input border" },
+    "3": { "$value": "{color.stone.600}", "$description": "Dropdown, active element border" },
+    "4": { "$value": "{color.stone.500}", "$description": "Modal, prominent border" }
   }
 }
