@@ -1610,7 +1610,8 @@
       "sizes": [],
       "ariaRole": null,
       "wcagCriteria": [
-        "1.4.3"
+        "1.4.3 Contrast (Minimum)",
+        "4.1.2 Name, Role, Value"
       ],
       "minTouchTarget": null,
       "buildConfig": {
@@ -1648,8 +1649,63 @@
           }
         }
       },
-      "props": [],
-      "aria": {}
+      "props": [
+        {
+          "name": "variant",
+          "type": "string",
+          "values": [
+            "default"
+          ],
+          "default": "default",
+          "required": false,
+          "description": "Visual style variant of the empty state"
+        },
+        {
+          "name": "icon",
+          "type": "ReactNode",
+          "required": false,
+          "description": "Icon component or element displayed above the title"
+        },
+        {
+          "name": "title",
+          "type": "string | ReactNode",
+          "required": true,
+          "description": "Primary heading that explains the empty state"
+        },
+        {
+          "name": "body",
+          "type": "string | ReactNode",
+          "required": false,
+          "description": "Secondary descriptive text providing context or next steps"
+        },
+        {
+          "name": "onClick",
+          "type": "function",
+          "required": false,
+          "description": "Callback function triggered when the empty state or associated action is activated"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": false,
+          "required": false,
+          "description": "Disables interaction with the empty state component"
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false,
+          "description": "Additional content rendered within the empty state, such as action buttons"
+        }
+      ],
+      "usage": "Use the empty state component when a list, table, or section contains no data to display. It provides contextual messaging to help users understand why content is absent and what they can do next. Pair with an icon, title, and optional action button to guide users toward resolution.",
+      "never": "Never use empty state for loading or error conditions—use dedicated loading and error components instead. Never omit the title or use vague messaging like 'No results'; provide specific, actionable context that explains the empty state reason.",
+      "compose": "Wrap the empty state in a container that matches the dimensions of the content area it replaces. Optionally pair with a call-to-action button positioned below the body text to guide users toward the next step, such as creating content or adjusting filters.",
+      "aria": {
+        "role": "status or article",
+        "keyboard": "If the component contains interactive elements like buttons, they must be keyboard accessible with Tab navigation and Enter/Space activation.",
+        "screenReader": "Screen readers announce the title as the primary message, followed by the body text. Ensure the icon has aria-hidden='true' if purely decorative, or provide aria-label if it conveys meaning."
+      }
     },
     {
       "name": "input",
