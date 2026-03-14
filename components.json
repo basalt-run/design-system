@@ -1296,7 +1296,8 @@
       "sizes": [],
       "ariaRole": null,
       "wcagCriteria": [
-        "1.4.3"
+        "1.4.3 Contrast (Minimum)",
+        "4.1.2 Name, Role, Value"
       ],
       "minTouchTarget": null,
       "buildConfig": {
@@ -1358,8 +1359,58 @@
           }
         }
       },
-      "props": [],
-      "aria": {}
+      "props": [
+        {
+          "name": "variant",
+          "type": "string",
+          "values": [
+            "default"
+          ],
+          "default": "default",
+          "required": false,
+          "description": "Visual style variant for the code block"
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "default": null,
+          "required": true,
+          "description": "The code content to display as plain text or pre-formatted string"
+        },
+        {
+          "name": "language",
+          "type": "string",
+          "values": [
+            "javascript",
+            "json",
+            "python",
+            "bash",
+            "html",
+            "css",
+            "typescript",
+            "yaml",
+            "plaintext"
+          ],
+          "default": "plaintext",
+          "required": false,
+          "description": "Programming language for syntax highlighting and semantics"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": false,
+          "required": false,
+          "description": "Disables interactive features like copying or selection"
+        }
+      ],
+      "usage": "Use codeBlock to display code snippets, JSON responses, token outputs, or production code that users need to read or reference. This component is ideal for documentation, API responses, configuration examples, and code samples that require syntax clarity and readability.",
+      "never": "Never use codeBlock for editable code input—use a code editor component instead. Never rely solely on color to distinguish syntax highlighting; ensure sufficient contrast ratios meet WCAG 1.4.3. Never nest interactive elements inside codeBlock without clear visual separation from the code content.",
+      "compose": "Wrap codeBlock with a container or card component when displaying multiple code samples together. Pair with a copy button or toolbar component positioned adjacent to the code block for user interactions like copying to clipboard.",
+      "aria": {
+        "role": "region",
+        "keyboard": "Code blocks are not keyboard interactive by default; interactive toolbar buttons (if present) follow standard button keyboard patterns",
+        "screenReader": "Screen readers announce the code block as a region and read the code content sequentially; use aria-label to identify the code type or purpose"
+      }
     },
     {
       "name": "dropdown",
