@@ -998,6 +998,9 @@
           "type": "ReactNode"
         }
       ],
+      "usage": "Use for primary actions where clear visual prominence is needed. One primary button per section maximum. Use secondary or ghost for supporting actions.",
+      "never": "Never use more than one primary button per visual section. Never use disabled state without surfacing the reason to the user. Never use for navigation — use a link instead.",
+      "compose": "Wrap in a ButtonGroup component when placing multiple buttons in a row. Use FormField wrapper when inside a form.",
       "aria": {
         "role": "button",
         "keyboard": "Enter or Space to activate. Tab to focus. Not focusable when disabled.",
