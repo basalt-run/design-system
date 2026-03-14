@@ -323,7 +323,8 @@
       "sizes": [],
       "ariaRole": null,
       "wcagCriteria": [
-        "1.4.3 Contrast (Minimum)"
+        "1.4.3 Contrast (Minimum)",
+        "4.1.2 Name, Role, Value"
       ],
       "minTouchTarget": null,
       "buildConfig": {
@@ -631,8 +632,52 @@
           }
         }
       },
-      "props": [],
-      "aria": {}
+      "props": [
+        {
+          "name": "variant",
+          "type": "string",
+          "values": [
+            "default",
+            "positive",
+            "warning",
+            "danger",
+            "info",
+            "neutral",
+            "accent"
+          ],
+          "default": "default",
+          "required": false,
+          "description": "Visual style and semantic intent communicated by the badge color and styling"
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "default": "",
+          "required": true,
+          "description": "The text or content displayed inside the badge"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": false,
+          "required": false,
+          "description": "Dims or mutes the badge to indicate inactive or archived status"
+        },
+        {
+          "name": "onClick",
+          "type": "function",
+          "required": false,
+          "description": "Optional click handler; only use if badge needs to serve as a filter or interactive element in specific contexts"
+        }
+      ],
+      "usage": "Use badges to communicate status, category, or priority information in a compact, scannable format. Badges work best for labeling items in lists, tables, or inline with content where visual status needs to be quickly recognized without disrupting reading flow.",
+      "never": "Never use badges as interactive elements—they are for display only and should not trigger actions on click. Never stack multiple badges without clear separation or nesting, as this creates visual clutter and makes individual statuses hard to distinguish. Never use badges to replace larger, more prominent alerts or notifications that require immediate user action.",
+      "compose": "Badges integrate well alongside text labels or card titles to indicate state at a glance. Pair them with consistent spacing and ensure they sit inline or in a dedicated label area rather than floating loosely in layouts.",
+      "aria": {
+        "role": "status",
+        "keyboard": "Badges are not keyboard interactive by default. If onClick is provided, ensure the parent element or wrapper handles keyboard focus and activation.",
+        "screenReader": "Screen readers announce the badge text and variant intent. Consider wrapping with aria-label if the badge alone does not provide sufficient context (e.g., 'Status: Active' instead of just 'Active')."
+      }
     },
     {
       "name": "Button",
