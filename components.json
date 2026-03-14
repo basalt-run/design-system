@@ -1125,7 +1125,8 @@
       "sizes": [],
       "ariaRole": null,
       "wcagCriteria": [
-        "1.4.3"
+        "1.4.3 Contrast (Minimum)",
+        "4.1.2 Name, Role, Value"
       ],
       "minTouchTarget": null,
       "buildConfig": {
@@ -1231,8 +1232,47 @@
           }
         }
       },
-      "props": [],
-      "aria": {}
+      "props": [
+        {
+          "name": "variant",
+          "type": "string",
+          "values": [
+            "default",
+            "body"
+          ],
+          "default": "default",
+          "required": false,
+          "description": "Visual style variant. 'default' includes standard card styling; 'body' provides minimal styling for flexible content composition."
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "default": null,
+          "required": true,
+          "description": "Card content including header, body text, and interactive elements."
+        },
+        {
+          "name": "onClick",
+          "type": "function",
+          "required": false,
+          "description": "Callback fired when the card is clicked. When provided, ensures proper keyboard handling and ARIA attributes are applied."
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": false,
+          "required": false,
+          "description": "When true, disables click interactions and applies disabled styling."
+        }
+      ],
+      "usage": "Use cards to group related content and create visual hierarchy within layouts. Cards are ideal for presenting self-contained information units like articles, products, or settings panels that benefit from visual separation and shadow elevation.",
+      "never": "Never use a card as a clickable button without proper ARIA attributes and keyboard support. Never nest cards within cards as this creates confusing visual and semantic hierarchy. Never rely solely on color or shadow for contrast—ensure text meets WCAG 1.4.3 contrast ratios independently.",
+      "compose": "Cards work best as direct children in grid or list layouts. Pair cards with consistent spacing utilities and ensure header and body content are semantically structured with appropriate heading levels.",
+      "aria": {
+        "role": "If onClick is provided: button or link depending on navigation context. Otherwise: article or region depending on content semantics.",
+        "keyboard": "If interactive, card must be keyboard accessible via Tab key and activate with Enter or Space. Focus state must be visible with sufficient contrast.",
+        "screenReader": "Screen readers announce card role and any heading content within. If clickable, announce as button with descriptive label derived from card header or primary content."
+      }
     },
     {
       "name": "codeBlock",
