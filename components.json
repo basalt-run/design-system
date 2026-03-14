@@ -323,8 +323,7 @@
       "sizes": [],
       "ariaRole": null,
       "wcagCriteria": [
-        "1.4.3",
-        "1.4.11"
+        "1.4.3 Contrast (Minimum)"
       ],
       "minTouchTarget": null,
       "buildConfig": {
