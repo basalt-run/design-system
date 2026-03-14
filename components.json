@@ -2131,8 +2131,8 @@
       "sizes": [],
       "ariaRole": null,
       "wcagCriteria": [
-        "2.4.1",
-        "4.1.2"
+        "2.4.1 Bypass Blocks",
+        "4.1.2 Name, Role, Value"
       ],
       "minTouchTarget": null,
       "buildConfig": {
@@ -2220,8 +2220,45 @@
           }
         }
       },
-      "props": [],
-      "aria": {}
+      "props": [
+        {
+          "name": "variant",
+          "type": "string",
+          "values": [
+            "default"
+          ],
+          "default": "default",
+          "required": false,
+          "description": "Visual style variant of the sidebar"
+        },
+        {
+          "name": "collapsed",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "description": "Controls whether the sidebar is collapsed to a narrow state"
+        },
+        {
+          "name": "onCollapse",
+          "type": "function",
+          "required": false,
+          "description": "Callback fired when the sidebar collapse state changes"
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": true,
+          "description": "Navigation items, sections, and other sidebar content"
+        }
+      ],
+      "usage": "Use the sidebar component for primary navigation in application layouts where users need persistent access to multiple sections or pages. Best suited for desktop and tablet viewports with sufficient horizontal space. Place the sidebar on the left edge of the viewport and maintain consistent visibility throughout the user session.",
+      "never": "Never use the sidebar for contextual actions or temporary navigation—use a drawer or menu instead. Never nest multiple levels of navigation deeper than two levels within the sidebar. Never hide essential navigation items that users need for core workflows without providing an alternative mobile-friendly pattern.",
+      "compose": "Wrap the sidebar in a layout container that manages responsive behavior and collapse states. Pair with a header component and main content area to create a complete application shell. Use sidebar sections to group related navigation items and maintain clear information hierarchy.",
+      "aria": {
+        "role": "navigation",
+        "keyboard": "Tab to navigate between sidebar items, Enter or Space to activate links, Arrow keys to move through grouped items when focus is within a section",
+        "screenReader": "Announces as 'navigation' landmark with current page or active item indicated via aria-current='page'"
+      }
     },
     {
       "name": "table",
