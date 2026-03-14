@@ -44,7 +44,7 @@
       "sizes": [],
       "ariaRole": null,
       "wcagCriteria": [
-        "1.4.3"
+        "1.4.3 Contrast (Minimum)"
       ],
       "minTouchTarget": null,
       "buildConfig": {
@@ -266,8 +266,49 @@
           }
         }
       },
-      "props": [],
-      "aria": {}
+      "props": [
+        {
+          "name": "variant",
+          "type": "string",
+          "values": [
+            "default",
+            "pass",
+            "aa",
+            "aaLarge",
+            "fail"
+          ],
+          "default": "default",
+          "required": false,
+          "description": "Contrast compliance level. Use 'pass' for basic compliance, 'aa' for WCAG AA, 'aaLarge' for WCAG AA with larger text, 'fail' for non-compliant pairs, and 'default' for neutral state."
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": false,
+          "required": false,
+          "description": "Visually disables the badge when contrast data is unavailable or pending."
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false,
+          "description": "Badge label text such as 'AA', 'AAA', 'Fail', or a contrast ratio value like '4.5:1'."
+        },
+        {
+          "name": "onClick",
+          "type": "function",
+          "required": false,
+          "description": "Optional callback to handle badge interaction, such as opening a detailed contrast report or color adjustment panel."
+        }
+      ],
+      "usage": "Use a11yBadge to display WCAG contrast compliance status inline on color tokens in design tools and documentation. Display the badge alongside color swatches to communicate at a glance whether a color combination meets AA, AA-Large, or fails accessibility standards. This component is essential for guiding designers toward accessible color choices during the design process.",
+      "never": "Never use this badge as a substitute for actual contrast testing—it should reflect real measured contrast ratios, not assumptions. Never display multiple contrast badges for the same color pairing, as this creates visual noise and contradicts the purpose of quick status communication. Never apply this badge to non-color contexts or as a generic status indicator outside of accessibility compliance.",
+      "compose": "Render the a11yBadge as an inline element positioned adjacent to a color token preview or swatch. Pair it with the actual foreground and background colors being tested so the badge itself demonstrates the contrast it claims to measure.",
+      "aria": {
+        "role": "status",
+        "keyboard": "Badge is not keyboard-interactive by default; use onClick only if the badge triggers an action like opening a modal.",
+        "screenReader": "Announce the contrast level and ratio, e.g., 'WCAG AA compliant, 4.5 to 1 contrast ratio'. Include the specific standard met (AA, AA-Large) or failure state so users understand compliance impact."
+      }
     },
     {
       "name": "badge",
