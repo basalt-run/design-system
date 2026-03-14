@@ -1442,8 +1442,9 @@
       "sizes": [],
       "ariaRole": null,
       "wcagCriteria": [
-        "2.1.1",
-        "4.1.2"
+        "2.1.1 Keyboard",
+        "4.1.2 Name, Role, Value",
+        "1.4.3 Contrast (Minimum)"
       ],
       "minTouchTarget": null,
       "buildConfig": {
@@ -1537,8 +1538,58 @@
           }
         }
       },
-      "props": [],
-      "aria": {}
+      "props": [
+        {
+          "name": "variant",
+          "type": "string",
+          "values": [
+            "default"
+          ],
+          "default": "default",
+          "required": false,
+          "description": "Visual style variant of the dropdown menu"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "default": false,
+          "required": false,
+          "description": "Disables interaction with the dropdown trigger and prevents menu opening"
+        },
+        {
+          "name": "onClick",
+          "type": "function",
+          "required": false,
+          "description": "Callback fired when a dropdown item is selected"
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": true,
+          "description": "Dropdown items and separators rendered inside the menu container"
+        },
+        {
+          "name": "open",
+          "type": "boolean",
+          "default": false,
+          "required": false,
+          "description": "Controls whether the dropdown menu is visible"
+        },
+        {
+          "name": "onOpenChange",
+          "type": "function",
+          "required": false,
+          "description": "Callback fired when dropdown open state changes"
+        }
+      ],
+      "usage": "Use dropdown menus to present a list of mutually exclusive actions or selections in a compact, space-saving container. Essential for navigation menus, filters, and command palettes where options should remain hidden until explicitly triggered. Avoid dropdowns for frequently-changed settings or when all options must be immediately visible.",
+      "never": "Never use a dropdown to display more than 15 items without search or grouping; users struggle with long unscrollable lists. Never nest dropdowns within dropdowns as this creates cognitive overload and keyboard navigation confusion. Never disable the entire dropdown without providing an explanation or alternative action.",
+      "compose": "Wrap the dropdown trigger (button) and menu container together in a positioning context. Pair with a trigger button that clearly indicates open/closed state via aria-expanded and icon rotation. Position the menu to avoid viewport edges using a positioning library like Popper.js or Floating UI.",
+      "aria": {
+        "role": "menu or listbox depending on use case; trigger button uses role='button' with aria-haspopup='menu' or 'listbox' and aria-expanded indicating state",
+        "keyboard": "Enter or Space opens menu on trigger; Arrow Up/Down navigates items; Enter or Space selects item; Escape closes menu; Tab moves focus out of menu; Home/End jump to first/last item",
+        "screenReader": "Screen readers announce the trigger button label, haspopup type, and expanded state. Menu items are announced with their text, disabled state, and danger variants if applicable. Separators are announced to indicate logical grouping."
+      }
     },
     {
       "name": "emptyState",
