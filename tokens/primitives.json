@@ -147,7 +147,7 @@
     },
     "danger": {
       "50": {
-        "$value": "#FFF1F3"
+        "$value": "#FFF1F2"
       },
       "100": {
         "$value": "#FFE4E6"
