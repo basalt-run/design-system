@@ -68,6 +68,18 @@ node server.js --tokens-path ./tokens
 
 ---
 
+## npm Package Export
+
+Basalt can automatically publish your design system as an npm package. Enable it in your project settings — every token change triggers a build and publish automatically.
+
+```bash
+npm install @your-org/design-system
+```
+
+Includes tokens (TypeScript, JS, CSS), React components, and a Tailwind plugin. Powered by GitHub Actions — no extra tooling required.
+
+---
+
 ## Token architecture
 
 Three-tier structure — primitives → semantic → component.
