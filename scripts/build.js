@@ -12,10 +12,6 @@ if (!fs.existsSync(distDir)) {
   fs.mkdirSync(distDir, { recursive: true })
 }
 
-// ============================================================================
-// STEP 1: Load all token files and merge them
-// ============================================================================
-
 function deepMerge(target, source) {
   for (const key of Object.keys(source)) {
     if (key.startsWith('$')) continue
@@ -53,10 +49,6 @@ function loadTokens() {
   return merged
 }
 
-// ============================================================================
-// STEP 2: Generate TypeScript types
-// ============================================================================
-
 function flattenTokens(obj, prefix = '') {
   const flat = {}
   
@@ -74,10 +66,6 @@ function flattenTokens(obj, prefix = '') {
   
   return flat
 }
-
-// ============================================================================
-// STEP 2.5: Resolve token references
-// ============================================================================
 
 function refValToStr(val) {
   if (val === undefined || val === null) return undefined
@@ -156,10 +144,6 @@ export default tokens
   return typesFile
 }
 
-// ============================================================================
-// STEP 3: Generate CSS variables file
-// ============================================================================
-
 function generateCSS(tokens) {
   const flatTokens = flattenTokens(tokens)
   const resolvedTokens = resolveReferences(flatTokens)
@@ -179,10 +163,6 @@ function generateCSS(tokens) {
   
   return css
 }
-
-// ============================================================================
-// STEP 4: Generate Tailwind config plugin
-// ============================================================================
 
 function generateTailwindConfig(tokens) {
   const flatTokens = flattenTokens(tokens)
@@ -263,8 +243,75 @@ ${shadowEntries}
 }
 
 // ============================================================================
-// STEP 5: Generate ESM + CJS entry points
+// STEP 7: Generate React component files from components.json
 // ============================================================================
+
+function generateComponentFiles(components) {
+  const componentFiles = {}
+  
+  components.forEach(component => {
+    const { name, description = '', variants = {}, props = [] } = component
+    
+    const propsInterface = props.length > 0
+      ? props.map(p => {
+          const type = p.values ? `'${p.values.join("' | '")}'` : p.type || 'string'
+          return `  ${p.name}?: ${type}`
+        }).join('\n')
+      : ''
+    
+    const defaultClasses = []
+    const firstVariant = Object.values(variants)[0]
+    if (firstVariant) {
+      const bindings = firstVariant.tokenBindings || (firstVariant.states?.default?.tokenBindings) || []
+      const arr = Array.isArray(bindings) ? bindings : Object.entries(bindings || {}).map(([, b]) => b)
+      arr.forEach(b => {
+        const path = b.tokenPath || (b.token_path)
+        if (!path || typeof path !== 'string') return
+        const cssVar = `--${path.replace(/\./g, '-')}`
+        const prefix = (b.tailwindPrefix || '').trim()
+        if (prefix) defaultClasses.push(`${prefix}-[var(${cssVar})]`)
+      })
+    }
+    const baseClasses = defaultClasses.length > 0 ? defaultClasses.join(' ') : ''
+    
+    const tsx = `'use client'
+
+import React from 'react'
+
+/**
+ * ${name}
+ * ${description}
+ */
+
+interface ${name}Props extends React.HTMLAttributes<HTMLElement> {
+${propsInterface}
+}
+
+export const ${name} = React.forwardRef<HTMLElement, ${name}Props>(
+  ({ className, ...props }, ref) => (
+    <div
+      ref={ref as React.Ref<HTMLDivElement>}
+      className={\`${baseClasses}\${baseClasses && className ? ' ' : ''}\${className || ''}\`}
+      {...props}
+    />
+  )
+)
+
+${name}.displayName = '${name}'
+export default ${name}
+`
+    
+    componentFiles[`${name}.tsx`] = tsx
+  })
+  
+  const barrel = components
+    .map(c => `export { default as ${c.name}, ${c.name} } from './${c.name}'`)
+    .join('\n')
+  
+  componentFiles['index.ts'] = barrel
+  
+  return componentFiles
+}
 
 function generateIndex(tokens) {
   const flatTokens = flattenTokens(tokens)
@@ -290,12 +337,8 @@ module.exports.default = tokens
   return { esm: esmContent, cjs: cjsContent }
 }
 
-// ============================================================================
-// STEP 6: Write all files to dist
-// ============================================================================
-
 async function build() {
-  console.log('📦 Building Basalt design system package...')
+  console.log('📦 Building design system package...')
   
   try {
     const tokens = loadTokens()
@@ -318,20 +361,35 @@ async function build() {
     fs.writeFileSync(path.join(distDir, 'tailwind.config.js'), tailwindContent)
     console.log('✓ Generated Tailwind plugin (tailwind.config.js)')
 
-    console.log('\n✨ Build complete! Ready to publish.')
-    console.log(`   npm publish (or npm install github:basalt-run/design-system)`)
+    const componentsPath = path.join(rootDir, 'components.json')
+    if (fs.existsSync(componentsPath)) {
+      try {
+        const componentsJson = JSON.parse(fs.readFileSync(componentsPath, 'utf-8'))
+        const components = componentsJson.components || []
+        const componentFiles = generateComponentFiles(components)
+        const componentsDir = path.join(distDir, 'components')
+        if (!fs.existsSync(componentsDir)) {
+          fs.mkdirSync(componentsDir, { recursive: true })
+        }
+        Object.entries(componentFiles).forEach(([filename, content]) => {
+          fs.writeFileSync(path.join(componentsDir, filename), content)
+        })
+        console.log('✓ Generated ' + components.length + ' component files')
+      } catch (err) {
+        console.warn('⚠️  Could not generate component files:', err.message)
+      }
+    }
 
+    console.log('\\n✨ Build complete! Ready to publish.')
   } catch (error) {
     console.error('❌ Build failed:', error.message)
     process.exit(1)
   }
 }
 
-// Watch mode
 if (process.argv.includes('--watch')) {
   const watch = (await import('node-watch')).default
   console.log('👁️  Watching /tokens for changes...')
-  
   watch(tokensDir, { recursive: true }, () => {
     console.log('\n📝 Tokens changed. Rebuilding...')
     build()
