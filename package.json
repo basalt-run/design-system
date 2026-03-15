@@ -1,7 +1,7 @@
 {
   "name": "@basalt/design-system",
   "version": "1.0.0",
-  "description": "Basalt design system — tokens, components, and icons. Code-native, Git-backed, AI-ready.",
+  "description": "Design system tokens — Code-native, Git-backed, AI-ready.",
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.js",
@@ -14,6 +14,10 @@
     },
     "./css": "./dist/tokens.css",
     "./tailwind": "./dist/tailwind.config.js",
+    "./components": {
+      "types": "./dist/components/index.ts",
+      "import": "./dist/components/index.ts"
+    },
     "./tokens": "./tokens"
   },
   "files": [
@@ -25,20 +29,17 @@
   "scripts": {
     "build": "node scripts/build.js",
     "build:watch": "node scripts/build.js --watch",
-    "prepublishOnly": "npm run build",
-    "start": "node server.js",
-    "dev": "node --watch server.js"
+    "prepublishOnly": "npm run build"
   },
-  "keywords": ["design-system", "tokens", "dtcg", "basalt"],
+  "keywords": [
+    "design-system",
+    "tokens",
+    "dtcg",
+    "basalt"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/basalt-run/design-system"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.0.0"
-  },
-  "devDependencies": {
-    "node-watch": "^0.7.4"
   },
   "peerDependencies": {
     "tailwindcss": ">=3.0.0"
@@ -47,5 +48,8 @@
     "tailwindcss": {
       "optional": true
     }
+  },
+  "devDependencies": {
+    "node-watch": "^0.7.4"
   }
 }
