@@ -16,6 +16,23 @@ if (!fs.existsSync(distDir)) {
 // STEP 1: Load all token files and merge them
 // ============================================================================
 
+function deepMerge(target, source) {
+  for (const key of Object.keys(source)) {
+    if (key.startsWith('$')) continue
+    const srcVal = source[key]
+    const tgtVal = target[key]
+    if (srcVal && typeof srcVal === 'object' && !Array.isArray(srcVal) && srcVal.$value === undefined) {
+      if (!tgtVal || typeof tgtVal !== 'object' || tgtVal.$value !== undefined) {
+        target[key] = {}
+      }
+      deepMerge(target[key], srcVal)
+    } else {
+      target[key] = srcVal
+    }
+  }
+  return target
+}
+
 function loadTokens() {
   const tokenFiles = [
     'primitives.json',
@@ -29,7 +46,7 @@ function loadTokens() {
     const filePath = path.join(tokensDir, file)
     if (fs.existsSync(filePath)) {
       const content = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
-      merged = { ...merged, ...content }
+      deepMerge(merged, content)
     }
   })
 
@@ -58,9 +75,61 @@ function flattenTokens(obj, prefix = '') {
   return flat
 }
 
+// ============================================================================
+// STEP 2.5: Resolve token references
+// ============================================================================
+
+function refValToStr(val) {
+  if (val === undefined || val === null) return undefined
+  if (typeof val === 'object') {
+    if (val.offsetX !== undefined) {
+      return `${val.offsetX} ${val.offsetY} ${val.blur} ${val.spread} ${val.color}`
+    }
+    return JSON.stringify(val)
+  }
+  return String(val)
+}
+
+function resolveReferences(flatTokens, maxDepth = 5) {
+  const resolved = { ...flatTokens }
+  let depth = 0
+  let changed = true
+
+  while (changed && depth < maxDepth) {
+    changed = false
+    depth++
+
+    Object.entries(resolved).forEach(([path, value]) => {
+      if (typeof value === 'string' && value.includes('{')) {
+        const refPattern = /\{([a-z0-9.-]+)\}/gi
+        const newValue = value.replace(refPattern, (match, refPath) => {
+          const refKey = refPath.toLowerCase()
+
+          if (resolved[refKey] !== undefined && resolved[refKey] !== match) {
+            changed = true
+            const refVal = resolved[refKey]
+            return typeof refVal === 'object' ? refValToStr(refVal) : refVal
+          }
+
+          return match
+        })
+
+        resolved[path] = newValue
+      }
+    })
+  }
+
+  if (depth >= maxDepth) {
+    console.warn('⚠️  Reference resolution hit max depth. Check for circular references.')
+  }
+
+  return resolved
+}
+
 function generateTypeScript(tokens) {
   const flatTokens = flattenTokens(tokens)
-  const tokenPaths = Object.keys(flatTokens)
+  const resolvedTokens = resolveReferences(flatTokens)
+  const tokenPaths = Object.keys(resolvedTokens)
   
   const unionType = tokenPaths
     .map(pathStr => `'${pathStr}'`)
@@ -78,7 +147,7 @@ export interface Token {
 }
 
 export const tokens: Record<TokenPath, string | number | object> = {
-${tokenPaths.map(pathStr => `  '${pathStr}': ${JSON.stringify(flatTokens[pathStr])}`).join(',\n')}
+${tokenPaths.map(pathStr => `  '${pathStr}': ${JSON.stringify(resolvedTokens[pathStr])}`).join(',\n')}
 }
 
 export default tokens
@@ -93,10 +162,11 @@ export default tokens
 
 function generateCSS(tokens) {
   const flatTokens = flattenTokens(tokens)
-  
+  const resolvedTokens = resolveReferences(flatTokens)
+
   let css = ':root {\n'
-  
-  Object.entries(flatTokens).forEach(([pathStr, value]) => {
+
+  Object.entries(resolvedTokens).forEach(([pathStr, value]) => {
     const cssVarName = `--${pathStr.replace(/\./g, '-')}`
     const cssValue = typeof value === 'object' 
       ? JSON.stringify(value)
@@ -116,9 +186,10 @@ function generateCSS(tokens) {
 
 function generateTailwindConfig(tokens) {
   const flatTokens = flattenTokens(tokens)
-  
+  const resolvedTokens = resolveReferences(flatTokens)
+
   const grouped = {}
-  Object.entries(flatTokens).forEach(([pathStr, value]) => {
+  Object.entries(resolvedTokens).forEach(([pathStr, value]) => {
     const category = pathStr.split('.')[0]
     if (!grouped[category]) grouped[category] = {}
     grouped[category][pathStr] = value
@@ -197,19 +268,20 @@ ${shadowEntries}
 
 function generateIndex(tokens) {
   const flatTokens = flattenTokens(tokens)
-  
+  const resolvedTokens = resolveReferences(flatTokens)
+
   const esmContent = `
 // Auto-generated from Basalt tokens
 // Usage: import { tokens } from '@basalt/design-system'
 
-export const tokens = ${JSON.stringify(flatTokens, null, 2)}
+export const tokens = ${JSON.stringify(resolvedTokens, null, 2)}
 
 export default tokens
 `
 
   const cjsContent = `
 // Auto-generated from Basalt tokens (CommonJS)
-const tokens = ${JSON.stringify(flatTokens, null, 2)}
+const tokens = ${JSON.stringify(resolvedTokens, null, 2)}
 
 module.exports = { tokens }
 module.exports.default = tokens
