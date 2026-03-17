@@ -265,49 +265,6 @@
             }
           }
         }
-      },
-      "props": [
-        {
-          "name": "variant",
-          "type": "string",
-          "values": [
-            "default",
-            "pass",
-            "aa",
-            "aaLarge",
-            "fail"
-          ],
-          "default": "default",
-          "required": false,
-          "description": "Contrast compliance level. Use 'pass' for basic compliance, 'aa' for WCAG AA, 'aaLarge' for WCAG AA with larger text, 'fail' for non-compliant pairs, and 'default' for neutral state."
-        },
-        {
-          "name": "disabled",
-          "type": "boolean",
-          "default": false,
-          "required": false,
-          "description": "Visually disables the badge when contrast data is unavailable or pending."
-        },
-        {
-          "name": "children",
-          "type": "ReactNode",
-          "required": false,
-          "description": "Badge label text such as 'AA', 'AAA', 'Fail', or a contrast ratio value like '4.5:1'."
-        },
-        {
-          "name": "onClick",
-          "type": "function",
-          "required": false,
-          "description": "Optional callback to handle badge interaction, such as opening a detailed contrast report or color adjustment panel."
-        }
-      ],
-      "usage": "Use a11yBadge to display WCAG contrast compliance status inline on color tokens in design tools and documentation. Display the badge alongside color swatches to communicate at a glance whether a color combination meets AA, AA-Large, or fails accessibility standards. This component is essential for guiding designers toward accessible color choices during the design process.",
-      "never": "Never use this badge as a substitute for actual contrast testing—it should reflect real measured contrast ratios, not assumptions. Never display multiple contrast badges for the same color pairing, as this creates visual noise and contradicts the purpose of quick status communication. Never apply this badge to non-color contexts or as a generic status indicator outside of accessibility compliance.",
-      "compose": "Render the a11yBadge as an inline element positioned adjacent to a color token preview or swatch. Pair it with the actual foreground and background colors being tested so the badge itself demonstrates the contrast it claims to measure.",
-      "aria": {
-        "role": "status",
-        "keyboard": "Badge is not keyboard-interactive by default; use onClick only if the badge triggers an action like opening a modal.",
-        "screenReader": "Announce the contrast level and ratio, e.g., 'WCAG AA compliant, 4.5 to 1 contrast ratio'. Include the specific standard met (AA, AA-Large) or failure state so users understand compliance impact."
       }
     },
     {
@@ -673,53 +630,72 @@
             }
           }
         }
-      },
-      "props": [
-        {
-          "name": "variant",
-          "type": "string",
-          "values": [
-            "default",
-            "positive",
-            "warning",
-            "danger",
-            "info",
-            "neutral",
-            "accent"
-          ],
-          "default": "default",
-          "required": false,
-          "description": "Visual style and semantic intent communicated by the badge color and styling"
-        },
-        {
-          "name": "children",
-          "type": "ReactNode",
-          "default": "",
-          "required": true,
-          "description": "The text or content displayed inside the badge"
-        },
-        {
-          "name": "disabled",
-          "type": "boolean",
-          "default": false,
-          "required": false,
-          "description": "Dims or mutes the badge to indicate inactive or archived status"
-        },
-        {
-          "name": "onClick",
-          "type": "function",
-          "required": false,
-          "description": "Optional click handler; only use if badge needs to serve as a filter or interactive element in specific contexts"
-        }
-      ],
-      "usage": "Use badges to communicate status, category, or priority information in a compact, scannable format. Badges work best for labeling items in lists, tables, or inline with content where visual status needs to be quickly recognized without disrupting reading flow.",
-      "never": "Never use badges as interactive elements—they are for display only and should not trigger actions on click. Never stack multiple badges without clear separation or nesting, as this creates visual clutter and makes individual statuses hard to distinguish. Never use badges to replace larger, more prominent alerts or notifications that require immediate user action.",
-      "compose": "Badges integrate well alongside text labels or card titles to indicate state at a glance. Pair them with consistent spacing and ensure they sit inline or in a dedicated label area rather than floating loosely in layouts.",
-      "aria": {
-        "role": "status",
-        "keyboard": "Badges are not keyboard interactive by default. If onClick is provided, ensure the parent element or wrapper handles keyboard focus and activation.",
-        "screenReader": "Screen readers announce the badge text and variant intent. Consider wrapping with aria-label if the badge alone does not provide sufficient context (e.g., 'Status: Active' instead of just 'Active')."
       }
+    },
+    {
+      "name": "button",
+      "description": "Button component tokens.",
+      "tokens": [
+        "button.height.xs",
+        "button.height.sm",
+        "button.height.md",
+        "button.height.lg",
+        "button.paddingX.xs",
+        "button.paddingX.sm",
+        "button.paddingX.md",
+        "button.paddingX.lg",
+        "button.radius",
+        "button.fontSize.xs",
+        "button.fontSize.sm",
+        "button.fontSize.md",
+        "button.fontSize.lg",
+        "button.fontWeight",
+        "button.gap",
+        "button.focusRingWidth",
+        "button.focusRingOffset",
+        "button.primary.bg",
+        "button.primary.bgHover",
+        "button.primary.bgActive",
+        "button.primary.bgDisabled",
+        "button.primary.text",
+        "button.primary.textDisabled",
+        "button.primary.border",
+        "button.primary.focusRing",
+        "button.secondary.bg",
+        "button.secondary.bgHover",
+        "button.secondary.bgActive",
+        "button.secondary.bgDisabled",
+        "button.secondary.text",
+        "button.secondary.textHover",
+        "button.secondary.border",
+        "button.secondary.borderHover",
+        "button.secondary.focusRing",
+        "button.ghost.bg",
+        "button.ghost.bgHover",
+        "button.ghost.bgActive",
+        "button.ghost.text",
+        "button.ghost.textHover",
+        "button.ghost.border",
+        "button.ghost.focusRing",
+        "button.danger.bg",
+        "button.danger.bgHover",
+        "button.danger.bgSubtle",
+        "button.danger.text",
+        "button.danger.textSubtle",
+        "button.danger.border",
+        "button.danger.focusRing"
+      ],
+      "variants": [],
+      "sizes": [],
+      "ariaRole": null,
+      "wcagCriteria": [
+        "1.4.3",
+        "1.4.11",
+        "2.5.8",
+        "4.1.2"
+      ],
+      "minTouchTarget": null,
+      "buildConfig": {}
     },
     {
       "name": "card",
@@ -856,47 +832,6 @@
             }
           }
         }
-      },
-      "props": [
-        {
-          "name": "variant",
-          "type": "string",
-          "values": [
-            "default",
-            "body"
-          ],
-          "default": "default",
-          "required": false,
-          "description": "Visual style variant. 'default' includes standard card styling; 'body' provides minimal styling for flexible content composition."
-        },
-        {
-          "name": "children",
-          "type": "ReactNode",
-          "default": null,
-          "required": true,
-          "description": "Card content including header, body text, and interactive elements."
-        },
-        {
-          "name": "onClick",
-          "type": "function",
-          "required": false,
-          "description": "Callback fired when the card is clicked. When provided, ensures proper keyboard handling and ARIA attributes are applied."
-        },
-        {
-          "name": "disabled",
-          "type": "boolean",
-          "default": false,
-          "required": false,
-          "description": "When true, disables click interactions and applies disabled styling."
-        }
-      ],
-      "usage": "Use cards to group related content and create visual hierarchy within layouts. Cards are ideal for presenting self-contained information units like articles, products, or settings panels that benefit from visual separation and shadow elevation.",
-      "never": "Never use a card as a clickable button without proper ARIA attributes and keyboard support. Never nest cards within cards as this creates confusing visual and semantic hierarchy. Never rely solely on color or shadow for contrast—ensure text meets WCAG 1.4.3 contrast ratios independently.",
-      "compose": "Cards work best as direct children in grid or list layouts. Pair cards with consistent spacing utilities and ensure header and body content are semantically structured with appropriate heading levels.",
-      "aria": {
-        "role": "If onClick is provided: button or link depending on navigation context. Otherwise: article or region depending on content semantics.",
-        "keyboard": "If interactive, card must be keyboard accessible via Tab key and activate with Enter or Space. Focus state must be visible with sufficient contrast.",
-        "screenReader": "Screen readers announce card role and any heading content within. If clickable, announce as button with descriptive label derived from card header or primary content."
       }
     },
     {
@@ -983,58 +918,6 @@
             }
           }
         }
-      },
-      "props": [
-        {
-          "name": "variant",
-          "type": "string",
-          "values": [
-            "default"
-          ],
-          "default": "default",
-          "required": false,
-          "description": "Visual style variant for the code block"
-        },
-        {
-          "name": "children",
-          "type": "ReactNode",
-          "default": null,
-          "required": true,
-          "description": "The code content to display as plain text or pre-formatted string"
-        },
-        {
-          "name": "language",
-          "type": "string",
-          "values": [
-            "javascript",
-            "json",
-            "python",
-            "bash",
-            "html",
-            "css",
-            "typescript",
-            "yaml",
-            "plaintext"
-          ],
-          "default": "plaintext",
-          "required": false,
-          "description": "Programming language for syntax highlighting and semantics"
-        },
-        {
-          "name": "disabled",
-          "type": "boolean",
-          "default": false,
-          "required": false,
-          "description": "Disables interactive features like copying or selection"
-        }
-      ],
-      "usage": "Use codeBlock to display code snippets, JSON responses, token outputs, or production code that users need to read or reference. This component is ideal for documentation, API responses, configuration examples, and code samples that require syntax clarity and readability.",
-      "never": "Never use codeBlock for editable code input—use a code editor component instead. Never rely solely on color to distinguish syntax highlighting; ensure sufficient contrast ratios meet WCAG 1.4.3. Never nest interactive elements inside codeBlock without clear visual separation from the code content.",
-      "compose": "Wrap codeBlock with a container or card component when displaying multiple code samples together. Pair with a copy button or toolbar component positioned adjacent to the code block for user interactions like copying to clipboard.",
-      "aria": {
-        "role": "region",
-        "keyboard": "Code blocks are not keyboard interactive by default; interactive toolbar buttons (if present) follow standard button keyboard patterns",
-        "screenReader": "Screen readers announce the code block as a region and read the code content sequentially; use aria-label to identify the code type or purpose"
       }
     },
     {
@@ -1162,58 +1045,6 @@
             }
           }
         }
-      },
-      "props": [
-        {
-          "name": "variant",
-          "type": "string",
-          "values": [
-            "default"
-          ],
-          "default": "default",
-          "required": false,
-          "description": "Visual style variant of the dropdown menu"
-        },
-        {
-          "name": "disabled",
-          "type": "boolean",
-          "default": false,
-          "required": false,
-          "description": "Disables interaction with the dropdown trigger and prevents menu opening"
-        },
-        {
-          "name": "onClick",
-          "type": "function",
-          "required": false,
-          "description": "Callback fired when a dropdown item is selected"
-        },
-        {
-          "name": "children",
-          "type": "ReactNode",
-          "required": true,
-          "description": "Dropdown items and separators rendered inside the menu container"
-        },
-        {
-          "name": "open",
-          "type": "boolean",
-          "default": false,
-          "required": false,
-          "description": "Controls whether the dropdown menu is visible"
-        },
-        {
-          "name": "onOpenChange",
-          "type": "function",
-          "required": false,
-          "description": "Callback fired when dropdown open state changes"
-        }
-      ],
-      "usage": "Use dropdown menus to present a list of mutually exclusive actions or selections in a compact, space-saving container. Essential for navigation menus, filters, and command palettes where options should remain hidden until explicitly triggered. Avoid dropdowns for frequently-changed settings or when all options must be immediately visible.",
-      "never": "Never use a dropdown to display more than 15 items without search or grouping; users struggle with long unscrollable lists. Never nest dropdowns within dropdowns as this creates cognitive overload and keyboard navigation confusion. Never disable the entire dropdown without providing an explanation or alternative action.",
-      "compose": "Wrap the dropdown trigger (button) and menu container together in a positioning context. Pair with a trigger button that clearly indicates open/closed state via aria-expanded and icon rotation. Position the menu to avoid viewport edges using a positioning library like Popper.js or Floating UI.",
-      "aria": {
-        "role": "menu or listbox depending on use case; trigger button uses role='button' with aria-haspopup='menu' or 'listbox' and aria-expanded indicating state",
-        "keyboard": "Enter or Space opens menu on trigger; Arrow Up/Down navigates items; Enter or Space selects item; Escape closes menu; Tab moves focus out of menu; Home/End jump to first/last item",
-        "screenReader": "Screen readers announce the trigger button label, haspopup type, and expanded state. Menu items are announced with their text, disabled state, and danger variants if applicable. Separators are announced to indicate logical grouping."
       }
     },
     {
@@ -1273,63 +1104,6 @@
             }
           }
         }
-      },
-      "props": [
-        {
-          "name": "variant",
-          "type": "string",
-          "values": [
-            "default"
-          ],
-          "default": "default",
-          "required": false,
-          "description": "Visual style variant of the empty state"
-        },
-        {
-          "name": "icon",
-          "type": "ReactNode",
-          "required": false,
-          "description": "Icon component or element displayed above the title"
-        },
-        {
-          "name": "title",
-          "type": "string | ReactNode",
-          "required": true,
-          "description": "Primary heading that explains the empty state"
-        },
-        {
-          "name": "body",
-          "type": "string | ReactNode",
-          "required": false,
-          "description": "Secondary descriptive text providing context or next steps"
-        },
-        {
-          "name": "onClick",
-          "type": "function",
-          "required": false,
-          "description": "Callback function triggered when the empty state or associated action is activated"
-        },
-        {
-          "name": "disabled",
-          "type": "boolean",
-          "default": false,
-          "required": false,
-          "description": "Disables interaction with the empty state component"
-        },
-        {
-          "name": "children",
-          "type": "ReactNode",
-          "required": false,
-          "description": "Additional content rendered within the empty state, such as action buttons"
-        }
-      ],
-      "usage": "Use the empty state component when a list, table, or section contains no data to display. It provides contextual messaging to help users understand why content is absent and what they can do next. Pair with an icon, title, and optional action button to guide users toward resolution.",
-      "never": "Never use empty state for loading or error conditions—use dedicated loading and error components instead. Never omit the title or use vague messaging like 'No results'; provide specific, actionable context that explains the empty state reason.",
-      "compose": "Wrap the empty state in a container that matches the dimensions of the content area it replaces. Optionally pair with a call-to-action button positioned below the body text to guide users toward the next step, such as creating content or adjusting filters.",
-      "aria": {
-        "role": "status or article",
-        "keyboard": "If the component contains interactive elements like buttons, they must be keyboard accessible with Tab navigation and Enter/Space activation.",
-        "screenReader": "Screen readers announce the title as the primary message, followed by the body text. Ensure the icon has aria-hidden='true' if purely decorative, or provide aria-label if it conveys meaning."
       }
     },
     {
@@ -1474,95 +1248,6 @@
             }
           }
         }
-      },
-      "props": [
-        {
-          "name": "size",
-          "type": "string",
-          "values": [
-            "sm",
-            "md",
-            "lg"
-          ],
-          "default": "md",
-          "required": false,
-          "description": "Controls the height and internal spacing of the input"
-        },
-        {
-          "name": "disabled",
-          "type": "boolean",
-          "default": "false",
-          "required": false,
-          "description": "Disables input interaction and applies disabled styling"
-        },
-        {
-          "name": "error",
-          "type": "boolean",
-          "default": "false",
-          "required": false,
-          "description": "Applies error state styling including border and focus ring colors"
-        },
-        {
-          "name": "label",
-          "type": "string",
-          "default": "",
-          "required": false,
-          "description": "Text displayed above the input as the field label"
-        },
-        {
-          "name": "hint",
-          "type": "string",
-          "default": "",
-          "required": false,
-          "description": "Helper text displayed between label and input for additional context"
-        },
-        {
-          "name": "errorMessage",
-          "type": "string",
-          "default": "",
-          "required": false,
-          "description": "Validation error text displayed below the input when error is true"
-        },
-        {
-          "name": "placeholder",
-          "type": "string",
-          "default": "",
-          "required": false,
-          "description": "Placeholder text shown when input is empty"
-        },
-        {
-          "name": "value",
-          "type": "string",
-          "default": "",
-          "required": false,
-          "description": "Controlled value of the input"
-        },
-        {
-          "name": "onChange",
-          "type": "function",
-          "required": false,
-          "description": "Callback fired when input value changes"
-        },
-        {
-          "name": "onFocus",
-          "type": "function",
-          "required": false,
-          "description": "Callback fired when input receives focus"
-        },
-        {
-          "name": "onBlur",
-          "type": "function",
-          "required": false,
-          "description": "Callback fired when input loses focus"
-        }
-      ],
-      "usage": "Use for collecting short-form text input, multi-line textarea content, or selection from a dropdown list. Input components should always be paired with a visible label and optionally include hint text for clarification or error messages for validation feedback. Supports small, medium, and large sizes to match surrounding UI density.",
-      "never": "Never use input without an associated visible label or aria-label. Never rely solely on placeholder text to communicate the field's purpose, as it disappears on interaction. Never use input for actions or navigation; use buttons instead.",
-      "compose": "Wrap input with a label element or associate via htmlFor/id attributes. Group related inputs within fieldset elements. Pair with hint text below the label and error messages below the input for validation feedback.",
-      "aria": {
-        "role": "textbox for text inputs, combobox for select, or implicit role based on input type",
-        "keyboard": "Focus with Tab. Type to enter text. Select dropdowns respond to Enter/Space to open and Arrow keys to navigate options. Escape closes dropdowns.",
-        "screenReader": "Announces label, current value, required state, invalid state, and associated hint or error messages via aria-describedby"
       }
     },
     {
@@ -1662,61 +1347,6 @@
             }
           }
         }
-      },
-      "props": [
-        {
-          "name": "open",
-          "type": "boolean",
-          "required": true,
-          "description": "Controls the visibility state of the modal"
-        },
-        {
-          "name": "onClose",
-          "type": "function",
-          "required": true,
-          "description": "Callback fired when the modal requests to close via backdrop click, escape key, or close button"
-        },
-        {
-          "name": "title",
-          "type": "string",
-          "required": false,
-          "description": "Header title text for the modal"
-        },
-        {
-          "name": "showCloseButton",
-          "type": "boolean",
-          "default": "true",
-          "required": false,
-          "description": "Whether to display the close button in the header"
-        },
-        {
-          "name": "closeOnBackdrop",
-          "type": "boolean",
-          "default": "true",
-          "required": false,
-          "description": "Whether clicking the backdrop dismisses the modal"
-        },
-        {
-          "name": "closeOnEscape",
-          "type": "boolean",
-          "default": "true",
-          "required": false,
-          "description": "Whether pressing Escape key dismisses the modal"
-        },
-        {
-          "name": "children",
-          "type": "ReactNode",
-          "required": true,
-          "description": "Content to render in the modal body"
-        }
-      ],
-      "usage": "Use modals to focus user attention on critical tasks, confirmations, or information that requires immediate action before continuing. Modals should contain a clear header, concise content, and explicit action buttons in the footer. Reserve modals for workflows that must interrupt the user's current context.",
-      "never": "Never use modals for non-essential information that could be displayed inline or in a less intrusive pattern. Never nest modals within other modals, as this creates confusion and navigation complexity. Never omit a clear close mechanism or trap focus without providing keyboard-accessible exit options.",
-      "compose": "Wrap modal content with a header containing a title and close button, a scrollable body section, and a footer with primary and secondary action buttons. Pair with a backdrop overlay to dim background content and signal the modal state.",
-      "aria": {
-        "role": "dialog",
-        "keyboard": "Escape closes modal. Tab cycles focus through interactive elements within modal. Focus is trapped inside modal while open and restored to trigger element on close.",
-        "screenReader": "Announces dialog role and title. Background content is marked inert or aria-hidden to prevent navigation outside modal."
       }
     },
     {
@@ -1844,45 +1474,6 @@
             }
           }
         }
-      },
-      "props": [
-        {
-          "name": "variant",
-          "type": "string",
-          "values": [
-            "default"
-          ],
-          "default": "default",
-          "required": false,
-          "description": "Visual style variant of the sidebar"
-        },
-        {
-          "name": "collapsed",
-          "type": "boolean",
-          "default": "false",
-          "required": false,
-          "description": "Controls whether the sidebar is collapsed to a narrow state"
-        },
-        {
-          "name": "onCollapse",
-          "type": "function",
-          "required": false,
-          "description": "Callback fired when the sidebar collapse state changes"
-        },
-        {
-          "name": "children",
-          "type": "ReactNode",
-          "required": true,
-          "description": "Navigation items, sections, and other sidebar content"
-        }
-      ],
-      "usage": "Use the sidebar component for primary navigation in application layouts where users need persistent access to multiple sections or pages. Best suited for desktop and tablet viewports with sufficient horizontal space. Place the sidebar on the left edge of the viewport and maintain consistent visibility throughout the user session.",
-      "never": "Never use the sidebar for contextual actions or temporary navigation—use a drawer or menu instead. Never nest multiple levels of navigation deeper than two levels within the sidebar. Never hide essential navigation items that users need for core workflows without providing an alternative mobile-friendly pattern.",
-      "compose": "Wrap the sidebar in a layout container that manages responsive behavior and collapse states. Pair with a header component and main content area to create a complete application shell. Use sidebar sections to group related navigation items and maintain clear information hierarchy.",
-      "aria": {
-        "role": "navigation",
-        "keyboard": "Tab to navigate between sidebar items, Enter or Space to activate links, Arrow keys to move through grouped items when focus is within a section",
-        "screenReader": "Announces as 'navigation' landmark with current page or active item indicated via aria-current='page'"
       }
     },
     {
@@ -2049,9 +1640,7 @@
             }
           }
         }
-      },
-      "props": [],
-      "aria": {}
+      }
     },
     {
       "name": "toast",
@@ -2255,9 +1844,7 @@
             }
           }
         }
-      },
-      "props": [],
-      "aria": {}
+      }
     },
     {
       "name": "tokenCard",
@@ -2491,9 +2078,7 @@
             }
           }
         }
-      },
-      "props": [],
-      "aria": {}
+      }
     },
     {
       "name": "topbar",
@@ -2554,9 +2139,7 @@
             }
           }
         }
-      },
-      "props": [],
-      "aria": {}
+      }
     }
   ]
 }
