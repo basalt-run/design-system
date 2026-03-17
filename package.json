@@ -1,6 +1,6 @@
 {
   "name": "@basalt/design-system",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Design system tokens — Code-native, Git-backed, AI-ready.",
   "license": "MIT",
   "type": "module",
