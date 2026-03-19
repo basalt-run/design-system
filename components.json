@@ -1100,106 +1100,100 @@
       "minTouchTarget": null,
       "buildConfig": {
         "variants": {
-          "body": {
-            "states": {
-              "focus": {
-                "staticClasses": "",
-                "tokenBindings": []
-              },
-              "hover": {
-                "staticClasses": "",
-                "tokenBindings": []
-              },
-              "active": {
-                "staticClasses": "",
-                "tokenBindings": []
-              },
-              "default": {
-                "staticClasses": "rounded-xl border transition-shadow",
-                "tokenBindings": [
-                  {
-                    "id": "body-default-color",
-                    "tokenPath": "card.body.color",
-                    "cssProperty": "color",
-                    "tailwindPrefix": "text"
-                  }
-                ]
-              },
-              "disabled": {
-                "staticClasses": "",
-                "tokenBindings": []
-              }
-            }
-          },
           "default": {
             "states": {
-              "focus": {
-                "staticClasses": "",
-                "tokenBindings": []
-              },
-              "hover": {
-                "staticClasses": "",
-                "tokenBindings": [
-                  {
-                    "id": "default-hover-bordercolor",
-                    "tokenPath": "card.borderHover",
-                    "cssProperty": "border-color",
-                    "tailwindPrefix": "border"
-                  }
-                ]
-              },
-              "active": {
-                "staticClasses": "",
-                "tokenBindings": []
-              },
               "default": {
-                "staticClasses": "rounded-xl border transition-shadow",
                 "tokenBindings": [
                   {
                     "id": "default-default-backgroundcolor",
-                    "tokenPath": "card.bg",
                     "cssProperty": "background-color",
+                    "tokenPath": "card.bg",
                     "tailwindPrefix": "bg"
                   },
                   {
                     "id": "default-default-bordercolor",
-                    "tokenPath": "card.border",
                     "cssProperty": "border-color",
+                    "tokenPath": "card.border",
                     "tailwindPrefix": "border"
                   },
                   {
                     "id": "default-default-borderradius",
-                    "tokenPath": "card.radius",
                     "cssProperty": "border-radius",
+                    "tokenPath": "card.radius",
                     "tailwindPrefix": "rounded"
                   },
                   {
                     "id": "default-default-padding",
-                    "tokenPath": "card.padding",
                     "cssProperty": "padding",
+                    "tokenPath": "card.padding",
                     "tailwindPrefix": "p"
                   },
                   {
                     "id": "default-default-shadowcolor",
-                    "tokenPath": "card.shadow",
                     "cssProperty": "shadow-color",
+                    "tokenPath": "card.shadow",
                     "tailwindPrefix": "shadow"
                   },
                   {
                     "id": "default-default-color",
-                    "tokenPath": "card.header.color",
                     "cssProperty": "color",
+                    "tokenPath": "card.header.color",
                     "tailwindPrefix": "text"
                   }
-                ]
+                ],
+                "staticClasses": "rounded-xl border transition-shadow"
+              },
+              "hover": {
+                "tokenBindings": [],
+                "staticClasses": ""
+              },
+              "focus": {
+                "tokenBindings": [],
+                "staticClasses": ""
+              },
+              "active": {
+                "tokenBindings": [],
+                "staticClasses": ""
               },
               "disabled": {
-                "staticClasses": "",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": ""
+              }
+            }
+          },
+          "body": {
+            "states": {
+              "default": {
+                "tokenBindings": [
+                  {
+                    "id": "body-default-color",
+                    "cssProperty": "color",
+                    "tokenPath": "card.body.color",
+                    "tailwindPrefix": "text"
+                  }
+                ],
+                "staticClasses": "rounded-xl border transition-shadow"
+              },
+              "hover": {
+                "tokenBindings": [],
+                "staticClasses": ""
+              },
+              "focus": {
+                "tokenBindings": [],
+                "staticClasses": ""
+              },
+              "active": {
+                "tokenBindings": [],
+                "staticClasses": ""
+              },
+              "disabled": {
+                "tokenBindings": [],
+                "staticClasses": ""
               }
             }
           }
-        }
+        },
+        "icons": {}
       },
       "props": [
         {
