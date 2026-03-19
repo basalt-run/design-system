@@ -35,7 +35,7 @@
           "name": "aa"
         },
         {
-          "name": "aaLarge"
+          "name": "aalarge"
         },
         {
           "name": "fail"
@@ -50,222 +50,211 @@
       "minTouchTarget": null,
       "buildConfig": {
         "variants": {
-          "aa": {
+          "default": {
             "states": {
-              "focus": {
-                "staticClasses": "",
-                "tokenBindings": []
-              },
-              "hover": {
-                "staticClasses": "",
-                "tokenBindings": []
-              },
-              "active": {
-                "staticClasses": "",
-                "tokenBindings": []
-              },
               "default": {
-                "staticClasses": "",
                 "tokenBindings": [
                   {
-                    "id": "aa-default-backgroundcolor",
-                    "tokenPath": "a11yBadge.aa.bg",
-                    "cssProperty": "background-color",
-                    "tailwindPrefix": "bg"
-                  },
-                  {
-                    "id": "aa-default-bordercolor",
-                    "tokenPath": "a11yBadge.aa.border",
-                    "cssProperty": "border-color",
-                    "tailwindPrefix": "border"
-                  },
-                  {
-                    "id": "aa-default-color",
-                    "tokenPath": "a11yBadge.aa.text",
-                    "cssProperty": "color",
-                    "tailwindPrefix": "text"
+                    "id": "default-default-borderradius",
+                    "cssProperty": "border-radius",
+                    "tokenPath": "a11yBadge.radius",
+                    "tailwindPrefix": "rounded"
                   }
-                ]
-              },
-              "disabled": {
-                "staticClasses": "",
-                "tokenBindings": []
-              }
-            }
-          },
-          "fail": {
-            "states": {
-              "focus": {
-                "staticClasses": "",
-                "tokenBindings": []
+                ],
+                "staticClasses": ""
               },
               "hover": {
-                "staticClasses": "",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": ""
+              },
+              "focus": {
+                "tokenBindings": [],
+                "staticClasses": ""
               },
               "active": {
-                "staticClasses": "",
-                "tokenBindings": []
-              },
-              "default": {
-                "staticClasses": "",
-                "tokenBindings": [
-                  {
-                    "id": "fail-default-backgroundcolor",
-                    "tokenPath": "a11yBadge.fail.bg",
-                    "cssProperty": "background-color",
-                    "tailwindPrefix": "bg"
-                  },
-                  {
-                    "id": "fail-default-bordercolor",
-                    "tokenPath": "a11yBadge.fail.border",
-                    "cssProperty": "border-color",
-                    "tailwindPrefix": "border"
-                  },
-                  {
-                    "id": "fail-default-color",
-                    "tokenPath": "a11yBadge.fail.text",
-                    "cssProperty": "color",
-                    "tailwindPrefix": "text"
-                  }
-                ]
+                "tokenBindings": [],
+                "staticClasses": ""
               },
               "disabled": {
-                "staticClasses": "",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": ""
               }
             }
           },
           "pass": {
             "states": {
-              "focus": {
-                "staticClasses": "",
-                "tokenBindings": []
-              },
-              "hover": {
-                "staticClasses": "",
-                "tokenBindings": []
-              },
-              "active": {
-                "staticClasses": "",
-                "tokenBindings": []
-              },
               "default": {
-                "staticClasses": "",
                 "tokenBindings": [
                   {
                     "id": "pass-default-backgroundcolor",
-                    "tokenPath": "a11yBadge.pass.bg",
                     "cssProperty": "background-color",
+                    "tokenPath": "a11yBadge.pass.bg",
                     "tailwindPrefix": "bg"
                   },
                   {
                     "id": "pass-default-bordercolor",
-                    "tokenPath": "a11yBadge.pass.border",
                     "cssProperty": "border-color",
+                    "tokenPath": "a11yBadge.pass.border",
                     "tailwindPrefix": "border"
                   },
                   {
                     "id": "pass-default-color",
-                    "tokenPath": "a11yBadge.pass.text",
                     "cssProperty": "color",
+                    "tokenPath": "a11yBadge.pass.text",
                     "tailwindPrefix": "text"
                   }
-                ]
+                ],
+                "staticClasses": ""
+              },
+              "hover": {
+                "tokenBindings": [],
+                "staticClasses": ""
+              },
+              "focus": {
+                "tokenBindings": [],
+                "staticClasses": ""
+              },
+              "active": {
+                "tokenBindings": [],
+                "staticClasses": ""
               },
               "disabled": {
-                "staticClasses": "",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": ""
               }
             }
           },
-          "aaLarge": {
+          "aa": {
             "states": {
-              "focus": {
-                "staticClasses": "",
-                "tokenBindings": []
-              },
-              "hover": {
-                "staticClasses": "",
-                "tokenBindings": []
-              },
-              "active": {
-                "staticClasses": "",
-                "tokenBindings": []
-              },
               "default": {
-                "staticClasses": "",
                 "tokenBindings": [
                   {
-                    "id": "aaLarge-default-backgroundcolor",
-                    "tokenPath": "a11yBadge.aaLarge.bg",
+                    "id": "aa-default-backgroundcolor",
                     "cssProperty": "background-color",
+                    "tokenPath": "a11yBadge.aa.bg",
                     "tailwindPrefix": "bg"
                   },
                   {
-                    "id": "aaLarge-default-bordercolor",
-                    "tokenPath": "a11yBadge.aaLarge.border",
+                    "id": "aa-default-bordercolor",
                     "cssProperty": "border-color",
+                    "tokenPath": "a11yBadge.aa.border",
                     "tailwindPrefix": "border"
                   },
                   {
-                    "id": "aaLarge-default-color",
-                    "tokenPath": "a11yBadge.aaLarge.text",
+                    "id": "aa-default-color",
                     "cssProperty": "color",
+                    "tokenPath": "a11yBadge.aa.text",
                     "tailwindPrefix": "text"
                   }
-                ]
+                ],
+                "staticClasses": ""
+              },
+              "hover": {
+                "tokenBindings": [],
+                "staticClasses": ""
+              },
+              "focus": {
+                "tokenBindings": [],
+                "staticClasses": ""
+              },
+              "active": {
+                "tokenBindings": [],
+                "staticClasses": ""
               },
               "disabled": {
-                "staticClasses": "",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": ""
               }
             }
           },
-          "default": {
+          "aalarge": {
             "states": {
-              "focus": {
-                "staticClasses": "",
-                "tokenBindings": []
-              },
-              "hover": {
-                "staticClasses": "",
-                "tokenBindings": []
-              },
-              "active": {
-                "staticClasses": "",
-                "tokenBindings": []
-              },
               "default": {
-                "staticClasses": "",
                 "tokenBindings": [
                   {
-                    "id": "default-default-borderradius",
-                    "tokenPath": "a11yBadge.radius",
-                    "cssProperty": "border-radius",
-                    "tailwindPrefix": "rounded"
+                    "id": "aalarge-default-backgroundcolor",
+                    "cssProperty": "background-color",
+                    "tokenPath": "a11yBadge.aaLarge.bg",
+                    "tailwindPrefix": "bg"
                   },
                   {
-                    "id": "default-default-paddingx",
-                    "tokenPath": "a11yBadge.paddingX",
-                    "cssProperty": "padding-x",
-                    "tailwindPrefix": "px"
+                    "id": "aalarge-default-bordercolor",
+                    "cssProperty": "border-color",
+                    "tokenPath": "a11yBadge.aaLarge.border",
+                    "tailwindPrefix": "border"
                   },
                   {
-                    "id": "default-default-paddingy",
-                    "tokenPath": "a11yBadge.paddingY",
-                    "cssProperty": "padding-y",
-                    "tailwindPrefix": "py"
+                    "id": "aalarge-default-color",
+                    "cssProperty": "color",
+                    "tokenPath": "a11yBadge.aaLarge.text",
+                    "tailwindPrefix": "text"
                   }
-                ]
+                ],
+                "staticClasses": ""
+              },
+              "hover": {
+                "tokenBindings": [],
+                "staticClasses": ""
+              },
+              "focus": {
+                "tokenBindings": [],
+                "staticClasses": ""
+              },
+              "active": {
+                "tokenBindings": [],
+                "staticClasses": ""
               },
               "disabled": {
-                "staticClasses": "",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": ""
+              }
+            }
+          },
+          "fail": {
+            "states": {
+              "default": {
+                "tokenBindings": [
+                  {
+                    "id": "fail-default-backgroundcolor",
+                    "cssProperty": "background-color",
+                    "tokenPath": "a11yBadge.fail.bg",
+                    "tailwindPrefix": "bg"
+                  },
+                  {
+                    "id": "fail-default-bordercolor",
+                    "cssProperty": "border-color",
+                    "tokenPath": "a11yBadge.fail.border",
+                    "tailwindPrefix": "border"
+                  },
+                  {
+                    "id": "fail-default-color",
+                    "cssProperty": "color",
+                    "tokenPath": "a11yBadge.fail.text",
+                    "tailwindPrefix": "text"
+                  }
+                ],
+                "staticClasses": ""
+              },
+              "hover": {
+                "tokenBindings": [],
+                "staticClasses": ""
+              },
+              "focus": {
+                "tokenBindings": [],
+                "staticClasses": ""
+              },
+              "active": {
+                "tokenBindings": [],
+                "staticClasses": ""
+              },
+              "disabled": {
+                "tokenBindings": [],
+                "staticClasses": ""
               }
             }
           }
-        }
+        },
+        "icons": {}
       },
       "props": [
         {
