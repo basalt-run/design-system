@@ -1421,9 +1421,10 @@
       "sizes": [],
       "ariaRole": null,
       "wcagCriteria": [
+        "1.4.3 Contrast (Minimum)",
+        "1.4.6 Contrast (Enhanced)",
         "2.1.1 Keyboard",
-        "4.1.2 Name, Role, Value",
-        "1.4.3 Contrast (Minimum)"
+        "4.1.2 Name, Role, Value"
       ],
       "minTouchTarget": null,
       "buildConfig": {
