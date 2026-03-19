@@ -1,55 +1,33 @@
 {
   "name": "@basalt/design-system",
-  "version": "1.0.8",
-  "description": "Design system tokens — Code-native, Git-backed, AI-ready.",
-  "license": "MIT",
-  "type": "module",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
-    },
-    "./css": "./dist/tokens.css",
-    "./tailwind": "./dist/tailwind.config.js",
-    "./components": {
-      "types": "./dist/components/index.ts",
-      "import": "./dist/components/index.ts"
-    },
-    "./tokens": "./tokens"
-  },
+  "version": "1.0.1",
+  "description": "Design system components from basalt-run/design-system",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist",
-    "tokens",
-    "components.json",
-    "icons"
+    "src"
   ],
   "scripts": {
-    "build": "node scripts/build.js",
-    "build:watch": "node scripts/build.js --watch",
+    "build": "tsc",
     "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/react": "^18.0.0 || ^19.0.0"
   },
   "keywords": [
     "design-system",
+    "components",
     "tokens",
-    "dtcg",
     "basalt"
   ],
   "repository": {
     "type": "git",
     "url": "https://github.com/basalt-run/design-system"
-  },
-  "peerDependencies": {
-    "tailwindcss": ">=3.0.0"
-  },
-  "peerDependenciesMeta": {
-    "tailwindcss": {
-      "optional": true
-    }
-  },
-  "devDependencies": {
-    "node-watch": "^0.7.4"
   }
 }
