@@ -35,7 +35,7 @@
           "name": "aa"
         },
         {
-          "name": "aalarge"
+          "name": "aaLarge"
         },
         {
           "name": "fail"
@@ -50,211 +50,222 @@
       "minTouchTarget": null,
       "buildConfig": {
         "variants": {
-          "default": {
-            "states": {
-              "default": {
-                "tokenBindings": [
-                  {
-                    "id": "default-default-borderradius",
-                    "cssProperty": "border-radius",
-                    "tokenPath": "a11yBadge.radius",
-                    "tailwindPrefix": "rounded"
-                  }
-                ],
-                "staticClasses": ""
-              },
-              "hover": {
-                "tokenBindings": [],
-                "staticClasses": ""
-              },
-              "focus": {
-                "tokenBindings": [],
-                "staticClasses": ""
-              },
-              "active": {
-                "tokenBindings": [],
-                "staticClasses": ""
-              },
-              "disabled": {
-                "tokenBindings": [],
-                "staticClasses": ""
-              }
-            }
-          },
-          "pass": {
-            "states": {
-              "default": {
-                "tokenBindings": [
-                  {
-                    "id": "pass-default-backgroundcolor",
-                    "cssProperty": "background-color",
-                    "tokenPath": "a11yBadge.pass.bg",
-                    "tailwindPrefix": "bg"
-                  },
-                  {
-                    "id": "pass-default-bordercolor",
-                    "cssProperty": "border-color",
-                    "tokenPath": "a11yBadge.pass.border",
-                    "tailwindPrefix": "border"
-                  },
-                  {
-                    "id": "pass-default-color",
-                    "cssProperty": "color",
-                    "tokenPath": "a11yBadge.pass.text",
-                    "tailwindPrefix": "text"
-                  }
-                ],
-                "staticClasses": ""
-              },
-              "hover": {
-                "tokenBindings": [],
-                "staticClasses": ""
-              },
-              "focus": {
-                "tokenBindings": [],
-                "staticClasses": ""
-              },
-              "active": {
-                "tokenBindings": [],
-                "staticClasses": ""
-              },
-              "disabled": {
-                "tokenBindings": [],
-                "staticClasses": ""
-              }
-            }
-          },
           "aa": {
             "states": {
+              "focus": {
+                "staticClasses": "",
+                "tokenBindings": []
+              },
+              "hover": {
+                "staticClasses": "",
+                "tokenBindings": []
+              },
+              "active": {
+                "staticClasses": "",
+                "tokenBindings": []
+              },
               "default": {
+                "staticClasses": "",
                 "tokenBindings": [
                   {
                     "id": "aa-default-backgroundcolor",
-                    "cssProperty": "background-color",
                     "tokenPath": "a11yBadge.aa.bg",
+                    "cssProperty": "background-color",
                     "tailwindPrefix": "bg"
                   },
                   {
                     "id": "aa-default-bordercolor",
-                    "cssProperty": "border-color",
                     "tokenPath": "a11yBadge.aa.border",
+                    "cssProperty": "border-color",
                     "tailwindPrefix": "border"
                   },
                   {
                     "id": "aa-default-color",
-                    "cssProperty": "color",
                     "tokenPath": "a11yBadge.aa.text",
-                    "tailwindPrefix": "text"
-                  }
-                ],
-                "staticClasses": ""
-              },
-              "hover": {
-                "tokenBindings": [],
-                "staticClasses": ""
-              },
-              "focus": {
-                "tokenBindings": [],
-                "staticClasses": ""
-              },
-              "active": {
-                "tokenBindings": [],
-                "staticClasses": ""
-              },
-              "disabled": {
-                "tokenBindings": [],
-                "staticClasses": ""
-              }
-            }
-          },
-          "aalarge": {
-            "states": {
-              "default": {
-                "tokenBindings": [
-                  {
-                    "id": "aalarge-default-backgroundcolor",
-                    "cssProperty": "background-color",
-                    "tokenPath": "a11yBadge.aaLarge.bg",
-                    "tailwindPrefix": "bg"
-                  },
-                  {
-                    "id": "aalarge-default-bordercolor",
-                    "cssProperty": "border-color",
-                    "tokenPath": "a11yBadge.aaLarge.border",
-                    "tailwindPrefix": "border"
-                  },
-                  {
-                    "id": "aalarge-default-color",
                     "cssProperty": "color",
-                    "tokenPath": "a11yBadge.aaLarge.text",
                     "tailwindPrefix": "text"
                   }
-                ],
-                "staticClasses": ""
-              },
-              "hover": {
-                "tokenBindings": [],
-                "staticClasses": ""
-              },
-              "focus": {
-                "tokenBindings": [],
-                "staticClasses": ""
-              },
-              "active": {
-                "tokenBindings": [],
-                "staticClasses": ""
+                ]
               },
               "disabled": {
-                "tokenBindings": [],
-                "staticClasses": ""
+                "staticClasses": "",
+                "tokenBindings": []
               }
             }
           },
           "fail": {
             "states": {
+              "focus": {
+                "staticClasses": "",
+                "tokenBindings": []
+              },
+              "hover": {
+                "staticClasses": "",
+                "tokenBindings": []
+              },
+              "active": {
+                "staticClasses": "",
+                "tokenBindings": []
+              },
               "default": {
+                "staticClasses": "",
                 "tokenBindings": [
                   {
                     "id": "fail-default-backgroundcolor",
-                    "cssProperty": "background-color",
                     "tokenPath": "a11yBadge.fail.bg",
+                    "cssProperty": "background-color",
                     "tailwindPrefix": "bg"
                   },
                   {
                     "id": "fail-default-bordercolor",
-                    "cssProperty": "border-color",
                     "tokenPath": "a11yBadge.fail.border",
+                    "cssProperty": "border-color",
                     "tailwindPrefix": "border"
                   },
                   {
                     "id": "fail-default-color",
-                    "cssProperty": "color",
                     "tokenPath": "a11yBadge.fail.text",
+                    "cssProperty": "color",
                     "tailwindPrefix": "text"
                   }
-                ],
-                "staticClasses": ""
-              },
-              "hover": {
-                "tokenBindings": [],
-                "staticClasses": ""
-              },
-              "focus": {
-                "tokenBindings": [],
-                "staticClasses": ""
-              },
-              "active": {
-                "tokenBindings": [],
-                "staticClasses": ""
+                ]
               },
               "disabled": {
-                "tokenBindings": [],
-                "staticClasses": ""
+                "staticClasses": "",
+                "tokenBindings": []
+              }
+            }
+          },
+          "pass": {
+            "states": {
+              "focus": {
+                "staticClasses": "",
+                "tokenBindings": []
+              },
+              "hover": {
+                "staticClasses": "",
+                "tokenBindings": []
+              },
+              "active": {
+                "staticClasses": "",
+                "tokenBindings": []
+              },
+              "default": {
+                "staticClasses": "",
+                "tokenBindings": [
+                  {
+                    "id": "pass-default-backgroundcolor",
+                    "tokenPath": "a11yBadge.pass.bg",
+                    "cssProperty": "background-color",
+                    "tailwindPrefix": "bg"
+                  },
+                  {
+                    "id": "pass-default-bordercolor",
+                    "tokenPath": "a11yBadge.pass.border",
+                    "cssProperty": "border-color",
+                    "tailwindPrefix": "border"
+                  },
+                  {
+                    "id": "pass-default-color",
+                    "tokenPath": "a11yBadge.pass.text",
+                    "cssProperty": "color",
+                    "tailwindPrefix": "text"
+                  }
+                ]
+              },
+              "disabled": {
+                "staticClasses": "",
+                "tokenBindings": []
+              }
+            }
+          },
+          "aaLarge": {
+            "states": {
+              "focus": {
+                "staticClasses": "",
+                "tokenBindings": []
+              },
+              "hover": {
+                "staticClasses": "",
+                "tokenBindings": []
+              },
+              "active": {
+                "staticClasses": "",
+                "tokenBindings": []
+              },
+              "default": {
+                "staticClasses": "",
+                "tokenBindings": [
+                  {
+                    "id": "aaLarge-default-backgroundcolor",
+                    "tokenPath": "a11yBadge.aaLarge.bg",
+                    "cssProperty": "background-color",
+                    "tailwindPrefix": "bg"
+                  },
+                  {
+                    "id": "aaLarge-default-bordercolor",
+                    "tokenPath": "a11yBadge.aaLarge.border",
+                    "cssProperty": "border-color",
+                    "tailwindPrefix": "border"
+                  },
+                  {
+                    "id": "aaLarge-default-color",
+                    "tokenPath": "a11yBadge.aaLarge.text",
+                    "cssProperty": "color",
+                    "tailwindPrefix": "text"
+                  }
+                ]
+              },
+              "disabled": {
+                "staticClasses": "",
+                "tokenBindings": []
+              }
+            }
+          },
+          "default": {
+            "states": {
+              "focus": {
+                "staticClasses": "",
+                "tokenBindings": []
+              },
+              "hover": {
+                "staticClasses": "",
+                "tokenBindings": []
+              },
+              "active": {
+                "staticClasses": "",
+                "tokenBindings": []
+              },
+              "default": {
+                "staticClasses": "",
+                "tokenBindings": [
+                  {
+                    "id": "default-default-borderradius",
+                    "tokenPath": "a11yBadge.radius",
+                    "cssProperty": "border-radius",
+                    "tailwindPrefix": "rounded"
+                  },
+                  {
+                    "id": "default-default-paddingx",
+                    "tokenPath": "a11yBadge.paddingX",
+                    "cssProperty": "padding-x",
+                    "tailwindPrefix": "px"
+                  },
+                  {
+                    "id": "default-default-paddingy",
+                    "tokenPath": "a11yBadge.paddingY",
+                    "cssProperty": "padding-y",
+                    "tailwindPrefix": "py"
+                  }
+                ]
+              },
+              "disabled": {
+                "staticClasses": "",
+                "tokenBindings": []
               }
             }
           }
-        },
-        "icons": {}
+        }
       },
       "props": [
         {
@@ -790,211 +801,210 @@
       "minTouchTarget": null,
       "buildConfig": {
         "variants": {
-          "default": {
-            "states": {
-              "focus": {
-                "tokenBindings": [],
-                "staticClasses": "ring-2 ring-offset-2"
-              },
-              "hover": {
-                "tokenBindings": [],
-                "staticClasses": ""
-              },
-              "active": {
-                "tokenBindings": [],
-                "staticClasses": ""
-              },
-              "default": {
-                "tokenBindings": [
-                  {
-                    "id": "default-default-borderradius",
-                    "cssProperty": "border-radius",
-                    "tokenPath": "button.radius",
-                    "tailwindPrefix": "rounded"
-                  }
-                ],
-                "staticClasses": "inline-flex items-center justify-center text-sm font-medium transition-colors focus:outline-none"
-              },
-              "disabled": {
-                "tokenBindings": [],
-                "staticClasses": "opacity-50 cursor-not-allowed"
-              }
-            }
-          },
-          "primary": {
-            "states": {
-              "focus": {
-                "tokenBindings": [],
-                "staticClasses": "ring-2 ring-offset-2"
-              },
-              "hover": {
-                "tokenBindings": [],
-                "staticClasses": ""
-              },
-              "active": {
-                "tokenBindings": [],
-                "staticClasses": ""
-              },
-              "default": {
-                "tokenBindings": [
-                  {
-                    "id": "primary-default-backgroundcolor",
-                    "cssProperty": "background-color",
-                    "tokenPath": "button.primary.bg",
-                    "tailwindPrefix": "bg"
-                  },
-                  {
-                    "id": "primary-default-color",
-                    "cssProperty": "color",
-                    "tokenPath": "button.primary.text",
-                    "tailwindPrefix": "text"
-                  },
-                  {
-                    "id": "primary-default-bordercolor",
-                    "cssProperty": "border-color",
-                    "tokenPath": "button.primary.border",
-                    "tailwindPrefix": "border"
-                  }
-                ],
-                "staticClasses": "inline-flex items-center justify-center text-sm font-medium transition-colors focus:outline-none"
-              },
-              "disabled": {
-                "tokenBindings": [],
-                "staticClasses": "opacity-50 cursor-not-allowed"
-              }
-            }
-          },
-          "secondary": {
-            "states": {
-              "focus": {
-                "tokenBindings": [],
-                "staticClasses": "ring-2 ring-offset-2"
-              },
-              "hover": {
-                "tokenBindings": [],
-                "staticClasses": ""
-              },
-              "active": {
-                "tokenBindings": [],
-                "staticClasses": ""
-              },
-              "default": {
-                "tokenBindings": [
-                  {
-                    "id": "secondary-default-backgroundcolor",
-                    "cssProperty": "background-color",
-                    "tokenPath": "button.secondary.bg",
-                    "tailwindPrefix": "bg"
-                  },
-                  {
-                    "id": "secondary-default-color",
-                    "cssProperty": "color",
-                    "tokenPath": "button.secondary.text",
-                    "tailwindPrefix": "text"
-                  },
-                  {
-                    "id": "secondary-default-bordercolor",
-                    "cssProperty": "border-color",
-                    "tokenPath": "button.secondary.border",
-                    "tailwindPrefix": "border"
-                  }
-                ],
-                "staticClasses": "inline-flex items-center justify-center text-sm font-medium transition-colors focus:outline-none"
-              },
-              "disabled": {
-                "tokenBindings": [],
-                "staticClasses": "opacity-50 cursor-not-allowed"
-              }
-            }
-          },
           "ghost": {
             "states": {
               "focus": {
-                "tokenBindings": [],
-                "staticClasses": "ring-2 ring-offset-2"
+                "staticClasses": "ring-2 ring-offset-2",
+                "tokenBindings": []
               },
               "hover": {
-                "tokenBindings": [],
-                "staticClasses": ""
+                "staticClasses": "",
+                "tokenBindings": []
               },
               "active": {
-                "tokenBindings": [],
-                "staticClasses": ""
+                "staticClasses": "",
+                "tokenBindings": []
               },
               "default": {
+                "staticClasses": "inline-flex items-center justify-center text-sm font-medium transition-colors focus:outline-none",
                 "tokenBindings": [
                   {
                     "id": "ghost-default-backgroundcolor",
-                    "cssProperty": "background-color",
                     "tokenPath": "button.ghost.bg",
+                    "cssProperty": "background-color",
                     "tailwindPrefix": "bg"
                   },
                   {
                     "id": "ghost-default-color",
-                    "cssProperty": "color",
                     "tokenPath": "button.ghost.text",
+                    "cssProperty": "color",
                     "tailwindPrefix": "text"
                   },
                   {
                     "id": "ghost-default-bordercolor",
-                    "cssProperty": "border-color",
                     "tokenPath": "button.ghost.border",
+                    "cssProperty": "border-color",
                     "tailwindPrefix": "border"
                   }
-                ],
-                "staticClasses": "inline-flex items-center justify-center text-sm font-medium transition-colors focus:outline-none"
+                ]
               },
               "disabled": {
-                "tokenBindings": [],
-                "staticClasses": "opacity-50 cursor-not-allowed"
+                "staticClasses": "opacity-50 cursor-not-allowed",
+                "tokenBindings": []
               }
             }
           },
           "danger": {
             "states": {
               "focus": {
-                "tokenBindings": [],
-                "staticClasses": "ring-2 ring-offset-2"
+                "staticClasses": "ring-2 ring-offset-2",
+                "tokenBindings": []
               },
               "hover": {
-                "tokenBindings": [],
-                "staticClasses": ""
+                "staticClasses": "",
+                "tokenBindings": []
               },
               "active": {
-                "tokenBindings": [],
-                "staticClasses": ""
+                "staticClasses": "",
+                "tokenBindings": []
               },
               "default": {
+                "staticClasses": "inline-flex items-center justify-center text-sm font-medium transition-colors focus:outline-none",
                 "tokenBindings": [
                   {
                     "id": "danger-default-backgroundcolor",
-                    "cssProperty": "background-color",
                     "tokenPath": "button.danger.bg",
+                    "cssProperty": "background-color",
                     "tailwindPrefix": "bg"
                   },
                   {
                     "id": "danger-default-color",
-                    "cssProperty": "color",
                     "tokenPath": "button.danger.text",
+                    "cssProperty": "color",
                     "tailwindPrefix": "text"
                   },
                   {
                     "id": "danger-default-bordercolor",
-                    "cssProperty": "border-color",
                     "tokenPath": "button.danger.border",
+                    "cssProperty": "border-color",
                     "tailwindPrefix": "border"
                   }
-                ],
-                "staticClasses": "inline-flex items-center justify-center text-sm font-medium transition-colors focus:outline-none"
+                ]
               },
               "disabled": {
-                "tokenBindings": [],
-                "staticClasses": "opacity-50 cursor-not-allowed"
+                "staticClasses": "opacity-50 cursor-not-allowed",
+                "tokenBindings": []
+              }
+            }
+          },
+          "default": {
+            "states": {
+              "focus": {
+                "staticClasses": "ring-2 ring-offset-2",
+                "tokenBindings": []
+              },
+              "hover": {
+                "staticClasses": "",
+                "tokenBindings": []
+              },
+              "active": {
+                "staticClasses": "",
+                "tokenBindings": []
+              },
+              "default": {
+                "staticClasses": "inline-flex items-center justify-center text-sm font-medium transition-colors focus:outline-none",
+                "tokenBindings": [
+                  {
+                    "id": "default-default-borderradius",
+                    "tokenPath": "button.radius",
+                    "cssProperty": "border-radius",
+                    "tailwindPrefix": "rounded"
+                  }
+                ]
+              },
+              "disabled": {
+                "staticClasses": "opacity-50 cursor-not-allowed",
+                "tokenBindings": []
+              }
+            }
+          },
+          "primary": {
+            "states": {
+              "focus": {
+                "staticClasses": "ring-2 ring-offset-2",
+                "tokenBindings": []
+              },
+              "hover": {
+                "staticClasses": "",
+                "tokenBindings": []
+              },
+              "active": {
+                "staticClasses": "",
+                "tokenBindings": []
+              },
+              "default": {
+                "staticClasses": "inline-flex items-center justify-center text-sm font-medium transition-colors focus:outline-none",
+                "tokenBindings": [
+                  {
+                    "id": "primary-default-backgroundcolor",
+                    "tokenPath": "button.primary.bg",
+                    "cssProperty": "background-color",
+                    "tailwindPrefix": "bg"
+                  },
+                  {
+                    "id": "primary-default-color",
+                    "tokenPath": "button.primary.text",
+                    "cssProperty": "color",
+                    "tailwindPrefix": "text"
+                  },
+                  {
+                    "id": "primary-default-bordercolor",
+                    "tokenPath": "button.primary.border",
+                    "cssProperty": "border-color",
+                    "tailwindPrefix": "border"
+                  }
+                ]
+              },
+              "disabled": {
+                "staticClasses": "opacity-50 cursor-not-allowed",
+                "tokenBindings": []
+              }
+            }
+          },
+          "secondary": {
+            "states": {
+              "focus": {
+                "staticClasses": "ring-2 ring-offset-2",
+                "tokenBindings": []
+              },
+              "hover": {
+                "staticClasses": "",
+                "tokenBindings": []
+              },
+              "active": {
+                "staticClasses": "",
+                "tokenBindings": []
+              },
+              "default": {
+                "staticClasses": "inline-flex items-center justify-center text-sm font-medium transition-colors focus:outline-none",
+                "tokenBindings": [
+                  {
+                    "id": "secondary-default-backgroundcolor",
+                    "tokenPath": "button.secondary.bg",
+                    "cssProperty": "background-color",
+                    "tailwindPrefix": "bg"
+                  },
+                  {
+                    "id": "secondary-default-color",
+                    "tokenPath": "button.secondary.text",
+                    "cssProperty": "color",
+                    "tailwindPrefix": "text"
+                  },
+                  {
+                    "id": "secondary-default-bordercolor",
+                    "tokenPath": "button.secondary.border",
+                    "cssProperty": "border-color",
+                    "tailwindPrefix": "border"
+                  }
+                ]
+              },
+              "disabled": {
+                "staticClasses": "opacity-50 cursor-not-allowed",
+                "tokenBindings": []
               }
             }
           }
-        },
-        "icons": {}
+        }
       },
       "props": [
         {
@@ -1100,100 +1110,106 @@
       "minTouchTarget": null,
       "buildConfig": {
         "variants": {
+          "body": {
+            "states": {
+              "focus": {
+                "staticClasses": "",
+                "tokenBindings": []
+              },
+              "hover": {
+                "staticClasses": "",
+                "tokenBindings": []
+              },
+              "active": {
+                "staticClasses": "",
+                "tokenBindings": []
+              },
+              "default": {
+                "staticClasses": "rounded-xl border transition-shadow",
+                "tokenBindings": [
+                  {
+                    "id": "body-default-color",
+                    "tokenPath": "card.body.color",
+                    "cssProperty": "color",
+                    "tailwindPrefix": "text"
+                  }
+                ]
+              },
+              "disabled": {
+                "staticClasses": "",
+                "tokenBindings": []
+              }
+            }
+          },
           "default": {
             "states": {
+              "focus": {
+                "staticClasses": "",
+                "tokenBindings": []
+              },
+              "hover": {
+                "staticClasses": "",
+                "tokenBindings": [
+                  {
+                    "id": "default-hover-bordercolor",
+                    "tokenPath": "card.borderHover",
+                    "cssProperty": "border-color",
+                    "tailwindPrefix": "border"
+                  }
+                ]
+              },
+              "active": {
+                "staticClasses": "",
+                "tokenBindings": []
+              },
               "default": {
+                "staticClasses": "rounded-xl border transition-shadow",
                 "tokenBindings": [
                   {
                     "id": "default-default-backgroundcolor",
-                    "cssProperty": "background-color",
                     "tokenPath": "card.bg",
+                    "cssProperty": "background-color",
                     "tailwindPrefix": "bg"
                   },
                   {
                     "id": "default-default-bordercolor",
-                    "cssProperty": "border-color",
                     "tokenPath": "card.border",
+                    "cssProperty": "border-color",
                     "tailwindPrefix": "border"
                   },
                   {
                     "id": "default-default-borderradius",
-                    "cssProperty": "border-radius",
                     "tokenPath": "card.radius",
+                    "cssProperty": "border-radius",
                     "tailwindPrefix": "rounded"
                   },
                   {
                     "id": "default-default-padding",
-                    "cssProperty": "padding",
                     "tokenPath": "card.padding",
+                    "cssProperty": "padding",
                     "tailwindPrefix": "p"
                   },
                   {
                     "id": "default-default-shadowcolor",
-                    "cssProperty": "shadow-color",
                     "tokenPath": "card.shadow",
+                    "cssProperty": "shadow-color",
                     "tailwindPrefix": "shadow"
                   },
                   {
                     "id": "default-default-color",
-                    "cssProperty": "color",
                     "tokenPath": "card.header.color",
-                    "tailwindPrefix": "text"
-                  }
-                ],
-                "staticClasses": "rounded-xl border transition-shadow"
-              },
-              "hover": {
-                "tokenBindings": [],
-                "staticClasses": ""
-              },
-              "focus": {
-                "tokenBindings": [],
-                "staticClasses": ""
-              },
-              "active": {
-                "tokenBindings": [],
-                "staticClasses": ""
-              },
-              "disabled": {
-                "tokenBindings": [],
-                "staticClasses": ""
-              }
-            }
-          },
-          "body": {
-            "states": {
-              "default": {
-                "tokenBindings": [
-                  {
-                    "id": "body-default-color",
                     "cssProperty": "color",
-                    "tokenPath": "card.body.color",
                     "tailwindPrefix": "text"
                   }
-                ],
-                "staticClasses": "rounded-xl border transition-shadow"
-              },
-              "hover": {
-                "tokenBindings": [],
-                "staticClasses": ""
-              },
-              "focus": {
-                "tokenBindings": [],
-                "staticClasses": ""
-              },
-              "active": {
-                "tokenBindings": [],
-                "staticClasses": ""
+                ]
               },
               "disabled": {
-                "tokenBindings": [],
-                "staticClasses": ""
+                "staticClasses": "",
+                "tokenBindings": []
               }
             }
           }
-        },
-        "icons": {}
+        }
       },
       "props": [
         {
@@ -2257,8 +2273,8 @@
       "sizes": [],
       "ariaRole": null,
       "wcagCriteria": [
-        "1.3.1",
-        "2.4.6"
+        "1.3.1 Info and Relationships",
+        "2.4.6 Headings and Labels"
       ],
       "minTouchTarget": null,
       "buildConfig": {
@@ -2388,8 +2404,66 @@
           }
         }
       },
-      "props": [],
-      "aria": {}
+      "props": [
+        {
+          "name": "variant",
+          "type": "string",
+          "values": [
+            "default",
+            "row"
+          ],
+          "default": "default",
+          "required": false,
+          "description": "Visual style variant of the table"
+        },
+        {
+          "name": "selectable",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "description": "Enables row selection functionality"
+        },
+        {
+          "name": "hoverable",
+          "type": "boolean",
+          "default": "true",
+          "required": false,
+          "description": "Shows hover state on rows"
+        },
+        {
+          "name": "striped",
+          "type": "boolean",
+          "default": "false",
+          "required": false,
+          "description": "Alternates row background colors for easier scanning"
+        },
+        {
+          "name": "onRowClick",
+          "type": "function",
+          "required": false,
+          "description": "Callback fired when a table row is clicked"
+        },
+        {
+          "name": "onSelectionChange",
+          "type": "function",
+          "required": false,
+          "description": "Callback fired when row selection state changes"
+        },
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": true,
+          "description": "Table content including headers and rows"
+        }
+      ],
+      "usage": "Use tables to display structured data in rows and columns where users need to scan, compare, or sort information. Tables work best for datasets with multiple attributes per item, allowing users to quickly identify patterns and relationships. Implement row selection when users need to perform actions on specific entries.",
+      "never": "Never use tables for layout purposes or when a simpler list would suffice. Never embed complex interactive controls within table cells that would interfere with row selection or keyboard navigation. Never display tables without clear column headers, as this breaks semantic relationships required for accessibility.",
+      "compose": "Wrap table components in a scrollable container when dealing with wide datasets to maintain responsive behavior. Pair with pagination or virtual scrolling for large datasets to maintain performance and usability.",
+      "aria": {
+        "role": "table with row/columnheader/cell roles on child elements",
+        "keyboard": "Tab moves between interactive elements within cells. Arrow keys navigate between cells when focus is within the table. Space selects rows when selectable is enabled.",
+        "screenReader": "Screen readers announce table structure including row and column count, header associations, and selection state. Column headers are programmatically associated with data cells."
+      }
     },
     {
       "name": "toast",
