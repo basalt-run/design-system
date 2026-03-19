@@ -801,210 +801,211 @@
       "minTouchTarget": null,
       "buildConfig": {
         "variants": {
-          "ghost": {
-            "states": {
-              "focus": {
-                "staticClasses": "ring-2 ring-offset-2",
-                "tokenBindings": []
-              },
-              "hover": {
-                "staticClasses": "",
-                "tokenBindings": []
-              },
-              "active": {
-                "staticClasses": "",
-                "tokenBindings": []
-              },
-              "default": {
-                "staticClasses": "inline-flex items-center justify-center text-sm font-medium transition-colors focus:outline-none",
-                "tokenBindings": [
-                  {
-                    "id": "ghost-default-backgroundcolor",
-                    "tokenPath": "button.ghost.bg",
-                    "cssProperty": "background-color",
-                    "tailwindPrefix": "bg"
-                  },
-                  {
-                    "id": "ghost-default-color",
-                    "tokenPath": "button.ghost.text",
-                    "cssProperty": "color",
-                    "tailwindPrefix": "text"
-                  },
-                  {
-                    "id": "ghost-default-bordercolor",
-                    "tokenPath": "button.ghost.border",
-                    "cssProperty": "border-color",
-                    "tailwindPrefix": "border"
-                  }
-                ]
-              },
-              "disabled": {
-                "staticClasses": "opacity-50 cursor-not-allowed",
-                "tokenBindings": []
-              }
-            }
-          },
-          "danger": {
-            "states": {
-              "focus": {
-                "staticClasses": "ring-2 ring-offset-2",
-                "tokenBindings": []
-              },
-              "hover": {
-                "staticClasses": "",
-                "tokenBindings": []
-              },
-              "active": {
-                "staticClasses": "",
-                "tokenBindings": []
-              },
-              "default": {
-                "staticClasses": "inline-flex items-center justify-center text-sm font-medium transition-colors focus:outline-none",
-                "tokenBindings": [
-                  {
-                    "id": "danger-default-backgroundcolor",
-                    "tokenPath": "button.danger.bg",
-                    "cssProperty": "background-color",
-                    "tailwindPrefix": "bg"
-                  },
-                  {
-                    "id": "danger-default-color",
-                    "tokenPath": "button.danger.text",
-                    "cssProperty": "color",
-                    "tailwindPrefix": "text"
-                  },
-                  {
-                    "id": "danger-default-bordercolor",
-                    "tokenPath": "button.danger.border",
-                    "cssProperty": "border-color",
-                    "tailwindPrefix": "border"
-                  }
-                ]
-              },
-              "disabled": {
-                "staticClasses": "opacity-50 cursor-not-allowed",
-                "tokenBindings": []
-              }
-            }
-          },
           "default": {
             "states": {
               "focus": {
-                "staticClasses": "ring-2 ring-offset-2",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": "ring-2 ring-offset-2"
               },
               "hover": {
-                "staticClasses": "",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": ""
               },
               "active": {
-                "staticClasses": "",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": ""
               },
               "default": {
-                "staticClasses": "inline-flex items-center justify-center text-sm font-medium transition-colors focus:outline-none",
                 "tokenBindings": [
                   {
                     "id": "default-default-borderradius",
-                    "tokenPath": "button.radius",
                     "cssProperty": "border-radius",
+                    "tokenPath": "button.radius",
                     "tailwindPrefix": "rounded"
                   }
-                ]
+                ],
+                "staticClasses": "inline-flex items-center justify-center text-sm font-medium transition-colors focus:outline-none"
               },
               "disabled": {
-                "staticClasses": "opacity-50 cursor-not-allowed",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": "opacity-50 cursor-not-allowed"
               }
             }
           },
           "primary": {
             "states": {
               "focus": {
-                "staticClasses": "ring-2 ring-offset-2",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": "ring-2 ring-offset-2"
               },
               "hover": {
-                "staticClasses": "",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": ""
               },
               "active": {
-                "staticClasses": "",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": ""
               },
               "default": {
-                "staticClasses": "inline-flex items-center justify-center text-sm font-medium transition-colors focus:outline-none",
                 "tokenBindings": [
                   {
                     "id": "primary-default-backgroundcolor",
-                    "tokenPath": "button.primary.bg",
                     "cssProperty": "background-color",
+                    "tokenPath": "button.primary.bg",
                     "tailwindPrefix": "bg"
                   },
                   {
                     "id": "primary-default-color",
-                    "tokenPath": "button.primary.text",
                     "cssProperty": "color",
+                    "tokenPath": "button.primary.text",
                     "tailwindPrefix": "text"
                   },
                   {
                     "id": "primary-default-bordercolor",
-                    "tokenPath": "button.primary.border",
                     "cssProperty": "border-color",
+                    "tokenPath": "button.primary.border",
                     "tailwindPrefix": "border"
                   }
-                ]
+                ],
+                "staticClasses": "inline-flex items-center justify-center text-sm font-medium transition-colors focus:outline-none"
               },
               "disabled": {
-                "staticClasses": "opacity-50 cursor-not-allowed",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": "opacity-50 cursor-not-allowed"
               }
             }
           },
           "secondary": {
             "states": {
               "focus": {
-                "staticClasses": "ring-2 ring-offset-2",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": "ring-2 ring-offset-2"
               },
               "hover": {
-                "staticClasses": "",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": ""
               },
               "active": {
-                "staticClasses": "",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": ""
               },
               "default": {
-                "staticClasses": "inline-flex items-center justify-center text-sm font-medium transition-colors focus:outline-none",
                 "tokenBindings": [
                   {
                     "id": "secondary-default-backgroundcolor",
-                    "tokenPath": "button.secondary.bg",
                     "cssProperty": "background-color",
+                    "tokenPath": "button.secondary.bg",
                     "tailwindPrefix": "bg"
                   },
                   {
                     "id": "secondary-default-color",
-                    "tokenPath": "button.secondary.text",
                     "cssProperty": "color",
+                    "tokenPath": "button.secondary.text",
                     "tailwindPrefix": "text"
                   },
                   {
                     "id": "secondary-default-bordercolor",
-                    "tokenPath": "button.secondary.border",
                     "cssProperty": "border-color",
+                    "tokenPath": "button.secondary.border",
                     "tailwindPrefix": "border"
                   }
-                ]
+                ],
+                "staticClasses": "inline-flex items-center justify-center text-sm font-medium transition-colors focus:outline-none"
               },
               "disabled": {
-                "staticClasses": "opacity-50 cursor-not-allowed",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": "opacity-50 cursor-not-allowed"
+              }
+            }
+          },
+          "ghost": {
+            "states": {
+              "focus": {
+                "tokenBindings": [],
+                "staticClasses": "ring-2 ring-offset-2"
+              },
+              "hover": {
+                "tokenBindings": [],
+                "staticClasses": ""
+              },
+              "active": {
+                "tokenBindings": [],
+                "staticClasses": ""
+              },
+              "default": {
+                "tokenBindings": [
+                  {
+                    "id": "ghost-default-backgroundcolor",
+                    "cssProperty": "background-color",
+                    "tokenPath": "button.ghost.bg",
+                    "tailwindPrefix": "bg"
+                  },
+                  {
+                    "id": "ghost-default-color",
+                    "cssProperty": "color",
+                    "tokenPath": "button.ghost.text",
+                    "tailwindPrefix": "text"
+                  },
+                  {
+                    "id": "ghost-default-bordercolor",
+                    "cssProperty": "border-color",
+                    "tokenPath": "button.ghost.border",
+                    "tailwindPrefix": "border"
+                  }
+                ],
+                "staticClasses": "inline-flex items-center justify-center text-sm font-medium transition-colors focus:outline-none"
+              },
+              "disabled": {
+                "tokenBindings": [],
+                "staticClasses": "opacity-50 cursor-not-allowed"
+              }
+            }
+          },
+          "danger": {
+            "states": {
+              "focus": {
+                "tokenBindings": [],
+                "staticClasses": "ring-2 ring-offset-2"
+              },
+              "hover": {
+                "tokenBindings": [],
+                "staticClasses": ""
+              },
+              "active": {
+                "tokenBindings": [],
+                "staticClasses": ""
+              },
+              "default": {
+                "tokenBindings": [
+                  {
+                    "id": "danger-default-backgroundcolor",
+                    "cssProperty": "background-color",
+                    "tokenPath": "button.danger.bg",
+                    "tailwindPrefix": "bg"
+                  },
+                  {
+                    "id": "danger-default-color",
+                    "cssProperty": "color",
+                    "tokenPath": "button.danger.text",
+                    "tailwindPrefix": "text"
+                  },
+                  {
+                    "id": "danger-default-bordercolor",
+                    "cssProperty": "border-color",
+                    "tokenPath": "button.danger.border",
+                    "tailwindPrefix": "border"
+                  }
+                ],
+                "staticClasses": "inline-flex items-center justify-center text-sm font-medium transition-colors focus:outline-none"
+              },
+              "disabled": {
+                "tokenBindings": [],
+                "staticClasses": "opacity-50 cursor-not-allowed"
               }
             }
           }
-        }
+        },
+        "icons": {}
       },
       "props": [
         {
