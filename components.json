@@ -1432,91 +1432,92 @@
           "default": {
             "states": {
               "focus": {
-                "staticClasses": "",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": ""
               },
               "hover": {
-                "staticClasses": "",
                 "tokenBindings": [
                   {
                     "id": "default-hover-backgroundcolor",
-                    "tokenPath": "dropdown.item.bgHover",
                     "cssProperty": "background-color",
+                    "tokenPath": "dropdown.item.bgHover",
                     "tailwindPrefix": "bg"
                   }
-                ]
+                ],
+                "staticClasses": ""
               },
               "active": {
-                "staticClasses": "",
                 "tokenBindings": [
                   {
                     "id": "default-active-backgroundcolor",
-                    "tokenPath": "dropdown.item.bgActive",
                     "cssProperty": "background-color",
+                    "tokenPath": "dropdown.item.bgActive",
                     "tailwindPrefix": "bg"
                   }
-                ]
+                ],
+                "staticClasses": ""
               },
               "default": {
-                "staticClasses": "rounded-lg border shadow-lg",
                 "tokenBindings": [
                   {
                     "id": "default-default-backgroundcolor",
-                    "tokenPath": "dropdown.bg",
                     "cssProperty": "background-color",
+                    "tokenPath": "dropdown.bg",
                     "tailwindPrefix": "bg"
                   },
                   {
                     "id": "default-default-bordercolor",
-                    "tokenPath": "dropdown.border",
                     "cssProperty": "border-color",
+                    "tokenPath": "dropdown.border",
                     "tailwindPrefix": "border"
                   },
                   {
                     "id": "default-default-borderradius",
-                    "tokenPath": "dropdown.radius",
                     "cssProperty": "border-radius",
+                    "tokenPath": "dropdown.radius",
                     "tailwindPrefix": "rounded"
                   },
                   {
                     "id": "default-default-padding",
-                    "tokenPath": "dropdown.padding",
                     "cssProperty": "padding",
+                    "tokenPath": "dropdown.padding",
                     "tailwindPrefix": "p"
                   },
                   {
                     "id": "default-default-shadowcolor",
-                    "tokenPath": "dropdown.shadow",
                     "cssProperty": "shadow-color",
+                    "tokenPath": "dropdown.shadow",
                     "tailwindPrefix": "shadow"
                   },
                   {
                     "id": "default-default-paddingx",
-                    "tokenPath": "dropdown.item.paddingX",
                     "cssProperty": "padding-x",
+                    "tokenPath": "dropdown.item.paddingX",
                     "tailwindPrefix": "px"
                   },
                   {
                     "id": "default-default-paddingy",
-                    "tokenPath": "dropdown.item.paddingY",
                     "cssProperty": "padding-y",
+                    "tokenPath": "dropdown.item.paddingY",
                     "tailwindPrefix": "py"
                   },
                   {
                     "id": "default-default-color",
-                    "tokenPath": "dropdown.item.text",
                     "cssProperty": "color",
+                    "tokenPath": "dropdown.item.text",
                     "tailwindPrefix": "text"
                   }
-                ]
+                ],
+                "staticClasses": "rounded-lg border shadow-lg"
               },
               "disabled": {
-                "staticClasses": "",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": ""
               }
             }
           }
-        }
+        },
+        "icons": {}
       },
       "props": [
         {
