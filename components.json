@@ -375,305 +375,306 @@
           "info": {
             "states": {
               "focus": {
-                "staticClasses": "",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": ""
               },
               "hover": {
-                "staticClasses": "",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": ""
               },
               "active": {
-                "staticClasses": "",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": ""
               },
               "default": {
-                "staticClasses": "inline-flex items-center text-xs font-medium",
                 "tokenBindings": [
                   {
                     "id": "info-default-backgroundcolor",
-                    "tokenPath": "badge.info.bg",
                     "cssProperty": "background-color",
+                    "tokenPath": "badge.info.bg",
                     "tailwindPrefix": "bg"
                   },
                   {
                     "id": "info-default-bordercolor",
-                    "tokenPath": "badge.info.border",
                     "cssProperty": "border-color",
+                    "tokenPath": "badge.info.border",
                     "tailwindPrefix": "border"
                   },
                   {
                     "id": "info-default-color",
-                    "tokenPath": "badge.info.text",
                     "cssProperty": "color",
+                    "tokenPath": "badge.info.text",
                     "tailwindPrefix": "text"
                   }
-                ]
+                ],
+                "staticClasses": "inline-flex items-center text-xs font-medium"
               },
               "disabled": {
-                "staticClasses": "",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": ""
               }
             }
           },
           "accent": {
             "states": {
               "focus": {
-                "staticClasses": "",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": ""
               },
               "hover": {
-                "staticClasses": "",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": ""
               },
               "active": {
-                "staticClasses": "",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": ""
               },
               "default": {
-                "staticClasses": "inline-flex items-center text-xs font-medium",
                 "tokenBindings": [
                   {
                     "id": "accent-default-backgroundcolor",
-                    "tokenPath": "badge.accent.bg",
                     "cssProperty": "background-color",
+                    "tokenPath": "badge.accent.bg",
                     "tailwindPrefix": "bg"
                   },
                   {
                     "id": "accent-default-bordercolor",
-                    "tokenPath": "badge.accent.border",
                     "cssProperty": "border-color",
+                    "tokenPath": "badge.accent.border",
                     "tailwindPrefix": "border"
                   },
                   {
                     "id": "accent-default-color",
-                    "tokenPath": "badge.accent.text",
                     "cssProperty": "color",
+                    "tokenPath": "badge.accent.text",
                     "tailwindPrefix": "text"
                   }
-                ]
+                ],
+                "staticClasses": "inline-flex items-center text-xs font-medium"
               },
               "disabled": {
-                "staticClasses": "",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": ""
               }
             }
           },
           "danger": {
             "states": {
               "focus": {
-                "staticClasses": "",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": ""
               },
               "hover": {
-                "staticClasses": "",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": ""
               },
               "active": {
-                "staticClasses": "",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": ""
               },
               "default": {
-                "staticClasses": "inline-flex items-center text-xs font-medium",
                 "tokenBindings": [
                   {
                     "id": "danger-default-backgroundcolor",
-                    "tokenPath": "badge.danger.bg",
                     "cssProperty": "background-color",
+                    "tokenPath": "badge.danger.bg",
                     "tailwindPrefix": "bg"
                   },
                   {
                     "id": "danger-default-bordercolor",
-                    "tokenPath": "badge.danger.border",
                     "cssProperty": "border-color",
+                    "tokenPath": "badge.danger.border",
                     "tailwindPrefix": "border"
                   },
                   {
                     "id": "danger-default-color",
-                    "tokenPath": "badge.danger.text",
                     "cssProperty": "color",
+                    "tokenPath": "badge.danger.text",
                     "tailwindPrefix": "text"
                   }
-                ]
+                ],
+                "staticClasses": "inline-flex items-center text-xs font-medium"
               },
               "disabled": {
-                "staticClasses": "",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": ""
               }
             }
           },
           "default": {
             "states": {
               "focus": {
-                "staticClasses": "",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": ""
               },
               "hover": {
-                "staticClasses": "",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": ""
               },
               "active": {
-                "staticClasses": "",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": ""
               },
               "default": {
-                "staticClasses": "inline-flex items-center text-xs font-medium",
                 "tokenBindings": [
                   {
                     "id": "default-default-paddingx",
-                    "tokenPath": "badge.paddingX",
                     "cssProperty": "padding-x",
+                    "tokenPath": "badge.paddingX",
                     "tailwindPrefix": "px"
                   },
                   {
                     "id": "default-default-paddingy",
-                    "tokenPath": "badge.paddingY",
                     "cssProperty": "padding-y",
+                    "tokenPath": "badge.paddingY",
                     "tailwindPrefix": "py"
                   },
                   {
                     "id": "default-default-borderradius",
-                    "tokenPath": "badge.radius",
                     "cssProperty": "border-radius",
+                    "tokenPath": "badge.radius",
                     "tailwindPrefix": "rounded"
                   }
-                ]
+                ],
+                "staticClasses": "inline-flex items-center text-xs font-medium"
               },
               "disabled": {
-                "staticClasses": "",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": ""
               }
             }
           },
           "neutral": {
             "states": {
               "focus": {
-                "staticClasses": "",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": ""
               },
               "hover": {
-                "staticClasses": "",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": ""
               },
               "active": {
-                "staticClasses": "",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": ""
               },
               "default": {
-                "staticClasses": "inline-flex items-center text-xs font-medium",
                 "tokenBindings": [
                   {
                     "id": "neutral-default-backgroundcolor",
-                    "tokenPath": "badge.neutral.bg",
                     "cssProperty": "background-color",
+                    "tokenPath": "badge.neutral.bg",
                     "tailwindPrefix": "bg"
                   },
                   {
                     "id": "neutral-default-bordercolor",
-                    "tokenPath": "badge.neutral.border",
                     "cssProperty": "border-color",
+                    "tokenPath": "badge.neutral.border",
                     "tailwindPrefix": "border"
                   },
                   {
                     "id": "neutral-default-color",
-                    "tokenPath": "badge.neutral.text",
                     "cssProperty": "color",
+                    "tokenPath": "badge.neutral.text",
                     "tailwindPrefix": "text"
                   }
-                ]
+                ],
+                "staticClasses": "inline-flex items-center text-xs font-medium"
               },
               "disabled": {
-                "staticClasses": "",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": ""
               }
             }
           },
           "warning": {
             "states": {
               "focus": {
-                "staticClasses": "",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": ""
               },
               "hover": {
-                "staticClasses": "",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": ""
               },
               "active": {
-                "staticClasses": "",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": ""
               },
               "default": {
-                "staticClasses": "inline-flex items-center text-xs font-medium",
                 "tokenBindings": [
                   {
                     "id": "warning-default-backgroundcolor",
-                    "tokenPath": "badge.warning.bg",
                     "cssProperty": "background-color",
+                    "tokenPath": "badge.warning.bg",
                     "tailwindPrefix": "bg"
                   },
                   {
                     "id": "warning-default-bordercolor",
-                    "tokenPath": "badge.warning.border",
                     "cssProperty": "border-color",
+                    "tokenPath": "badge.warning.border",
                     "tailwindPrefix": "border"
                   },
                   {
                     "id": "warning-default-color",
-                    "tokenPath": "badge.warning.text",
                     "cssProperty": "color",
+                    "tokenPath": "badge.warning.text",
                     "tailwindPrefix": "text"
                   }
-                ]
+                ],
+                "staticClasses": "inline-flex items-center text-xs font-medium"
               },
               "disabled": {
-                "staticClasses": "",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": ""
               }
             }
           },
           "positive": {
             "states": {
               "focus": {
-                "staticClasses": "",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": ""
               },
               "hover": {
-                "staticClasses": "",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": ""
               },
               "active": {
-                "staticClasses": "",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": ""
               },
               "default": {
-                "staticClasses": "inline-flex items-center text-xs font-medium",
                 "tokenBindings": [
                   {
                     "id": "positive-default-backgroundcolor",
-                    "tokenPath": "badge.positive.bg",
                     "cssProperty": "background-color",
+                    "tokenPath": "badge.positive.bg",
                     "tailwindPrefix": "bg"
                   },
                   {
                     "id": "positive-default-bordercolor",
-                    "tokenPath": "badge.positive.border",
                     "cssProperty": "border-color",
+                    "tokenPath": "badge.positive.border",
                     "tailwindPrefix": "border"
                   },
                   {
                     "id": "positive-default-color",
-                    "tokenPath": "badge.positive.text",
                     "cssProperty": "color",
+                    "tokenPath": "badge.positive.text",
                     "tailwindPrefix": "text"
                   }
-                ]
+                ],
+                "staticClasses": "inline-flex items-center text-xs font-medium"
               },
               "disabled": {
-                "staticClasses": "",
-                "tokenBindings": []
+                "tokenBindings": [],
+                "staticClasses": ""
               }
             }
           }
-        }
+        },
+        "icons": {}
       },
       "props": [
         {
