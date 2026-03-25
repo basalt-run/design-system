@@ -1,0 +1,1668 @@
+{
+  "$schema": "https://basalt.run/schemas/manifest.json",
+  "version": "1.0.0",
+  "generatedAt": "2026-03-25T22:44:14.300Z",
+  "projectId": "e152643d-5a0f-4500-9ea7-004cacde5178",
+  "projectSlug": "basalt-run-design-system",
+  "projectName": "basalt-run/design-system",
+  "storybookCompatible": true,
+  "components": {
+    "basalt-run-design-system-a11y-badge": {
+      "id": "basalt-run-design-system-a11y-badge",
+      "name": "a11yBadge",
+      "path": null,
+      "stories": [
+        {
+          "id": "basalt-run-design-system-a11y-badge--default",
+          "name": "default",
+          "snippet": "const Default = () => <a11yBadge />;"
+        },
+        {
+          "id": "basalt-run-design-system-a11y-badge--pass",
+          "name": "pass",
+          "snippet": "const Pass = () => <a11yBadge variant=\"pass\" />;"
+        },
+        {
+          "id": "basalt-run-design-system-a11y-badge--aa",
+          "name": "aa",
+          "snippet": "const Aa = () => <a11yBadge variant=\"aa\" />;"
+        },
+        {
+          "id": "basalt-run-design-system-a11y-badge--aalarge",
+          "name": "aaLarge",
+          "snippet": "const AaLarge = () => <a11yBadge variant=\"aalarge\" />;"
+        },
+        {
+          "id": "basalt-run-design-system-a11y-badge--fail",
+          "name": "fail",
+          "snippet": "const Fail = () => <a11yBadge variant=\"fail\" />;"
+        }
+      ],
+      "import": "import { a11yBadge } from \"@your-org/design-system\";",
+      "description": "Accessibility contrast badge — shown inline on color tokens.",
+      "props": {
+        "variant": {
+          "required": false,
+          "type": "\"default\" | \"pass\" | \"aa\" | \"aalarge\" | \"fail\"",
+          "description": "Visual variant",
+          "defaultValue": "default"
+        }
+      },
+      "basalt": {
+        "projectId": "e152643d-5a0f-4500-9ea7-004cacde5178",
+        "projectSlug": "basalt-run-design-system",
+        "tokenMappings": [
+          {
+            "cssProperty": "border-radius",
+            "tokenPath": "a11yBadge.radius"
+          },
+          {
+            "cssProperty": "padding",
+            "tokenPath": "a11yBadge.paddingX"
+          },
+          {
+            "cssProperty": "padding",
+            "tokenPath": "a11yBadge.paddingY"
+          },
+          {
+            "cssProperty": "font-size",
+            "tokenPath": "a11yBadge.fontSize"
+          },
+          {
+            "cssProperty": "font-weight",
+            "tokenPath": "a11yBadge.fontWeight"
+          },
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "a11yBadge.pass.bg"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "a11yBadge.pass.border"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "a11yBadge.pass.text"
+          },
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "a11yBadge.aa.bg"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "a11yBadge.aa.border"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "a11yBadge.aa.text"
+          },
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "a11yBadge.aaLarge.bg"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "a11yBadge.aaLarge.border"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "a11yBadge.aaLarge.text"
+          },
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "a11yBadge.fail.bg"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "a11yBadge.fail.border"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "a11yBadge.fail.text"
+          }
+        ],
+        "usage": "Use a11yBadge to display WCAG contrast compliance status inline on color tokens in design tools and documentation. Display the badge alongside color swatches to communicate at a glance whether a color combination meets AA, AA-Large, or fails accessibility standards. This component is essential for guiding designers toward accessible color choices during the design process.",
+        "never": "Never use this badge as a substitute for actual contrast testing—it should reflect real measured contrast ratios, not assumptions. Never display multiple contrast badges for the same color pairing, as this creates visual noise and contradicts the purpose of quick status communication. Never apply this badge to non-color contexts or as a generic status indicator outside of accessibility compliance.",
+        "a11y": "",
+        "wcagCriteria": [
+          "2.1.1 Keyboard",
+          "4.1.2 Name, Role, Value"
+        ],
+        "ariaRole": null,
+        "minTouchTarget": null,
+        "figmaNodeId": null,
+        "updatedAt": "2026-03-18T23:02:05.366+00:00"
+      }
+    },
+    "basalt-run-design-system-badge": {
+      "id": "basalt-run-design-system-badge",
+      "name": "badge",
+      "path": null,
+      "stories": [
+        {
+          "id": "basalt-run-design-system-badge--default",
+          "name": "default",
+          "snippet": "const Default = () => <badge />;"
+        },
+        {
+          "id": "basalt-run-design-system-badge--positive",
+          "name": "positive",
+          "snippet": "const Positive = () => <badge variant=\"positive\" />;"
+        },
+        {
+          "id": "basalt-run-design-system-badge--warning",
+          "name": "warning",
+          "snippet": "const Warning = () => <badge variant=\"warning\" />;"
+        },
+        {
+          "id": "basalt-run-design-system-badge--danger",
+          "name": "danger",
+          "snippet": "const Danger = () => <badge variant=\"danger\" />;"
+        },
+        {
+          "id": "basalt-run-design-system-badge--info",
+          "name": "info",
+          "snippet": "const Info = () => <badge variant=\"info\" />;"
+        },
+        {
+          "id": "basalt-run-design-system-badge--neutral",
+          "name": "neutral",
+          "snippet": "const Neutral = () => <badge variant=\"neutral\" />;"
+        },
+        {
+          "id": "basalt-run-design-system-badge--accent",
+          "name": "accent",
+          "snippet": "const Accent = () => <badge variant=\"accent\" />;"
+        }
+      ],
+      "import": "import { badge } from \"@your-org/design-system\";",
+      "description": "Status badge / label tokens.",
+      "props": {
+        "variant": {
+          "required": false,
+          "type": "\"default\" | \"positive\" | \"warning\" | \"danger\" | \"info\" | \"neutral\" | \"accent\"",
+          "description": "Visual variant",
+          "defaultValue": "default"
+        }
+      },
+      "basalt": {
+        "projectId": "e152643d-5a0f-4500-9ea7-004cacde5178",
+        "projectSlug": "basalt-run-design-system",
+        "tokenMappings": [
+          {
+            "cssProperty": "padding",
+            "tokenPath": "badge.paddingX"
+          },
+          {
+            "cssProperty": "padding",
+            "tokenPath": "badge.paddingY"
+          },
+          {
+            "cssProperty": "border-radius",
+            "tokenPath": "badge.radius"
+          },
+          {
+            "cssProperty": "font-size",
+            "tokenPath": "badge.fontSize"
+          },
+          {
+            "cssProperty": "font-weight",
+            "tokenPath": "badge.fontWeight"
+          },
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "badge.positive.bg"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "badge.positive.border"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "badge.positive.text"
+          },
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "badge.warning.bg"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "badge.warning.border"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "badge.warning.text"
+          },
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "badge.danger.bg"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "badge.danger.border"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "badge.danger.text"
+          },
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "badge.info.bg"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "badge.info.border"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "badge.info.text"
+          },
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "badge.neutral.bg"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "badge.neutral.border"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "badge.neutral.text"
+          },
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "badge.accent.bg"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "badge.accent.border"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "badge.accent.text"
+          }
+        ],
+        "usage": "Use badges to communicate status, category, or priority information in a compact, scannable format. Badges work best for labeling items in lists, tables, or inline with content where visual status needs to be quickly recognized without disrupting reading flow.",
+        "never": "Never use badges as interactive elements—they are for display only and should not trigger actions on click. Never stack multiple badges without clear separation or nesting, as this creates visual clutter and makes individual statuses hard to distinguish. Never use badges to replace larger, more prominent alerts or notifications that require immediate user action.",
+        "a11y": "",
+        "wcagCriteria": [
+          "1.4.3 Contrast (Minimum)",
+          "2.1.1 Keyboard",
+          "4.1.2 Name, Role, Value"
+        ],
+        "ariaRole": null,
+        "minTouchTarget": null,
+        "figmaNodeId": null,
+        "updatedAt": "2026-03-14T16:32:49.438+00:00"
+      }
+    },
+    "basalt-run-design-system-button": {
+      "id": "basalt-run-design-system-button",
+      "name": "button",
+      "path": null,
+      "stories": [
+        {
+          "id": "basalt-run-design-system-button--default",
+          "name": "default",
+          "snippet": "const Default = () => <button />;"
+        },
+        {
+          "id": "basalt-run-design-system-button--primary",
+          "name": "primary",
+          "snippet": "const Primary = () => <button variant=\"primary\" />;"
+        },
+        {
+          "id": "basalt-run-design-system-button--secondary",
+          "name": "secondary",
+          "snippet": "const Secondary = () => <button variant=\"secondary\" />;"
+        },
+        {
+          "id": "basalt-run-design-system-button--ghost",
+          "name": "ghost",
+          "snippet": "const Ghost = () => <button variant=\"ghost\" />;"
+        },
+        {
+          "id": "basalt-run-design-system-button--danger",
+          "name": "danger",
+          "snippet": "const Danger = () => <button variant=\"danger\" />;"
+        }
+      ],
+      "import": "import { button } from \"@your-org/design-system\";",
+      "description": "Button component tokens.",
+      "props": {
+        "variant": {
+          "required": false,
+          "type": "\"default\" | \"primary\" | \"secondary\" | \"ghost\" | \"danger\"",
+          "description": "Visual variant",
+          "defaultValue": "default"
+        }
+      },
+      "basalt": {
+        "projectId": "e152643d-5a0f-4500-9ea7-004cacde5178",
+        "projectSlug": "basalt-run-design-system",
+        "tokenMappings": [
+          {
+            "cssProperty": "color",
+            "tokenPath": "button.height.xs"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "button.height.sm"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "button.height.md"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "button.height.lg"
+          },
+          {
+            "cssProperty": "padding",
+            "tokenPath": "button.paddingX.xs"
+          },
+          {
+            "cssProperty": "padding",
+            "tokenPath": "button.paddingX.sm"
+          },
+          {
+            "cssProperty": "padding",
+            "tokenPath": "button.paddingX.md"
+          },
+          {
+            "cssProperty": "padding",
+            "tokenPath": "button.paddingX.lg"
+          },
+          {
+            "cssProperty": "border-radius",
+            "tokenPath": "button.radius"
+          },
+          {
+            "cssProperty": "font-size",
+            "tokenPath": "button.fontSize.xs"
+          },
+          {
+            "cssProperty": "font-size",
+            "tokenPath": "button.fontSize.sm"
+          },
+          {
+            "cssProperty": "font-size",
+            "tokenPath": "button.fontSize.md"
+          },
+          {
+            "cssProperty": "font-size",
+            "tokenPath": "button.fontSize.lg"
+          },
+          {
+            "cssProperty": "font-weight",
+            "tokenPath": "button.fontWeight"
+          },
+          {
+            "cssProperty": "gap",
+            "tokenPath": "button.gap"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "button.focusRingWidth"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "button.focusRingOffset"
+          },
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "button.primary.bg"
+          },
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "button.primary.bgHover"
+          },
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "button.primary.bgActive"
+          },
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "button.primary.bgDisabled"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "button.primary.text"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "button.primary.textDisabled"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "button.primary.border"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "button.primary.focusRing"
+          },
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "button.secondary.bg"
+          },
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "button.secondary.bgHover"
+          },
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "button.secondary.bgActive"
+          },
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "button.secondary.bgDisabled"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "button.secondary.text"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "button.secondary.textHover"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "button.secondary.border"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "button.secondary.borderHover"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "button.secondary.focusRing"
+          },
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "button.ghost.bg"
+          },
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "button.ghost.bgHover"
+          },
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "button.ghost.bgActive"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "button.ghost.text"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "button.ghost.textHover"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "button.ghost.border"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "button.ghost.focusRing"
+          },
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "button.danger.bg"
+          },
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "button.danger.bgHover"
+          },
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "button.danger.bgSubtle"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "button.danger.text"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "button.danger.textSubtle"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "button.danger.border"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "button.danger.focusRing"
+          }
+        ],
+        "usage": "Use buttons to trigger actions, submit forms, or navigate within an application. Choose variant based on visual hierarchy: primary for main actions, secondary for supporting actions, ghost for tertiary actions, and danger for destructive operations. Buttons should have clear, action-oriented labels that describe what happens when clicked.",
+        "never": "Never use buttons for navigation to different pages (use links instead). Never disable a button without providing clear feedback about why it's disabled or when it will become available. Never use danger variant for non-destructive actions, and never combine multiple primary buttons in the same context without clear priority.",
+        "a11y": "",
+        "wcagCriteria": [
+          "2.1.1 Keyboard",
+          "4.1.2 Name, Role, Value"
+        ],
+        "ariaRole": null,
+        "minTouchTarget": null,
+        "figmaNodeId": null,
+        "updatedAt": "2026-03-19T02:39:44.152+00:00"
+      }
+    },
+    "basalt-run-design-system-card": {
+      "id": "basalt-run-design-system-card",
+      "name": "card",
+      "path": null,
+      "stories": [
+        {
+          "id": "basalt-run-design-system-card--default",
+          "name": "default",
+          "snippet": "const Default = () => <card />;"
+        },
+        {
+          "id": "basalt-run-design-system-card--body",
+          "name": "body",
+          "snippet": "const Body = () => <card variant=\"body\" />;"
+        }
+      ],
+      "import": "import { card } from \"@your-org/design-system\";",
+      "description": "Card container tokens.",
+      "props": {
+        "variant": {
+          "required": false,
+          "type": "\"default\" | \"body\"",
+          "description": "Visual variant",
+          "defaultValue": "default"
+        }
+      },
+      "basalt": {
+        "projectId": "e152643d-5a0f-4500-9ea7-004cacde5178",
+        "projectSlug": "basalt-run-design-system",
+        "tokenMappings": [
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "card.bg"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "card.border"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "card.borderHover"
+          },
+          {
+            "cssProperty": "border-radius",
+            "tokenPath": "card.radius"
+          },
+          {
+            "cssProperty": "padding",
+            "tokenPath": "card.padding"
+          },
+          {
+            "cssProperty": "padding",
+            "tokenPath": "card.paddingLg"
+          },
+          {
+            "cssProperty": "box-shadow",
+            "tokenPath": "card.shadow"
+          },
+          {
+            "cssProperty": "box-shadow",
+            "tokenPath": "card.shadowHover"
+          },
+          {
+            "cssProperty": "font-size",
+            "tokenPath": "card.header.fontSize"
+          },
+          {
+            "cssProperty": "font-weight",
+            "tokenPath": "card.header.fontWeight"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "card.header.color"
+          },
+          {
+            "cssProperty": "font-size",
+            "tokenPath": "card.body.fontSize"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "card.body.color"
+          }
+        ],
+        "usage": "Use cards to group related content and create visual hierarchy within layouts. Cards are ideal for presenting self-contained information units like articles, products, or settings panels that benefit from visual separation and shadow elevation.",
+        "never": "Never use a card as a clickable button without proper ARIA attributes and keyboard support. Never nest cards within cards as this creates confusing visual and semantic hierarchy. Never rely solely on color or shadow for contrast—ensure text meets WCAG 1.4.3 contrast ratios independently.",
+        "a11y": "",
+        "wcagCriteria": [
+          "1.4.3 Contrast (Minimum)",
+          "4.1.2 Name, Role, Value"
+        ],
+        "ariaRole": null,
+        "minTouchTarget": null,
+        "figmaNodeId": null,
+        "updatedAt": "2026-03-14T16:58:56.504+00:00"
+      }
+    },
+    "basalt-run-design-system-code-block": {
+      "id": "basalt-run-design-system-code-block",
+      "name": "codeBlock",
+      "path": null,
+      "stories": [
+        {
+          "id": "basalt-run-design-system-code-block--default",
+          "name": "default",
+          "snippet": "const Default = () => <codeBlock />;"
+        }
+      ],
+      "import": "import { codeBlock } from \"@your-org/design-system\";",
+      "description": "Code display blocks — token output, JSON, production code.",
+      "props": {},
+      "basalt": {
+        "projectId": "e152643d-5a0f-4500-9ea7-004cacde5178",
+        "projectSlug": "basalt-run-design-system",
+        "tokenMappings": [
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "codeBlock.bg"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "codeBlock.border"
+          },
+          {
+            "cssProperty": "border-radius",
+            "tokenPath": "codeBlock.radius"
+          },
+          {
+            "cssProperty": "padding",
+            "tokenPath": "codeBlock.padding"
+          },
+          {
+            "cssProperty": "font-size",
+            "tokenPath": "codeBlock.fontSize"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "codeBlock.fontFamily"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "codeBlock.lineHeight"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "codeBlock.text"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "codeBlock.textHighlight"
+          }
+        ],
+        "usage": "Use codeBlock to display code snippets, JSON responses, token outputs, or production code that users need to read or reference. This component is ideal for documentation, API responses, configuration examples, and code samples that require syntax clarity and readability.",
+        "never": "Never use codeBlock for editable code input—use a code editor component instead. Never rely solely on color to distinguish syntax highlighting; ensure sufficient contrast ratios meet WCAG 1.4.3. Never nest interactive elements inside codeBlock without clear visual separation from the code content.",
+        "a11y": "",
+        "wcagCriteria": [
+          "1.4.3 Contrast (Minimum)",
+          "4.1.2 Name, Role, Value"
+        ],
+        "ariaRole": null,
+        "minTouchTarget": null,
+        "figmaNodeId": null,
+        "updatedAt": "2026-03-14T16:59:03.985+00:00"
+      }
+    },
+    "basalt-run-design-system-dropdown": {
+      "id": "basalt-run-design-system-dropdown",
+      "name": "dropdown",
+      "path": null,
+      "stories": [
+        {
+          "id": "basalt-run-design-system-dropdown--default",
+          "name": "default",
+          "snippet": "const Default = () => <dropdown />;"
+        }
+      ],
+      "import": "import { dropdown } from \"@your-org/design-system\";",
+      "description": "Dropdown menu / popover tokens.",
+      "props": {},
+      "basalt": {
+        "projectId": "e152643d-5a0f-4500-9ea7-004cacde5178",
+        "projectSlug": "basalt-run-design-system",
+        "tokenMappings": [
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "dropdown.bg"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "dropdown.border"
+          },
+          {
+            "cssProperty": "border-radius",
+            "tokenPath": "dropdown.radius"
+          },
+          {
+            "cssProperty": "padding",
+            "tokenPath": "dropdown.padding"
+          },
+          {
+            "cssProperty": "box-shadow",
+            "tokenPath": "dropdown.shadow"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "dropdown.minWidth"
+          },
+          {
+            "cssProperty": "padding",
+            "tokenPath": "dropdown.item.paddingX"
+          },
+          {
+            "cssProperty": "padding",
+            "tokenPath": "dropdown.item.paddingY"
+          },
+          {
+            "cssProperty": "border-radius",
+            "tokenPath": "dropdown.item.radius"
+          },
+          {
+            "cssProperty": "font-size",
+            "tokenPath": "dropdown.item.fontSize"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "dropdown.item.text"
+          },
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "dropdown.item.bg"
+          },
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "dropdown.item.bgHover"
+          },
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "dropdown.item.bgActive"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "dropdown.item.textDanger"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "dropdown.separator.color"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "dropdown.separator.margin"
+          }
+        ],
+        "usage": "Use dropdown menus to present a list of mutually exclusive actions or selections in a compact, space-saving container. Essential for navigation menus, filters, and command palettes where options should remain hidden until explicitly triggered. Avoid dropdowns for frequently-changed settings or when all options must be immediately visible.",
+        "never": "Never use a dropdown to display more than 15 items without search or grouping; users struggle with long unscrollable lists. Never nest dropdowns within dropdowns as this creates cognitive overload and keyboard navigation confusion. Never disable the entire dropdown without providing an explanation or alternative action.",
+        "a11y": "",
+        "wcagCriteria": [
+          "1.4.3 Contrast (Minimum)",
+          "1.4.6 Contrast (Enhanced)",
+          "2.1.1 Keyboard",
+          "4.1.2 Name, Role, Value"
+        ],
+        "ariaRole": null,
+        "minTouchTarget": null,
+        "figmaNodeId": null,
+        "updatedAt": "2026-03-19T03:44:25.15+00:00"
+      }
+    },
+    "basalt-run-design-system-empty-state": {
+      "id": "basalt-run-design-system-empty-state",
+      "name": "emptyState",
+      "path": null,
+      "stories": [
+        {
+          "id": "basalt-run-design-system-empty-state--default",
+          "name": "default",
+          "snippet": "const Default = () => <emptyState />;"
+        }
+      ],
+      "import": "import { emptyState } from \"@your-org/design-system\";",
+      "description": "Empty state — used when a list or section has no content.",
+      "props": {},
+      "basalt": {
+        "projectId": "e152643d-5a0f-4500-9ea7-004cacde5178",
+        "projectSlug": "basalt-run-design-system",
+        "tokenMappings": [
+          {
+            "cssProperty": "color",
+            "tokenPath": "emptyState.iconColor"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "emptyState.iconSize"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "emptyState.titleColor"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "emptyState.bodyColor"
+          },
+          {
+            "cssProperty": "gap",
+            "tokenPath": "emptyState.gap"
+          },
+          {
+            "cssProperty": "padding",
+            "tokenPath": "emptyState.paddingY"
+          }
+        ],
+        "usage": "Use the empty state component when a list, table, or section contains no data to display. It provides contextual messaging to help users understand why content is absent and what they can do next. Pair with an icon, title, and optional action button to guide users toward resolution.",
+        "never": "Never use empty state for loading or error conditions—use dedicated loading and error components instead. Never omit the title or use vague messaging like 'No results'; provide specific, actionable context that explains the empty state reason.",
+        "a11y": "",
+        "wcagCriteria": [
+          "1.4.3 Contrast (Minimum)",
+          "4.1.2 Name, Role, Value"
+        ],
+        "ariaRole": null,
+        "minTouchTarget": null,
+        "figmaNodeId": null,
+        "updatedAt": "2026-03-14T16:59:22.232+00:00"
+      }
+    },
+    "basalt-run-design-system-input": {
+      "id": "basalt-run-design-system-input",
+      "name": "input",
+      "path": null,
+      "stories": [
+        {
+          "id": "basalt-run-design-system-input--default",
+          "name": "default",
+          "snippet": "const Default = () => <input />;"
+        }
+      ],
+      "import": "import { input } from \"@your-org/design-system\";",
+      "description": "Text input, textarea, select tokens.",
+      "props": {},
+      "basalt": {
+        "projectId": "e152643d-5a0f-4500-9ea7-004cacde5178",
+        "projectSlug": "basalt-run-design-system",
+        "tokenMappings": [
+          {
+            "cssProperty": "color",
+            "tokenPath": "input.height.sm"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "input.height.md"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "input.height.lg"
+          },
+          {
+            "cssProperty": "padding",
+            "tokenPath": "input.paddingX"
+          },
+          {
+            "cssProperty": "padding",
+            "tokenPath": "input.paddingY"
+          },
+          {
+            "cssProperty": "border-radius",
+            "tokenPath": "input.radius"
+          },
+          {
+            "cssProperty": "font-size",
+            "tokenPath": "input.fontSize"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "input.fontFamily"
+          },
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "input.bg"
+          },
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "input.bgDisabled"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "input.text"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "input.textPlaceholder"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "input.textDisabled"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "input.border"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "input.borderHover"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "input.borderFocus"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "input.borderError"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "input.focusRingColor"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "input.focusRingWidth"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "input.focusRingOffset"
+          },
+          {
+            "cssProperty": "font-size",
+            "tokenPath": "input.label.fontSize"
+          },
+          {
+            "cssProperty": "font-weight",
+            "tokenPath": "input.label.fontWeight"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "input.label.color"
+          },
+          {
+            "cssProperty": "gap",
+            "tokenPath": "input.label.gap"
+          },
+          {
+            "cssProperty": "font-size",
+            "tokenPath": "input.hint.fontSize"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "input.hint.color"
+          },
+          {
+            "cssProperty": "gap",
+            "tokenPath": "input.hint.gap"
+          },
+          {
+            "cssProperty": "font-size",
+            "tokenPath": "input.error.fontSize"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "input.error.color"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "input.error.iconColor"
+          }
+        ],
+        "usage": "Use for collecting short-form text input, multi-line textarea content, or selection from a dropdown list. Input components should always be paired with a visible label and optionally include hint text for clarification or error messages for validation feedback. Supports small, medium, and large sizes to match surrounding UI density.",
+        "never": "Never use input without an associated visible label or aria-label. Never rely solely on placeholder text to communicate the field's purpose, as it disappears on interaction. Never use input for actions or navigation; use buttons instead.",
+        "a11y": "",
+        "wcagCriteria": [
+          "1.4.3 Contrast (Minimum)",
+          "1.4.6 Contrast (Enhanced)",
+          "2.1.1 Keyboard",
+          "4.1.2 Name, Role, Value",
+          "1.3.1 Info and Relationships",
+          "2.5.8 Target Size (Minimum)"
+        ],
+        "ariaRole": null,
+        "minTouchTarget": null,
+        "figmaNodeId": null,
+        "updatedAt": "2026-03-14T17:09:59.96+00:00"
+      }
+    },
+    "basalt-run-design-system-modal": {
+      "id": "basalt-run-design-system-modal",
+      "name": "modal",
+      "path": null,
+      "stories": [
+        {
+          "id": "basalt-run-design-system-modal--default",
+          "name": "default",
+          "snippet": "const Default = () => <modal />;"
+        }
+      ],
+      "import": "import { modal } from \"@your-org/design-system\";",
+      "description": "Modal dialog tokens.",
+      "props": {},
+      "basalt": {
+        "projectId": "e152643d-5a0f-4500-9ea7-004cacde5178",
+        "projectSlug": "basalt-run-design-system",
+        "tokenMappings": [
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "modal.bg"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "modal.border"
+          },
+          {
+            "cssProperty": "border-radius",
+            "tokenPath": "modal.radius"
+          },
+          {
+            "cssProperty": "padding",
+            "tokenPath": "modal.padding"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "modal.maxWidth"
+          },
+          {
+            "cssProperty": "box-shadow",
+            "tokenPath": "modal.shadow"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "modal.backdrop"
+          },
+          {
+            "cssProperty": "font-size",
+            "tokenPath": "modal.header.fontSize"
+          },
+          {
+            "cssProperty": "font-weight",
+            "tokenPath": "modal.header.fontWeight"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "modal.header.color"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "modal.header.border"
+          },
+          {
+            "cssProperty": "padding",
+            "tokenPath": "modal.header.paddingBottom"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "modal.footer.border"
+          },
+          {
+            "cssProperty": "padding",
+            "tokenPath": "modal.footer.paddingTop"
+          },
+          {
+            "cssProperty": "gap",
+            "tokenPath": "modal.footer.gap"
+          }
+        ],
+        "usage": "Use modals to focus user attention on critical tasks, confirmations, or information that requires immediate action before continuing. Modals should contain a clear header, concise content, and explicit action buttons in the footer. Reserve modals for workflows that must interrupt the user's current context.",
+        "never": "Never use modals for non-essential information that could be displayed inline or in a less intrusive pattern. Never nest modals within other modals, as this creates confusion and navigation complexity. Never omit a clear close mechanism or trap focus without providing keyboard-accessible exit options.",
+        "a11y": "",
+        "wcagCriteria": [
+          "2.1.1 Keyboard",
+          "2.4.3 Focus Order",
+          "4.1.2 Name, Role, Value"
+        ],
+        "ariaRole": null,
+        "minTouchTarget": null,
+        "figmaNodeId": null,
+        "updatedAt": "2026-03-14T17:16:06.75+00:00"
+      }
+    },
+    "basalt-run-design-system-sidebar": {
+      "id": "basalt-run-design-system-sidebar",
+      "name": "sidebar",
+      "path": null,
+      "stories": [
+        {
+          "id": "basalt-run-design-system-sidebar--default",
+          "name": "default",
+          "snippet": "const Default = () => <sidebar />;"
+        }
+      ],
+      "import": "import { sidebar } from \"@your-org/design-system\";",
+      "description": "Left navigation sidebar tokens.",
+      "props": {},
+      "basalt": {
+        "projectId": "e152643d-5a0f-4500-9ea7-004cacde5178",
+        "projectSlug": "basalt-run-design-system",
+        "tokenMappings": [
+          {
+            "cssProperty": "color",
+            "tokenPath": "sidebar.width"
+          },
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "sidebar.bg"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "sidebar.border"
+          },
+          {
+            "cssProperty": "padding",
+            "tokenPath": "sidebar.padding"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "sidebar.header.height"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "sidebar.header.border"
+          },
+          {
+            "cssProperty": "font-size",
+            "tokenPath": "sidebar.section.labelFontSize"
+          },
+          {
+            "cssProperty": "font-weight",
+            "tokenPath": "sidebar.section.labelFontWeight"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "sidebar.section.labelColor"
+          },
+          {
+            "cssProperty": "gap",
+            "tokenPath": "sidebar.section.labelSpacing"
+          },
+          {
+            "cssProperty": "gap",
+            "tokenPath": "sidebar.section.gap"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "sidebar.item.height"
+          },
+          {
+            "cssProperty": "padding",
+            "tokenPath": "sidebar.item.paddingX"
+          },
+          {
+            "cssProperty": "border-radius",
+            "tokenPath": "sidebar.item.radius"
+          },
+          {
+            "cssProperty": "font-size",
+            "tokenPath": "sidebar.item.fontSize"
+          },
+          {
+            "cssProperty": "font-weight",
+            "tokenPath": "sidebar.item.fontWeight"
+          },
+          {
+            "cssProperty": "gap",
+            "tokenPath": "sidebar.item.gap"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "sidebar.item.text"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "sidebar.item.textHover"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "sidebar.item.textActive"
+          },
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "sidebar.item.bg"
+          },
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "sidebar.item.bgHover"
+          },
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "sidebar.item.bgActive"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "sidebar.item.borderActive"
+          }
+        ],
+        "usage": "Use the sidebar component for primary navigation in application layouts where users need persistent access to multiple sections or pages. Best suited for desktop and tablet viewports with sufficient horizontal space. Place the sidebar on the left edge of the viewport and maintain consistent visibility throughout the user session.",
+        "never": "Never use the sidebar for contextual actions or temporary navigation—use a drawer or menu instead. Never nest multiple levels of navigation deeper than two levels within the sidebar. Never hide essential navigation items that users need for core workflows without providing an alternative mobile-friendly pattern.",
+        "a11y": "",
+        "wcagCriteria": [
+          "2.4.1 Bypass Blocks",
+          "4.1.2 Name, Role, Value"
+        ],
+        "ariaRole": null,
+        "minTouchTarget": null,
+        "figmaNodeId": null,
+        "updatedAt": "2026-03-14T17:16:19.745+00:00"
+      }
+    },
+    "basalt-run-design-system-table": {
+      "id": "basalt-run-design-system-table",
+      "name": "table",
+      "path": null,
+      "stories": [
+        {
+          "id": "basalt-run-design-system-table--default",
+          "name": "default",
+          "snippet": "const Default = () => <table />;"
+        },
+        {
+          "id": "basalt-run-design-system-table--row",
+          "name": "row",
+          "snippet": "const Row = () => <table variant=\"row\" />;"
+        }
+      ],
+      "import": "import { table } from \"@your-org/design-system\";",
+      "description": "Data table tokens.",
+      "props": {
+        "variant": {
+          "required": false,
+          "type": "\"default\" | \"row\"",
+          "description": "Visual variant",
+          "defaultValue": "default"
+        }
+      },
+      "basalt": {
+        "projectId": "e152643d-5a0f-4500-9ea7-004cacde5178",
+        "projectSlug": "basalt-run-design-system",
+        "tokenMappings": [
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "table.bg"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "table.border"
+          },
+          {
+            "cssProperty": "border-radius",
+            "tokenPath": "table.radius"
+          },
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "table.header.bg"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "table.header.text"
+          },
+          {
+            "cssProperty": "font-size",
+            "tokenPath": "table.header.fontSize"
+          },
+          {
+            "cssProperty": "font-weight",
+            "tokenPath": "table.header.fontWeight"
+          },
+          {
+            "cssProperty": "padding",
+            "tokenPath": "table.header.paddingX"
+          },
+          {
+            "cssProperty": "padding",
+            "tokenPath": "table.header.paddingY"
+          },
+          {
+            "cssProperty": "gap",
+            "tokenPath": "table.header.letterSpacing"
+          },
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "table.row.bg"
+          },
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "table.row.bgHover"
+          },
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "table.row.bgSelected"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "table.row.border"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "table.row.text"
+          },
+          {
+            "cssProperty": "font-size",
+            "tokenPath": "table.row.fontSize"
+          },
+          {
+            "cssProperty": "padding",
+            "tokenPath": "table.row.paddingX"
+          },
+          {
+            "cssProperty": "padding",
+            "tokenPath": "table.row.paddingY"
+          }
+        ],
+        "usage": "Use tables to display structured data in rows and columns where users need to scan, compare, or sort information. Tables work best for datasets with multiple attributes per item, allowing users to quickly identify patterns and relationships. Implement row selection when users need to perform actions on specific entries.",
+        "never": "Never use tables for layout purposes or when a simpler list would suffice. Never embed complex interactive controls within table cells that would interfere with row selection or keyboard navigation. Never display tables without clear column headers, as this breaks semantic relationships required for accessibility.",
+        "a11y": "",
+        "wcagCriteria": [
+          "1.3.1 Info and Relationships",
+          "2.4.6 Headings and Labels"
+        ],
+        "ariaRole": null,
+        "minTouchTarget": null,
+        "figmaNodeId": null,
+        "updatedAt": "2026-03-19T03:18:23.103+00:00"
+      }
+    },
+    "basalt-run-design-system-toast": {
+      "id": "basalt-run-design-system-toast",
+      "name": "toast",
+      "path": null,
+      "stories": [
+        {
+          "id": "basalt-run-design-system-toast--default",
+          "name": "default",
+          "snippet": "const Default = () => <toast />;"
+        },
+        {
+          "id": "basalt-run-design-system-toast--success",
+          "name": "success",
+          "snippet": "const Success = () => <toast variant=\"success\" />;"
+        },
+        {
+          "id": "basalt-run-design-system-toast--warning",
+          "name": "warning",
+          "snippet": "const Warning = () => <toast variant=\"warning\" />;"
+        }
+      ],
+      "import": "import { toast } from \"@your-org/design-system\";",
+      "description": "Toast notification tokens.",
+      "props": {
+        "variant": {
+          "required": false,
+          "type": "\"default\" | \"success\" | \"warning\"",
+          "description": "Visual variant",
+          "defaultValue": "default"
+        }
+      },
+      "basalt": {
+        "projectId": "e152643d-5a0f-4500-9ea7-004cacde5178",
+        "projectSlug": "basalt-run-design-system",
+        "tokenMappings": [
+          {
+            "cssProperty": "border-radius",
+            "tokenPath": "toast.radius"
+          },
+          {
+            "cssProperty": "padding",
+            "tokenPath": "toast.padding"
+          },
+          {
+            "cssProperty": "padding",
+            "tokenPath": "toast.paddingX"
+          },
+          {
+            "cssProperty": "font-size",
+            "tokenPath": "toast.fontSize"
+          },
+          {
+            "cssProperty": "font-weight",
+            "tokenPath": "toast.fontWeight"
+          },
+          {
+            "cssProperty": "box-shadow",
+            "tokenPath": "toast.shadow"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "toast.duration"
+          },
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "toast.default.bg"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "toast.default.border"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "toast.default.text"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "toast.default.icon"
+          },
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "toast.success.bg"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "toast.success.border"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "toast.success.text"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "toast.success.icon"
+          },
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "toast.error.bg"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "toast.error.border"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "toast.error.text"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "toast.error.icon"
+          },
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "toast.warning.bg"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "toast.warning.border"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "toast.warning.text"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "toast.warning.icon"
+          }
+        ],
+        "usage": "",
+        "never": "",
+        "a11y": "",
+        "wcagCriteria": [
+          "1.4.3",
+          "4.1.3"
+        ],
+        "ariaRole": null,
+        "minTouchTarget": null,
+        "figmaNodeId": null,
+        "updatedAt": "2026-03-14T03:36:32.415+00:00"
+      }
+    },
+    "basalt-run-design-system-token-card": {
+      "id": "basalt-run-design-system-token-card",
+      "name": "tokenCard",
+      "path": null,
+      "stories": [
+        {
+          "id": "basalt-run-design-system-token-card--default",
+          "name": "default",
+          "snippet": "const Default = () => <tokenCard />;"
+        },
+        {
+          "id": "basalt-run-design-system-token-card--bghover",
+          "name": "bgHover",
+          "snippet": "const BgHover = () => <tokenCard variant=\"bghover\" />;"
+        },
+        {
+          "id": "basalt-run-design-system-token-card--path",
+          "name": "path",
+          "snippet": "const Path = () => <tokenCard variant=\"path\" />;"
+        },
+        {
+          "id": "basalt-run-design-system-token-card--value",
+          "name": "value",
+          "snippet": "const Value = () => <tokenCard variant=\"value\" />;"
+        },
+        {
+          "id": "basalt-run-design-system-token-card--swatch",
+          "name": "swatch",
+          "snippet": "const Swatch = () => <tokenCard variant=\"swatch\" />;"
+        }
+      ],
+      "import": "import { tokenCard } from \"@your-org/design-system\";",
+      "description": "Token editor card — the primary interactive element in the token list.",
+      "props": {
+        "variant": {
+          "required": false,
+          "type": "\"default\" | \"bghover\" | \"path\" | \"value\" | \"swatch\"",
+          "description": "Visual variant",
+          "defaultValue": "default"
+        }
+      },
+      "basalt": {
+        "projectId": "e152643d-5a0f-4500-9ea7-004cacde5178",
+        "projectSlug": "basalt-run-design-system",
+        "tokenMappings": [
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "tokenCard.bg"
+          },
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "tokenCard.bgHover"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "tokenCard.border"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "tokenCard.borderFocus"
+          },
+          {
+            "cssProperty": "border-radius",
+            "tokenPath": "tokenCard.radius"
+          },
+          {
+            "cssProperty": "padding",
+            "tokenPath": "tokenCard.paddingX"
+          },
+          {
+            "cssProperty": "padding",
+            "tokenPath": "tokenCard.paddingY"
+          },
+          {
+            "cssProperty": "font-size",
+            "tokenPath": "tokenCard.path.fontSize"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "tokenCard.path.fontFamily"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "tokenCard.path.color"
+          },
+          {
+            "cssProperty": "font-size",
+            "tokenPath": "tokenCard.value.fontSize"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "tokenCard.value.fontFamily"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "tokenCard.value.color"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "tokenCard.swatch.size"
+          },
+          {
+            "cssProperty": "border-radius",
+            "tokenPath": "tokenCard.swatch.radius"
+          }
+        ],
+        "usage": "",
+        "never": "",
+        "a11y": "",
+        "wcagCriteria": [
+          "1.4.3"
+        ],
+        "ariaRole": null,
+        "minTouchTarget": null,
+        "figmaNodeId": null,
+        "updatedAt": "2026-03-14T03:36:34.603+00:00"
+      }
+    },
+    "basalt-run-design-system-topbar": {
+      "id": "basalt-run-design-system-topbar",
+      "name": "topbar",
+      "path": null,
+      "stories": [
+        {
+          "id": "basalt-run-design-system-topbar--default",
+          "name": "default",
+          "snippet": "const Default = () => <topbar />;"
+        }
+      ],
+      "import": "import { topbar } from \"@your-org/design-system\";",
+      "description": "Top navigation / header bar tokens.",
+      "props": {},
+      "basalt": {
+        "projectId": "e152643d-5a0f-4500-9ea7-004cacde5178",
+        "projectSlug": "basalt-run-design-system",
+        "tokenMappings": [
+          {
+            "cssProperty": "color",
+            "tokenPath": "topbar.height"
+          },
+          {
+            "cssProperty": "background-color",
+            "tokenPath": "topbar.bg"
+          },
+          {
+            "cssProperty": "color",
+            "tokenPath": "topbar.border"
+          }
+        ],
+        "usage": "",
+        "never": "",
+        "a11y": "",
+        "wcagCriteria": [
+          "1.4.3"
+        ],
+        "ariaRole": null,
+        "minTouchTarget": null,
+        "figmaNodeId": null,
+        "updatedAt": "2026-03-14T03:36:36.385+00:00"
+      }
+    }
+  }
+}
