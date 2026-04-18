@@ -1,0 +1,98 @@
+{
+  "$metadata": {
+    "basalt": {
+      "theme": "light",
+      "description": "Light theme semantic aliases"
+    }
+  },
+  "color": {
+    "$type": "color",
+    "background": {
+      "default": {
+        "$value": "{color.neutral.50}",
+        "$description": "Page background"
+      },
+      "surface": {
+        "$value": "#FFFFFF",
+        "$description": "Card / elevated surface"
+      }
+    },
+    "text": {
+      "primary": {
+        "$value": "{color.neutral.900}",
+        "$description": "Headings, body text"
+      },
+      "secondary": {
+        "$value": "{color.neutral.500}",
+        "$description": "Supporting text, labels"
+      }
+    },
+    "action": {
+      "default": {
+        "$value": "{color.blue.500}",
+        "$description": "Primary buttons, links"
+      },
+      "hover": {
+        "$value": "{color.blue.600}"
+      }
+    },
+    "border": {
+      "default": {
+        "$value": "{color.neutral.200}"
+      }
+    },
+    "status": {
+      "success": {
+        "$value": "{color.green.500}"
+      },
+      "error": {
+        "$value": "{color.red.500}"
+      },
+      "warning": {
+        "$value": "{color.yellow.500}"
+      }
+    }
+  },
+  "spacing": {
+    "$type": "dimension",
+    "page": {
+      "$value": "{spacing.6}",
+      "$description": "Page-level padding"
+    },
+    "section": {
+      "$value": "{spacing.8}",
+      "$description": "Between major sections"
+    },
+    "element": {
+      "$value": "{spacing.4}",
+      "$description": "Between related elements"
+    },
+    "tight": {
+      "$value": "{spacing.2}",
+      "$description": "Compact spacing"
+    }
+  },
+  "radius": {
+    "$type": "dimension",
+    "default": {
+      "$value": "{radius.md}",
+      "$description": "Buttons, inputs, cards"
+    },
+    "pill": {
+      "$value": "{radius.full}",
+      "$description": "Tags, badges"
+    }
+  },
+  "fontSize": {
+    "$type": "dimension",
+    "body": {
+      "$value": "{fontSize.base}"
+    },
+    "caption": {
+      "$value": "{fontSize.sm}"
+    },
+    "heading": {
+      "$value": "{fontSize.2xl}"
+    }
+  }
+}
