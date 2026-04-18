@@ -194,7 +194,10 @@ function generateTailwindConfig(tokens) {
     })
     .join('\n')
 
-  const fontSizeEntries = Object.entries(grouped.typography?.fontSize || {})
+  const fontSizeEntries = Object.entries({
+    ...(grouped.typography?.fontSize || {}),
+    ...(grouped.fontSize || {}),
+  })
     .map(([pathStr, value]) => `          '${pathStr}': '${value}',`)
     .join('\n')
 

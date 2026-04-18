@@ -1,6 +1,6 @@
 {
   "name": "@basalt/design-system",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Design system tokens — Code-native, Git-backed, AI-ready.",
   "license": "MIT",
   "type": "module",
@@ -14,17 +14,11 @@
     },
     "./css": "./dist/tokens.css",
     "./tailwind": "./dist/tailwind.config.js",
-    "./components": {
-      "types": "./dist/components/index.ts",
-      "import": "./dist/components/index.ts"
-    },
     "./tokens": "./tokens"
   },
   "files": [
     "dist",
-    "tokens",
-    "components.json",
-    "icons"
+    "tokens"
   ],
   "scripts": {
     "build": "node scripts/build.js",
