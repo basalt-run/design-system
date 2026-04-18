@@ -1,0 +1,92 @@
+{
+  "$metadata": {
+    "basalt": {
+      "theme": "dark",
+      "description": "Dark theme semantic aliases"
+    }
+  },
+  "color": {
+    "$type": "color",
+    "background": {
+      "default": {
+        "$value": "{color.neutral.950}",
+        "$description": "Page background"
+      },
+      "surface": {
+        "$value": "{color.neutral.900}",
+        "$description": "Card / elevated surface"
+      }
+    },
+    "text": {
+      "primary": {
+        "$value": "{color.neutral.50}",
+        "$description": "Headings, body text"
+      },
+      "secondary": {
+        "$value": "{color.neutral.500}",
+        "$description": "Supporting text, labels"
+      }
+    },
+    "action": {
+      "default": {
+        "$value": "{color.blue.400}",
+        "$description": "Primary buttons, links"
+      },
+      "hover": {
+        "$value": "{color.blue.500}"
+      }
+    },
+    "border": {
+      "default": {
+        "$value": "{color.neutral.700}"
+      }
+    },
+    "status": {
+      "success": {
+        "$value": "{color.green.500}"
+      },
+      "error": {
+        "$value": "{color.red.500}"
+      },
+      "warning": {
+        "$value": "{color.yellow.500}"
+      }
+    }
+  },
+  "spacing": {
+    "$type": "dimension",
+    "page": {
+      "$value": "{spacing.6}"
+    },
+    "section": {
+      "$value": "{spacing.8}"
+    },
+    "element": {
+      "$value": "{spacing.4}"
+    },
+    "tight": {
+      "$value": "{spacing.2}"
+    }
+  },
+  "radius": {
+    "$type": "dimension",
+    "default": {
+      "$value": "{radius.md}"
+    },
+    "pill": {
+      "$value": "{radius.full}"
+    }
+  },
+  "fontSize": {
+    "$type": "dimension",
+    "body": {
+      "$value": "{fontSize.base}"
+    },
+    "caption": {
+      "$value": "{fontSize.sm}"
+    },
+    "heading": {
+      "$value": "{fontSize.2xl}"
+    }
+  }
+}
