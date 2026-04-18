@@ -1,39 +1,59 @@
-# Demo Design System
+# Basalt Design System
 
-A minimal design system managed by [Basalt](https://basalt.run).
+Design tokens in Git. Readable by AI. Beautiful to edit.
 
-## Token structure
+This repo is managed by [Basalt](https://basalt.run) — a design system platform that stores tokens, components, and documentation in Git and serves them to AI coding tools via MCP.
+
+## What's in this repo
 
 ```
 tokens/
-├── primitives.json        # Raw values — colors, spacing, typography, radius
-├── semantic.light.json    # Light theme aliases → reference primitives
-└── semantic.dark.json     # Dark theme aliases → reference primitives
+├── primitives.json        # Raw values (colors, spacing, radii)
+├── semantic.light.json    # Light theme semantic tokens
+└── semantic.dark.json     # Dark theme semantic tokens
 ```
 
-## Format
+All tokens use the [DTCG 2025.10](https://tr.designtokens.org/format/) format (W3C standard).
 
-All tokens use [DTCG 2025.10](https://www.designtokens.org/) format — the W3C standard for design tokens.
+## Using these tokens with AI tools
 
-## Usage
+Basalt serves this design system to Cursor, Claude Code, Claude Design, and Windsurf via an MCP server. AI tools query your real token values instead of guessing.
 
-This repo is connected to Basalt's MCP server. AI tools (Cursor, Claude Code, Windsurf) can query these tokens via the MCP endpoint.
+See **[MCP.md](MCP.md)** for setup instructions and available tools.
 
-The published npm package (`@basalt/design-system`) exposes resolved tokens, CSS variables, and a Tailwind helper — run `npm run build` after changing files under `tokens/`.
+**Quick config (Cursor / Claude Code / Windsurf):**
 
-## Repository layout (beyond tokens)
+```json
+{
+  "mcpServers": {
+    "basalt": {
+      "url": "https://basalt.run/api/mcp",
+      "headers": {
+        "Authorization": "Bearer bsk_your_key_here"
+      }
+    }
+  }
+}
+```
 
-| Path | Purpose |
-|------|--------|
-| `server.js` | Basalt MCP server (stdio) — loads `tokens/*.json` |
-| `scripts/build.js` | Merges token JSON → `dist/` (JS, CSS, Tailwind plugin) |
-| `app/`, `brand/`, `public/` | Example / marketing site assets |
-| `components/` | Legacy React examples (not the token demo) |
-| `figma-plugin/` | Plugin distribution |
-| `src/` | Supporting source |
+Get a free API key at [basalt.run](https://basalt.run).
 
-Large one-off Figma exports and sync manifests were removed to keep the demo repo easy to scan.
+## Token architecture
+
+Three tiers, each referencing the layer above:
+
+**Primitive** → raw values (`color.orange.500` = `#F97316`)
+**Semantic** → intent + theming (`color.action.default` → `color.orange.500`)
+**Component** → scoped to UI elements (`button.background.default` → `color.action.default`)
+
+AI tools resolve the full chain automatically via MCP.
+
+## Links
+
+- [basalt.run](https://basalt.run) — visual editor, component registry, MCP server
+- [MCP.md](MCP.md) — MCP server docs and setup
+- [MCP Registry](https://registry.modelcontextprotocol.io/) — search for `basalt`
 
 ## License
 
-MIT
+MIT — see [LICENSE](LICENSE).
