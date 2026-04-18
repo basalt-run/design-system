@@ -1,0 +1,21 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+  "name": "io.github.basalt-run/basalt",
+  "description": "Query design tokens, components, icons, and accessibility data from your Git-backed design system. Works with Claude Design, Claude Code, Cursor, and Windsurf.",
+  "status": "active",
+  "websiteUrl": "https://basalt.run",
+  "repository": {
+    "url": "https://github.com/basalt-run/design-system",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "remotes": [
+    {
+      "type": "sse",
+      "url": "https://basalt.run/api/mcp",
+      "headers": {
+        "Authorization": "Bearer <API_KEY>"
+      }
+    }
+  ]
+}
